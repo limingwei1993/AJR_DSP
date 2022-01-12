@@ -1,0 +1,251 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+CG_TOOL_ROOT := C:/ti/ccs1030/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS
+
+GEN_OPTS__FLAG := 
+GEN_CMDS__FLAG := 
+
+ORDERED_OBJS += \
+"./KCG/AutoBrake.obj" \
+"./KCG/AutoBrake_EnabletoDisArm.obj" \
+"./KCG/AutobrakeArmedtoDisarmed.obj" \
+"./KCG/Autobrake_ARM_Application.obj" \
+"./KCG/Autobrake_ARMtoEnable.obj" \
+"./KCG/Autobrake_Application_Disarmed.obj" \
+"./KCG/Autobrake_EnaletoApplication.obj" \
+"./KCG/BTI.obj" \
+"./KCG/BoolVect2Int16_digital_3.obj" \
+"./KCG/Brake.obj" \
+"./KCG/BrakeInhibit.obj" \
+"./KCG/BrakePress.obj" \
+"./KCG/BrakeSelect.obj" \
+"./KCG/Brake_Skid.obj" \
+"./KCG/Counter.obj" \
+"./KCG/LimiterF32.obj" \
+"./KCG/Lockwheel.obj" \
+"./KCG/OFFtoAutobrakeArmed.obj" \
+"./KCG/OFFtoRTOArmed.obj" \
+"./KCG/PI_Control.obj" \
+"./KCG/PedalF.obj" \
+"./KCG/RTOApplicationDisarmed_.obj" \
+"./KCG/RTOArmedtoDisarmed_.obj" \
+"./KCG/RTOArmedtoEnabled.obj" \
+"./KCG/RTOEnabledtoApplication.obj" \
+"./KCG/RTOEnabledtoDisarmed_.obj" \
+"./KCG/SC_Function.obj" \
+"./KCG/SC_LowSpeedMonitor.obj" \
+"./KCG/SC_SlipControl.obj" \
+"./KCG/SC_Wheel.obj" \
+"./KCG/Spindown.obj" \
+"./KCG/TDP.obj" \
+"./KCG/WOW_Processing.obj" \
+"./KCG/equ_2.obj" \
+"./KCG/equ_3.obj" \
+"./KCG/equ_4.obj" \
+"./KCG/equ_5.obj" \
+"./KCG/equ_6.obj" \
+"./KCG/kcg_consts.obj" \
+"./KCG/kcg_types.obj" \
+"./KCG/sigle.obj" \
+"./KCG/stm.obj" \
+"./SdCard/diskio.obj" \
+"./SdCard/ff.obj" \
+"./SdCard/ffsystem.obj" \
+"./SdCard/ffunicode.obj" \
+"./SdCard/sdcard.obj" \
+"./UserCode/dac5689.obj" \
+"./UserCode/global_Init.obj" \
+"./UserCode/init.obj" \
+"./UserCode/rs232.obj" \
+"./UserCode/sdram.obj" \
+"./UserCode/user_main.obj" \
+"./hal/source/dabort.obj" \
+"./hal/source/errata_SSWF021_45.obj" \
+"./hal/source/esm.obj" \
+"./hal/source/gio.obj" \
+"./hal/source/het.obj" \
+"./hal/source/mibspi.obj" \
+"./hal/source/notification.obj" \
+"./hal/source/pinmux.obj" \
+"./hal/source/rti.obj" \
+"./hal/source/sci.obj" \
+"./hal/source/spi.obj" \
+"./hal/source/sys_core.obj" \
+"./hal/source/sys_dma.obj" \
+"./hal/source/sys_intvecs.obj" \
+"./hal/source/sys_main.obj" \
+"./hal/source/sys_mpu.obj" \
+"./hal/source/sys_pcr.obj" \
+"./hal/source/sys_phantom.obj" \
+"./hal/source/sys_pmm.obj" \
+"./hal/source/sys_pmu.obj" \
+"./hal/source/sys_selftest.obj" \
+"./hal/source/sys_startup.obj" \
+"./hal/source/sys_vim.obj" \
+"./hal/source/system.obj" \
+"../hal/source/sys_link.cmd" \
+$(GEN_CMDS__FLAG) \
+-lrtsv7R4_T_be_v3D16_eabi.lib \
+
+-include ../makefile.init
+
+RM := DEL /F
+RMDIR := RMDIR /S/Q
+
+# All of the sources participating in the build are defined here
+-include sources.mk
+-include KCG/subdir_vars.mk
+-include SdCard/subdir_vars.mk
+-include UserCode/subdir_vars.mk
+-include hal/source/subdir_vars.mk
+-include KCG/subdir_rules.mk
+-include SdCard/subdir_rules.mk
+-include UserCode/subdir_rules.mk
+-include hal/source/subdir_rules.mk
+-include objects.mk
+
+ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(C55_DEPS)),)
+-include $(C55_DEPS)
+endif
+ifneq ($(strip $(C_UPPER_DEPS)),)
+-include $(C_UPPER_DEPS)
+endif
+ifneq ($(strip $(S67_DEPS)),)
+-include $(S67_DEPS)
+endif
+ifneq ($(strip $(S62_DEPS)),)
+-include $(S62_DEPS)
+endif
+ifneq ($(strip $(S_DEPS)),)
+-include $(S_DEPS)
+endif
+ifneq ($(strip $(OPT_DEPS)),)
+-include $(OPT_DEPS)
+endif
+ifneq ($(strip $(C??_DEPS)),)
+-include $(C??_DEPS)
+endif
+ifneq ($(strip $(ASM_UPPER_DEPS)),)
+-include $(ASM_UPPER_DEPS)
+endif
+ifneq ($(strip $(S??_DEPS)),)
+-include $(S??_DEPS)
+endif
+ifneq ($(strip $(C64_DEPS)),)
+-include $(C64_DEPS)
+endif
+ifneq ($(strip $(CXX_DEPS)),)
+-include $(CXX_DEPS)
+endif
+ifneq ($(strip $(S64_DEPS)),)
+-include $(S64_DEPS)
+endif
+ifneq ($(strip $(INO_DEPS)),)
+-include $(INO_DEPS)
+endif
+ifneq ($(strip $(CLA_DEPS)),)
+-include $(CLA_DEPS)
+endif
+ifneq ($(strip $(S55_DEPS)),)
+-include $(S55_DEPS)
+endif
+ifneq ($(strip $(SV7A_DEPS)),)
+-include $(SV7A_DEPS)
+endif
+ifneq ($(strip $(C62_DEPS)),)
+-include $(C62_DEPS)
+endif
+ifneq ($(strip $(C67_DEPS)),)
+-include $(C67_DEPS)
+endif
+ifneq ($(strip $(PDE_DEPS)),)
+-include $(PDE_DEPS)
+endif
+ifneq ($(strip $(K_DEPS)),)
+-include $(K_DEPS)
+endif
+ifneq ($(strip $(C_DEPS)),)
+-include $(C_DEPS)
+endif
+ifneq ($(strip $(CC_DEPS)),)
+-include $(CC_DEPS)
+endif
+ifneq ($(strip $(C++_DEPS)),)
+-include $(C++_DEPS)
+endif
+ifneq ($(strip $(C43_DEPS)),)
+-include $(C43_DEPS)
+endif
+ifneq ($(strip $(S43_DEPS)),)
+-include $(S43_DEPS)
+endif
+ifneq ($(strip $(ASM_DEPS)),)
+-include $(ASM_DEPS)
+endif
+ifneq ($(strip $(S_UPPER_DEPS)),)
+-include $(S_UPPER_DEPS)
+endif
+ifneq ($(strip $(CPP_DEPS)),)
+-include $(CPP_DEPS)
+endif
+ifneq ($(strip $(SA_DEPS)),)
+-include $(SA_DEPS)
+endif
+endif
+
+-include ../makefile.defs
+
+# Add inputs and outputs from these tool invocations to the build variables 
+EXE_OUTPUTS += \
+TMS570LS3137_BCMU_MCB.out \
+
+EXE_OUTPUTS__QUOTED += \
+"TMS570LS3137_BCMU_MCB.out" \
+
+BIN_OUTPUTS += \
+TMS570LS3137_BCMU_MCB.hex \
+
+BIN_OUTPUTS__QUOTED += \
+"TMS570LS3137_BCMU_MCB.hex" \
+
+
+# All Target
+all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+	@$(MAKE) --no-print-directory -Onone "TMS570LS3137_BCMU_MCB.out"
+
+# Tool invocations
+TMS570LS3137_BCMU_MCB.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+	@echo 'Building target: "$@"'
+	@echo 'Invoking: Arm Linker'
+	"C:/ti/ccs1030/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS/bin/armcl" -mv7R4 --code_state=32 --float_support=VFPv3D16 -g --diag_warning=225 --diag_wrap=off --display_error_number --enum_type=packed --abi=eabi -z -m"TMS570LS3137_BCMU_MCB.map" --heap_size=0x800 --stack_size=0x800 -i"C:/ti/ccs1030/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS/lib" -i"C:/ti/ccs1030/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="TMS570LS3137_BCMU_MCB_linkInfo.xml" --rom_model --be32 -o "TMS570LS3137_BCMU_MCB.out" $(ORDERED_OBJS)
+	@echo 'Finished building target: "$@"'
+	@echo ' '
+
+TMS570LS3137_BCMU_MCB.hex: $(EXE_OUTPUTS)
+	@echo 'Building secondary target: "$@"'
+	@echo 'Invoking: Arm Hex Utility'
+	"C:/ti/ccs1030/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS/bin/armhex" --diag_wrap=off -o "TMS570LS3137_BCMU_MCB.hex" $(EXE_OUTPUTS__QUOTED)
+	@echo 'Finished building secondary target: "$@"'
+	@echo ' '
+
+# Other Targets
+clean:
+	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
+	-$(RM) "KCG\AutoBrake.obj" "KCG\AutoBrake_EnabletoDisArm.obj" "KCG\AutobrakeArmedtoDisarmed.obj" "KCG\Autobrake_ARM_Application.obj" "KCG\Autobrake_ARMtoEnable.obj" "KCG\Autobrake_Application_Disarmed.obj" "KCG\Autobrake_EnaletoApplication.obj" "KCG\BTI.obj" "KCG\BoolVect2Int16_digital_3.obj" "KCG\Brake.obj" "KCG\BrakeInhibit.obj" "KCG\BrakePress.obj" "KCG\BrakeSelect.obj" "KCG\Brake_Skid.obj" "KCG\Counter.obj" "KCG\LimiterF32.obj" "KCG\Lockwheel.obj" "KCG\OFFtoAutobrakeArmed.obj" "KCG\OFFtoRTOArmed.obj" "KCG\PI_Control.obj" "KCG\PedalF.obj" "KCG\RTOApplicationDisarmed_.obj" "KCG\RTOArmedtoDisarmed_.obj" "KCG\RTOArmedtoEnabled.obj" "KCG\RTOEnabledtoApplication.obj" "KCG\RTOEnabledtoDisarmed_.obj" "KCG\SC_Function.obj" "KCG\SC_LowSpeedMonitor.obj" "KCG\SC_SlipControl.obj" "KCG\SC_Wheel.obj" "KCG\Spindown.obj" "KCG\TDP.obj" "KCG\WOW_Processing.obj" "KCG\equ_2.obj" "KCG\equ_3.obj" "KCG\equ_4.obj" "KCG\equ_5.obj" "KCG\equ_6.obj" "KCG\kcg_consts.obj" "KCG\kcg_types.obj" "KCG\sigle.obj" "KCG\stm.obj" 
+	-$(RM) "SdCard\diskio.obj" "SdCard\ff.obj" "SdCard\ffsystem.obj" "SdCard\ffunicode.obj" "SdCard\sdcard.obj" "UserCode\dac5689.obj" "UserCode\global_Init.obj" "UserCode\init.obj" "UserCode\rs232.obj" "UserCode\sdram.obj" "UserCode\user_main.obj" "hal\source\dabort.obj" "hal\source\errata_SSWF021_45.obj" "hal\source\esm.obj" "hal\source\gio.obj" "hal\source\het.obj" "hal\source\mibspi.obj" "hal\source\notification.obj" "hal\source\pinmux.obj" "hal\source\rti.obj" "hal\source\sci.obj" "hal\source\spi.obj" "hal\source\sys_core.obj" "hal\source\sys_dma.obj" "hal\source\sys_intvecs.obj" "hal\source\sys_main.obj" "hal\source\sys_mpu.obj" "hal\source\sys_pcr.obj" "hal\source\sys_phantom.obj" "hal\source\sys_pmm.obj" "hal\source\sys_pmu.obj" "hal\source\sys_selftest.obj" "hal\source\sys_startup.obj" "hal\source\sys_vim.obj" "hal\source\system.obj" 
+	-$(RM) "KCG\AutoBrake.d" "KCG\AutoBrake_EnabletoDisArm.d" "KCG\AutobrakeArmedtoDisarmed.d" "KCG\Autobrake_ARM_Application.d" "KCG\Autobrake_ARMtoEnable.d" "KCG\Autobrake_Application_Disarmed.d" "KCG\Autobrake_EnaletoApplication.d" "KCG\BTI.d" "KCG\BoolVect2Int16_digital_3.d" "KCG\Brake.d" "KCG\BrakeInhibit.d" "KCG\BrakePress.d" "KCG\BrakeSelect.d" "KCG\Brake_Skid.d" "KCG\Counter.d" "KCG\LimiterF32.d" "KCG\Lockwheel.d" "KCG\OFFtoAutobrakeArmed.d" "KCG\OFFtoRTOArmed.d" "KCG\PI_Control.d" "KCG\PedalF.d" "KCG\RTOApplicationDisarmed_.d" "KCG\RTOArmedtoDisarmed_.d" "KCG\RTOArmedtoEnabled.d" "KCG\RTOEnabledtoApplication.d" "KCG\RTOEnabledtoDisarmed_.d" "KCG\SC_Function.d" "KCG\SC_LowSpeedMonitor.d" "KCG\SC_SlipControl.d" "KCG\SC_Wheel.d" "KCG\Spindown.d" "KCG\TDP.d" "KCG\WOW_Processing.d" "KCG\equ_2.d" "KCG\equ_3.d" "KCG\equ_4.d" "KCG\equ_5.d" "KCG\equ_6.d" "KCG\kcg_consts.d" "KCG\kcg_types.d" "KCG\sigle.d" "KCG\stm.d" "SdCard\diskio.d" "SdCard\ff.d" "SdCard\ffsystem.d" "SdCard\ffunicode.d" "SdCard\sdcard.d" 
+	-$(RM) "UserCode\dac5689.d" "UserCode\global_Init.d" "UserCode\init.d" "UserCode\rs232.d" "UserCode\sdram.d" "UserCode\user_main.d" "hal\source\errata_SSWF021_45.d" "hal\source\esm.d" "hal\source\gio.d" "hal\source\het.d" "hal\source\mibspi.d" "hal\source\notification.d" "hal\source\pinmux.d" "hal\source\rti.d" "hal\source\sci.d" "hal\source\spi.d" "hal\source\sys_dma.d" "hal\source\sys_main.d" "hal\source\sys_pcr.d" "hal\source\sys_phantom.d" "hal\source\sys_pmm.d" "hal\source\sys_selftest.d" "hal\source\sys_startup.d" "hal\source\sys_vim.d" "hal\source\system.d" 
+	-$(RM) "hal\source\dabort.d" "hal\source\sys_core.d" "hal\source\sys_intvecs.d" "hal\source\sys_mpu.d" "hal\source\sys_pmu.d" 
+	-@echo 'Finished clean'
+	-@echo ' '
+
+.PHONY: all clean dependents
+.SECONDARY:
+
+-include ../makefile.targets
+

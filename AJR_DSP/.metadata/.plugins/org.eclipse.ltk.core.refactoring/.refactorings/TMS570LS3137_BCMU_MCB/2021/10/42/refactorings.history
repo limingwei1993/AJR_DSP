@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;TMS570LS3137_BCMU_MCB/UserCode/rs422.c&apos; to &apos;rs232.c&apos;" description="Rename resource &apos;rs422.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="UserCode/rs422.c" name="rs232.c" stamp="1633921332792" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;TMS570LS3137_BCMU_MCB/UserCode/rs422.h&apos; to &apos;rs232.h&apos;" description="Rename resource &apos;rs422.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="UserCode/rs422.h" name="rs232.h" stamp="1633921341513" updateReferences="true"/>
+</session>

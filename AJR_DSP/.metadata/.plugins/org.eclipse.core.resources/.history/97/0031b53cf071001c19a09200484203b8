@@ -1,0 +1,15 @@
+/*
+ * init.h
+ *
+ *  Created on: 2022Äê1ÔÂ5ÈÕ
+ *      Author: 15755
+ */
+
+#ifndef USERCODE_INIT_H_
+#define USERCODE_INIT_H_
+
+extern unsigned short Board_ID;
+
+
+
+#endif /* USERCODE_INIT_H_ */

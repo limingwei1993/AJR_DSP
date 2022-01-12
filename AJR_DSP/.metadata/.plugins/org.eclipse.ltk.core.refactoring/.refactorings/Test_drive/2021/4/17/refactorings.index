@@ -1,0 +1,7 @@
+1618910599375	Rename resource 'GPIO.c'
+1618920163060	Move 'main.c' to 'comm'
+1618922709147	Rename resource 'ADC_temperature.c'
+1618922718080	Rename resource 'ADC_temperature.h'
+1618998143620	Rename resource 'spi_temperature.c'
+1618998157258	Rename resource 'spi_temperature.h'
+1618998468989	Move 'spi_ADS8698.h' to 'comm'

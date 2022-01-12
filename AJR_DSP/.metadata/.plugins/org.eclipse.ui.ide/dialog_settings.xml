@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="DialogMarkerPropertiesDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="306"/>
+		<item key="DIALOG_Y_ORIGIN" value="224"/>
+		<item key="DIALOG_WIDTH" value="726"/>
+		<item key="DIALOG_HEIGHT" value="307"/>
+		<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="481"/>
+		<item key="DIALOG_Y_ORIGIN" value="246"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+</section>

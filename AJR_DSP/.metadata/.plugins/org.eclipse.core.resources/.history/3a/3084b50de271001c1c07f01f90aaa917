@@ -1,0 +1,36 @@
+/*
+ * init.c
+ *
+ *  Created on: 2022年1月5日
+ *      Author: 15755
+ */
+#include "user_main.h"
+/*******************************
+ * void initialization(void)
+ * 设备初始化。
+ ******************************/
+void initialization(void)
+{
+    _enable_interrupt_(); /*使能中断*/
+    _enable_IRQ();        /*使能中断*/
+    rtiInit();            /*初始化定时器*/
+    DAC5689_Init();       /*DAC5689初始化*/
+    gioInit();            /*I/O 初始化*/
+    muxInit();            /*引脚分配 初始化*/
+    Sdram_Init();         /*SDRAM总线 初始化*/
+    sciInit();            /*RS232 初始化*/
+    rtiEnableNotification(rtiNOTIFICATION_COMPARE0); /*使能定时器COMPARE0 5ms*/
+    rtiStartCounter(rtiCOUNTER_BLOCK0);  /*开始定时器BLOCK0计数*/
+    delay_ms(100);
+    canREG1->TIOC &=(~0x00000008);   /*can1_tx as i/o  to DSP_CL_N_SOV */
+    canREG1->TIOC |= 0x00000004;     /*can1_tx output */
+    canREG3->TIOC &=(~0x00000008);   /*can1_tx as i/o  to DSP_CL_AB_SW_SOL */
+    canREG3->TIOC |= 0x00000004;     /*can1_tx output */
+    SD_GPIO_Init();    /*SD卡I/O 口初始化*/
+    device_status_init();
+}
+
+void device_status_init(void)
+{
+
+}

@@ -1,0 +1,213 @@
+/*
+  ******************************************************************************
+  * @file    user_Main.c
+  * @author  JYS
+  * @version V1.0.0
+  * @date    2020-06-10
+  * @brief   Init
+  */
+
+#include "user_main.h"
+
+#include "string.h"
+#include "stdio.h"
+#define test_SD    0      /* 测试使用，置1后打开测试SD卡功能，置0则关闭*/
+#define test_SDRAM 1      /* 测试使用，置1后打开测试与FPGA通信的功能，置0则关闭*/
+#define test_DAC   0      /* 测试使用，置1后打开测试DAC功能，置0则关闭*/
+#define test_RS232 0      /* 测试使用，置1后打开测试RS232功能，置0则关闭*/
+#define test_SOV   0      /* 测试使用，置1后打开测试SOV功能，置0则关闭*/
+#define test_ABSW  0      /* 测试使用，置1后打开测试ABSW功能，置0则关闭*/
+uint8_t POWER_SOV = 0;    /* 测试使用，控制SOV参数*/
+uint8_t POWER_ABSW = 1;   /* 测试使用，控制ABSW参数*/
+
+RX_FPGA_DATA Receive_Machine_Parameters; /*从FPGA接收的设备状态参数*/
+TX_FPGA_DATA Transmit_Machine_Parameters;  /*发往FPGA控制设备状态的参数*/
+uint16_t MCB_Receive_Data[0x30] = {0};/* 接收来自FPGA的数据*/
+uint16_t MCB_Trismit_Data[20] = {0};/* 发送到FPGA的数据*/
+
+uint8_t test_DAC_1=0;     /*测试使用，置1控制DAC1*/
+uint8_t test_DAC_2=0;     /*测试使用，置1控制DAC2*/
+uint16_t DAC_ValueO = 0;  /*测试使用，输出DAC1的值*/
+uint16_t DAC_ValueI = 0;  /*测试使用，输出DAC1的值*/
+
+FATFS   fs;         /*测试使用，测试SD卡*/
+FIL     file;       /*测试使用，测试SD卡*/
+uint8_t test_sd_read=0;/*测试使用，置1读取SD卡*/
+uint8_t test_sd_write=0;/*测试使用，置1写数据到SD卡*/
+uint8_t sd_write_buff[120]={0};/*测试使用，写入SD卡的数据*/
+uint8_t sd_read_buff[120]={0};/*测试使用，保存从SD卡读取的数据*/
+uint8_t readlen=0;/*测试使用，从SD卡读取的数据长度*/
+uint8_t SDRAM_RxTx=0;     /*FPGA读写数据的标志*/
+inC_Brake test_inC;
+outC_Brake test_outC;
+void user_main(void)
+{
+    int i;
+    /*************以下初始化**************/
+
+    /*************以上初始化**************/
+    /*************以下测试程序，SD卡**************/
+#if test_SD==1
+    if(f_mount(&fs,"0:",1) != FR_OK)/*用于测试SD卡，挂在文件系统*/
+    {
+        RS232_Send(18,"\r\nSD_CARD_LOAD_ERR\r\n");/*测试使用，SD卡挂载失败，RS232上报*/
+    }
+    /*************以上测试SD卡**************/
+#endif
+    while (1)
+    {
+    /*************以下测试程序，ASSW**************/
+#if test_ABSW==1
+        /******以下测试程序，控制ABSW*******/
+        set_SOL(POWER_ABSW);
+        /******以上测试程序，控制*******/
+#endif
+    /*************以上测试程序，ASSW**************/
+    /*************以下测试程序，SOV**************/
+#if test_SOV==1
+        /******以下测试程序，控制SOV*******/
+        set_SOV(POWER_SOV);
+        /******以上测试程序，控制*******/
+#endif
+   /*************以上测试程序，SOV**************/
+   /*************以下测试程序，SD卡**************/
+#if test_SD==1
+        /******以下测试程序，SD卡*******/
+        if(test_sd_write==1)/*测试使用，写数据到SD卡*/
+       {
+          f_open (&file,  (const TCHAR *)"0:30.txt",  FA_OPEN_ALWAYS | FA_WRITE);  /*新建文件并打开*/
+          for(i=0;i<100;i++)  /*给往SD卡写的数据赋值*/
+          {
+              if(sd_write_buff[i]<0xff)
+               sd_write_buff[i]=sd_write_buff[i]+0x30;
+              else
+                  sd_write_buff[i]=0;
+          }
+          f_puts(sd_write_buff, &file); /*写数据到缓存*/
+          f_sync(&file);  /*将缓存区的数据写到文件*/
+          f_close (&file); /*关闭文件*/
+          test_sd_write=0; /*此次写数据到SD卡结束*/
+       }
+        if(test_sd_read==1)/*测试使用，从SD卡读取数据*/
+        {
+            f_open (&file,  (const TCHAR *)"0:30.txt",FA_READ); /*打开文件*/
+            f_read (&file, sd_read_buff, 100, &readlen); /*读数据*/
+            f_close (&file); /*关闭文件*/
+            test_sd_read=0;  /*此次读数据从SD卡结束*/
+            for(i=0;i<100;i++) /*比较读写SD卡的数据*/
+            {
+                 if(sd_read_buff[i]!=sd_write_buff[i])  /*比较SD卡的读写是否一致，不一致上报错误信息。*/
+                 {
+                     RS232_Send(18,"\r\nsd_write_buff=\r\n");
+                     RS232_Send(100,sd_write_buff);
+                     RS232_Send(17,"\r\nsd_read_buff=\r\n");
+                     RS232_Send(100,sd_read_buff);
+                     i=100;
+                 }
+            }
+        }
+        /******以上测试程序，SD卡*******/
+#endif
+      /*************以上测试程序，SD卡**************/
+      /*************以下与FPGA通信**************/
+#if test_SDRAM==1
+        /******以下读FPGA*******/
+        if(SDRAM_RxTx==1) /*5ms*/
+        {
+
+            /**/
+            test_inC.APPData.Aircraft_Data.Airspeed=Receive_Machine_Parameters.RX_429_Communication.Airspeed;
+            test_inC.APPData.Aircraft_Data.AircraftAcceleration_Left=Receive_Machine_Parameters.RX_429_Communication.AircraftAcceleration_Left;
+            test_inC.APPData.Aircraft_Data.AircraftAcceleration1_Right=Receive_Machine_Parameters.RX_429_Communication.AircraftAcceleration1_Right;
+            test_inC.APPData.Aircraft_Data.SpoilerStoredSignal_Left=Receive_Machine_Parameters.SpoilerStoredSignal_Left;
+            test_inC.APPData.Aircraft_Data.SpoilerStoredSignal_Right=Receive_Machine_Parameters.SpoilerStoredSignal_Right;
+            test_inC.APPData.WOWData.LeftWOW=Receive_Machine_Parameters.LeftWOW;
+            test_inC.APPData.WOWData.RightWOW=Receive_Machine_Parameters.RightWOW;
+            test_inC.APPData.WOWData.zong=Receive_Machine_Parameters.zong;
+            test_inC.APPData.WOWData.NLGWOW=Receive_Machine_Parameters.NLGWOW;
+            test_inC.APPData.PedalData.LeftCptPedal= Receive_Machine_Parameters.LeftCptPedal;
+            test_inC.APPData.PedalData.RightCptPedal=Receive_Machine_Parameters.RightCptPedal ;
+            test_inC.APPData.PedalData.LeftPPedal=Receive_Machine_Parameters.LeftPPedal ;
+            test_inC.APPData.PedalData.RightPPedal=Receive_Machine_Parameters.RightPPedal ;
+            test_inC.APPData.PedalData.MaxPedal=Receive_Machine_Parameters.MaxPedal ;
+            test_inC.APPData.ThrottleData.LeftThrottleIdle=Receive_Machine_Parameters.LeftThrottleIdle ;
+            test_inC.APPData.ThrottleData.RightThrottleIdle=Receive_Machine_Parameters.RightThrottleIdle ;
+            test_inC.APPData.ThrottleData.ThrottleIdleAtLeastOne=Receive_Machine_Parameters.ThrottleIdleAtLeastOne ;
+            test_inC.APPData.ThrottleData.ThrottleIdleBoth=Receive_Machine_Parameters.ThrottleIdleBoth ;
+            test_inC.APPData.LGData.LG_GearDown_Locked=Receive_Machine_Parameters.RX_429_Communication.LG_GearDown_Locked;
+            test_inC.APPData.LGData.LandingGearExtentionandRetractionCommand=Receive_Machine_Parameters.LandingGearExtentionandRetractionCommand;
+            test_inC.APPData.AutoBrakeData.AutoBRK_OFF=Receive_Machine_Parameters.AutoBRK_OFF ;
+            test_inC.APPData.AutoBrakeData.AutoBRK_LOW=Receive_Machine_Parameters.AutoBRK_LOW ;
+            test_inC.APPData.AutoBrakeData.AutoBRK_MED=Receive_Machine_Parameters.AutoBRK_MED ;
+            test_inC.APPData.AutoBrakeData.AutoBRK_HI=Receive_Machine_Parameters.AutoBRK_HI ;
+            test_inC.APPData.AutoBrakeData.AutoBRK_RTO=Receive_Machine_Parameters.AutoBRK_RTO ;
+            test_inC.APPData.WheelSpeedData.LeftWheelSpeed=Receive_Machine_Parameters.LeftWheelSpeed ;
+            test_inC.APPData.WheelSpeedData.RightWheelSpeed=Receive_Machine_Parameters.RightWheelSpeed ;
+            test_inC.APPData.WheelSpeedData.WheelSpeed_av=Receive_Machine_Parameters.WheelSpeed_av ;
+
+
+            /******以上，读FPGA*******/
+            Brake(&test_inC, &test_outC);
+        /******以下，写FPGA*******/
+
+
+            /**/
+            Transmit_Machine_Parameters.SOV_Open=test_outC.Output.SOV_Open;
+            Transmit_Machine_Parameters.BrakePressureCommand_L=test_outC.Output.BrakePressureCommand_L;
+            Transmit_Machine_Parameters.BrakePressureCommand_R=test_outC.Output.BrakePressureCommand_R;
+            Transmit_Machine_Parameters.CoilEnergized=test_outC.Output.BrakeAutoBKOut.CoilEnergized;
+             SDRAM_RxTx=0;
+        }
+        /******以上写FPGA*******/
+#endif
+       /*************以上与FPGA通信**************/
+       /*************以下测试程序，DAC**************/
+#if test_DAC==1
+        /******以下测试程序，控制DAC*******/
+        if(test_DAC_1==1) /*测试DAC1*/
+        {
+            DAC5689_SetVoltage_mv(DAC_O,DAC_ValueO);
+        }
+        if(test_DAC_2==1)/*测试DAC2*/
+        {
+
+            DAC5689_SetVoltage_mv(DAC_I,DAC_ValueI);
+        }
+        /******以上测试程序，控制DAC*******/
+#endif
+        /*************以上测试程序，DAC**************/
+        /*************以下测试程序，RS232**************/
+#if test_RS232==1
+        /*******以下测试RS232****************8*/
+        if(rs232_send_len !=rs232_recive_len)  /*RS232有接收到新的数据。将新接收的数据发送出去*/
+        {
+
+            if(rs232_recive_len>rs232_send_len)
+            {
+              RS232_Send(rs232_recive_len-rs232_send_len,&temp_Recive_buf[rs232_send_len]);
+              rs232_send_len=rs232_recive_len;
+
+            }
+            else if(rs232_recive_len<rs232_send_len)
+            {
+              RS232_Send(1000-rs232_send_len,&temp_Recive_buf[rs232_send_len]);
+              RS232_Send(rs232_recive_len,&temp_Recive_buf[0]);
+              rs232_send_len=rs232_recive_len;
+            }
+
+        }
+        /*******以上测试RS232****************8*/
+#endif
+        /*************以上测试程序，RS232**************/
+    }
+}
+/**********************
+ * void SD_GPIO_Init(void)
+ * SD卡的I/O口初始化
+ * ********************/
+void SD_GPIO_Init(void)
+{
+    spiREG3->PC0 &=(~0x00000fff);    /*mbspi cs ENA CLK SIMO SOMI as i/o  to SCLK CS MOSI MISO     0--GPIO*/
+    spiREG3->PC1 |=0x00000806;       /*mbspi_clkx output     0--INPUT  1--OUTPUT*/
+    spiREG3->PC1 &=(~0x00000100);       /*mbspi_clkx output     0--INPUT  1--OUTPUT*/
+}

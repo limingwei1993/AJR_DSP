@@ -1,0 +1,40 @@
+/*
+ * Device_control.c
+ *
+ *  Created on: 2022年1月11日
+ *      Author: 15755
+ */
+#include "global_Init.h"
+#include "reg_can.h"
+/***************************
+ * void set_SOV(uint8_t statue)
+ * 设置SOV信号
+ * statue：信号高低状态
+ * **************************/
+void set_SOV(uint8_t statue)
+{
+   if(statue==0)
+    {
+       canREG1->TIOC &=(~0x00000002);
+    }
+    else
+    {
+        canREG1->TIOC |=0x00000002;
+    }
+}
+/***************************
+ * void set_SOL(uint8_t statue)
+ * 设置ABSW信号
+ * statue：信号高低状态
+ * **************************/
+void set_SOL(uint8_t statue)
+{
+   if(statue==0)
+    {
+       canREG3->TIOC &=(~0x00000002);
+    }
+    else
+    {
+        canREG3->TIOC |=0x00000002;
+    }
+}

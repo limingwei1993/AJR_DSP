@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Test_drive/comm/spi_ADS8698.c&apos; to &apos;spi_ADS1258.c&apos;" description="Rename resource &apos;spi_ADS8698.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="comm/spi_ADS8698.c" name="spi_ADS1258.c" stamp="1622615817167" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Test_drive/comm/spi_ADS8698.h&apos; to &apos;spi_ADS1258.h&apos;" description="Rename resource &apos;spi_ADS8698.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="comm/spi_ADS8698.h" name="spi_ADS1258.h" stamp="1622615827377" updateReferences="true"/>
+</session>

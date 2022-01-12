@@ -1,0 +1,93 @@
+/*
+ * sdram.h
+ *
+ *  Created on: 2020Äê9ÔÂ12ÈÕ
+ *      Author: liaot
+ */
+
+#ifndef USERCODE_SDRAM_H_
+#define USERCODE_SDRAM_H_
+#include "global_Init.h"
+
+/*[#define][MCB]*/
+/*SPI-Read(1 - 31)*/
+#define       ADDR_ADC_N_SOV       0x01
+#define       ADDR_ADC_ABSW_SOL    0x02
+#define       ADDR_ADC_ACCPT_SIG   0x03
+#define       ADDR_429_RX1_DH      0x04
+#define       ADDR_429_RX1_DL      0x05
+#define       ADDR_429_RX2_DH      0x06
+#define       ADDR_429_RX2_DL      0x07
+#define       ADDR_429_RX3_DH      0x08
+#define       ADDR_429_RX3_DL      0x09
+#define       ADDR_CAN_RX_DATA     0x0A
+#define       ADDR_LVDT_RX_DATA    0x0B
+#define       ADDR_PBSW_PWM_SIG    0x0C
+#define       ADDR_IO_VALUE_GET    0x0D
+#define       ADDR_BIT_SW_GET      0x0E
+/*SPI-Write(1 - 31)*/
+#define       ADDR_429_TX1_DH      0x01
+#define       ADDR_429_TX1_DL      0x02
+#define       ADDR_429_TX2_DH      0x03
+#define       ADDR_429_TX2_DL      0x04
+#define       ADDR_429_TX3_DH      0x05
+#define       ADDR_429_TX3_DL      0x06
+#define       ADDR_CAN_TX_DATA     0x07
+#define       ADDR_LVDT_TX_DATA    0x08
+
+
+/*[Parameter][DAB]*/
+/*SPI-Read(1 - 128)*/
+#define       ADDR_ADC_LO_TEMP     0x01
+#define       ADDR_ADC_LI_TEMP     0x02
+#define       ADDR_ADC_RO_TEMP     0x03
+#define       ADDR_ADC_RI_TEMP     0x04
+#define       ADDR_ADC_LO_TEMPC    0x05
+#define       ADDR_ADC_LI_TEMPC    0x06
+#define       ADDR_ADC_RO_TEMPC    0x07
+#define       ADDR_ADC_RI_TEMPC    0x08
+#define       ADDR_ADC_PBV         0x09
+#define       ADDR_IO_GET          0x0A
+/*SPI-Write(1 - 128)*/
+#define       ADDR_IO_SET          0x01
+
+
+/*[Parameter - BCB]*/
+/*SPI-Read(1 - 128)*/
+#define        ADDR_DAC1_GET       0x01
+#define        ADDR_DAC2_GET       0x02
+#define        ADDR_ADC_PIL_LVDT   0x03
+#define        ADDR_ADC_COP_LVDT   0x04
+#define        ADDR_ADC_xO_PT      0x05
+#define        ADDR_ADC_xI_PT      0x06
+#define        ADDR_ADC_xO_BCV     0x07
+#define        ADDR_ADC_xI_BCV     0x08
+#define        ADDR_xO_WST         0x09
+#define        ADDR_xI_WST         0x0A
+//SPI-Write(1 - 128)
+#define        ADDR_DAC1_SET       0x01
+#define        ADDR_DAC2_SET       0x02
+
+typedef enum
+{
+  MCB = 0,
+  DAB,
+  BCB_L,
+  BCB_R
+}SDRAM_BOARD;
+
+uint8_t GetBit(int data, int index);
+extern void Sdram_Init(void);
+extern void SDRAM_Write_Data(uint8_t Addr, uint16_t Data);
+extern uint8_t SDRAM_Read_Data(uint8_t Addr,uint16_t *Read_data);
+uint8_t PrityGet(uint16_t data);
+void set_sdram_clk(uint8_t statue);
+void can2_tx_SetBit(uint8_t statue);
+uint16_t get_sdram_DATA_A12( void);
+void set_sdram_DATA_A12(uint8_t statue);
+void set_sdram_cs(uint8_t statue);
+void set_SOL(uint8_t statue);
+void set_SOV(uint8_t statue);
+void SDRAM_Set_IO_To_Write_Mode(void);
+void SDRAM_Set_IO_To_Read_Mode(void);
+#endif /* USERCODE_SDRAM_H_ */

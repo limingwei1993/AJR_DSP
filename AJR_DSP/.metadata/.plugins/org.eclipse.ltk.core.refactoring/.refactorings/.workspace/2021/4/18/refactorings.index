@@ -1,0 +1,7 @@
+1619345515962	Delete resource 'test_ecc'
+1619345793530	Delete resource 'test_ecc/main.c'
+1619408744151	Delete resource 'test_ecc/flash/Types.h'
+1619408811143	Delete resource 'test_ecc/flash/F021.h'
+1619418403912	Delete resource 'test_ecc/communication/user_Main.c'
+1619418408314	Delete resource 'test_ecc/communication/user_Main.h'
+1619418629525	Delete resource 'test_ecc/source/sys_startup.c'
