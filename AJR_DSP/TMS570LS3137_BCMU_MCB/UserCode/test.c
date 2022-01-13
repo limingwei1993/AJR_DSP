@@ -66,36 +66,42 @@ void Write_Data_Process(uint16_t Addr,uint16_t value)
     unsigned char i=0;
     unsigned char respond_frame[20]={0};
     unsigned char frame_len=0;
-    unsigned char read_data=0;
     for(i=0;i<Device_DATA_LEN;i++)
     {
         if(MCB_Data[i].Addr==(Addr&0x0fff))
         {
-            respond_frame[frame_len++]=0xAA;
-            respond_frame[frame_len++]=WRITE_DATA;
-            respond_frame[frame_len++]=(unsigned char)((Addr>>0)&0xff);
-            respond_frame[frame_len++]=(unsigned char)((Addr>>8)&0xff);
-            if(((Addr>>12) &0x0001)==1)
+            if(Addr==0x46)
             {
-                MCB_Data[i].value &=0x0000ffff;
-                MCB_Data[i].value |=((value<<16)&0xffff0000);
-                respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>16)&0xff);
-                respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>24)&0xff);
+                SD_Process_Flag=1;
+                File_Name=value;
+                SD_Process_Mode=SD_WRITE;
             }
             else
             {
-                MCB_Data[i].value &=0xffff0000;
-                MCB_Data[i].value |=((value<<0)&0x0000ffff);
-                respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>0)&0xff);
-                respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>8)&0xff);
+                respond_frame[frame_len++]=0xAA;
+                respond_frame[frame_len++]=WRITE_DATA;
+                respond_frame[frame_len++]=(unsigned char)((Addr>>0)&0xff);
+                respond_frame[frame_len++]=(unsigned char)((Addr>>8)&0xff);
+                if(((Addr>>12) &0x0001)==1)
+                {
+                    MCB_Data[i].value &=0x0000ffff;
+                    MCB_Data[i].value |=((value<<16)&0xffff0000);
+                    respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>16)&0xff);
+                    respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>24)&0xff);
+                }
+                else
+                {
+                    MCB_Data[i].value &=0xffff0000;
+                    MCB_Data[i].value |=((value<<0)&0x0000ffff);
+                    respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>0)&0xff);
+                    respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>8)&0xff);
+                }
+                respond_frame[frame_len++]=CRC_AND(respond_frame,frame_len);
+                respond_frame[frame_len++]=0x55;
+                RS232_Send(frame_len,respond_frame);
+
+
             }
-            if(Addr==0x46)
-            {
-                SD_Process(SD_WRITE,value,&read_data);
-            }
-            respond_frame[frame_len++]=CRC_AND(respond_frame,frame_len);
-            respond_frame[frame_len++]=0x55;
-            RS232_Send(frame_len,respond_frame);
             break;
         }
     }
@@ -111,35 +117,36 @@ void Read_Data_Process(uint16_t Addr,uint16_t value)
     unsigned char i=0;
     unsigned char respond_frame[20]={0};
     unsigned char frame_len=0;
-    unsigned char read_data=0;
     for(i=0;i<Device_DATA_LEN;i++)
     {
         if(MCB_Data[i].Addr==(Addr&0x0fff))
         {
-            respond_frame[frame_len++]=0xAA;
-            respond_frame[frame_len++]=READ_DATA;
-            respond_frame[frame_len++]=(unsigned char)((Addr>>0)&0xff);
-            respond_frame[frame_len++]=(unsigned char)((Addr>>8)&0xff);
-            if(((Addr>>12) &0x0001)==1)
+            if(Addr==0x46)
             {
-                respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>16)&0xff);
-                respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>24)&0xff);
+                SD_Process_Flag=1;
+                File_Name=value;
+                SD_Process_Mode=SD_READ;
             }
             else
             {
-                respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>0)&0xff);
-                respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>8)&0xff);
+                respond_frame[frame_len++]=0xAA;
+                respond_frame[frame_len++]=READ_DATA;
+                respond_frame[frame_len++]=(unsigned char)((Addr>>0)&0xff);
+                respond_frame[frame_len++]=(unsigned char)((Addr>>8)&0xff);
+                if(((Addr>>12) &0x0001)==1)
+                {
+                    respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>16)&0xff);
+                    respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>24)&0xff);
+                }
+                else
+                {
+                    respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>0)&0xff);
+                    respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>8)&0xff);
+                }
+                respond_frame[frame_len++]=CRC_AND(respond_frame,frame_len);
+                respond_frame[frame_len++]=0x55;
+                RS232_Send(frame_len,respond_frame);
             }
-            if(Addr==0x46)
-            {
-                SD_Process(SD_READ,value,&read_data);
-                frame_len-=2;
-                respond_frame[frame_len++]=read_data;
-                respond_frame[frame_len++]=0;
-            }
-            respond_frame[frame_len++]=CRC_AND(respond_frame,frame_len);
-            respond_frame[frame_len++]=0x55;
-            RS232_Send(frame_len,respond_frame);
             break;
         }
     }
@@ -151,13 +158,15 @@ void Read_Data_Process(uint16_t Addr,uint16_t value)
  * value：传入的值（文件名）
  * readdata：保存读取的值
  * ****************************/
-void SD_Process(uint8_t Read_Write,uint16_t value,uint8_t * readdata)
+void SD_Process(uint8_t Read_Write,uint16_t value)
 {
     static char dir[30] = {0};
     char test_buff[SD_TEST_LEN] = {0};
-    unsigned char temp =0;
+    unsigned char temp =1;
     unsigned int write_success_len =0;
     unsigned short i=0;
+    unsigned char respond_frame[20]={0};
+    unsigned char frame_len=0;
     FRESULT res=FR_OK;
     if(sd_card_status!=Fatfs_Load_Success)
        return;
@@ -175,7 +184,19 @@ void SD_Process(uint8_t Read_Write,uint16_t value,uint8_t * readdata)
             f_sync(&file);
             f_close(&file);
         }
-        *readdata=0;
+        else
+        {
+            return;
+        }
+        respond_frame[frame_len++]=0xAA;
+        respond_frame[frame_len++]=WRITE_DATA;
+        respond_frame[frame_len++]=(unsigned char)((ADDR_SD_CARD>>0)&0xff);
+        respond_frame[frame_len++]=(unsigned char)((ADDR_SD_CARD>>8)&0xff);
+        respond_frame[frame_len++]=(unsigned char)((value>>0)&0xff);
+        respond_frame[frame_len++]=(unsigned char)((value>>8)&0xff);
+        respond_frame[frame_len++]=CRC_AND(respond_frame,frame_len);
+        respond_frame[frame_len++]=0x55;
+        RS232_Send(frame_len,respond_frame);
     }
     else if(Read_Write==SD_READ)
     {
@@ -184,14 +205,27 @@ void SD_Process(uint8_t Read_Write,uint16_t value,uint8_t * readdata)
             test_buff[i]=0;
         }
         sprintf(dir,"0:%d.txt",value);
-        f_open (&file,  (const TCHAR *)dir,  FA_OPEN_EXISTING  |FA_READ);  /*新建文件并打开*/
+        f_open (&file,  (const TCHAR *)dir, FA_READ);  /*新建文件并打开*/
         if(res==FR_OK)
         {
             f_gets(test_buff,10,&file);
             f_close(&file);
         }
-        *readdata=test_buff[0];
+        else
+        {
+            return;
+        }
+        respond_frame[frame_len++]=0xAA;
+        respond_frame[frame_len++]=READ_DATA;
+        respond_frame[frame_len++]=(unsigned char)((ADDR_SD_CARD>>0)&0xff);
+        respond_frame[frame_len++]=(unsigned char)((ADDR_SD_CARD>>8)&0xff);
+        respond_frame[frame_len++]=(unsigned char)((test_buff[0]>>0)&0xff);
+        respond_frame[frame_len++]=(unsigned char)((test_buff[0]>>8)&0xff);
+        respond_frame[frame_len++]=CRC_AND(respond_frame,frame_len);
+        respond_frame[frame_len++]=0x55;
+        RS232_Send(frame_len,respond_frame);
     }
+
 
 }
 

@@ -9,6 +9,9 @@
 
 #include "user_main.h"
 uint8_t SDRAM_RxTx=0;     /*FPGA读写数据的标志*/
+uint8_t SD_Process_Flag=0;
+uint8_t SD_Process_Mode=0;
+uint16_t File_Name=0;
 void user_main(void)
 {
     initialization();
@@ -28,6 +31,11 @@ void user_main(void)
         }
         Signal_Output_Control();
       //  SdCard_Maintenance();
+        if(SD_Process_Flag==1)
+        {
+            SD_Process_Flag=0;
+           SD_Process(SD_Process_Mode,File_Name);
+        }
     }
 }
 

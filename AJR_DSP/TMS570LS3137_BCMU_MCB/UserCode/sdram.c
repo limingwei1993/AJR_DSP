@@ -196,7 +196,7 @@ void SDRAM_Read(void)
             break;
             case ADDR_INNER_WHEEL_ABS_START_SIGNAL:
             {
-              // Receive_Machine_Parameters.=MCB_Data[i].value;
+               Receive_Machine_Parameters.Inner_wheel_ABS_start_signal=MCB_Data[i].value;
             }
             break;
             case ADDR_INBOARD_SHUTOFF_VALVE_CURRENT:
@@ -489,7 +489,7 @@ void SDRAM_Write(void)
               break;
              case ADDR_SPINUP_SIGNAL:
             {
-               MCB_Data[i].value=(Transmit_Machine_Parameters.INBD_LT_SPINUP>0 ? 0x01:0x00)| (Transmit_Machine_Parameters.INBD_RT_SPINUP>0 ? 0x02:0x00);
+               MCB_Data[i].value=(Transmit_Machine_Parameters.INBD_LT_SPINUP>0 ? 0x01:0x00)| (Transmit_Machine_Parameters.INBD_RT_SPINUP>0 ? 0x02:0x00) | (Transmit_Machine_Parameters.ARM_SIG>0 ? 0x03:0x00);
             }
             break;
             default:

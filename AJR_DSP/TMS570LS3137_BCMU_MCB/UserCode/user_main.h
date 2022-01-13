@@ -152,6 +152,9 @@ typedef  struct TX_FPGA_DATA
 
 extern RX_FPGA_DATA Receive_Machine_Parameters; /*从FPGA接收的设备状态参数*/
 extern TX_FPGA_DATA Transmit_Machine_Parameters;  /*发往FPGA控制设备状态的参数*/
+extern uint8_t SD_Process_Flag;
+extern uint16_t File_Name;
+extern uint8_t SD_Process_Mode;
 extern void user_main(void);
 void SD_GPIO_Init(void);
 extern uint8_t SDRAM_RxTx;
