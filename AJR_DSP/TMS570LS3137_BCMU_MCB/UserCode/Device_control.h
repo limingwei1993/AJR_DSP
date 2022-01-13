@@ -7,10 +7,25 @@
 
 #ifndef USERCODE_DEVICE_CONTROL_H_
 #define USERCODE_DEVICE_CONTROL_H_
+typedef enum
+{
+    NORMAL_MODE = 0x000,
+    TEST_MODE=0x001,
+}WORK_MODE;
+typedef  struct Device_status_s
+{
+    unsigned char Master_Salve_mode;
+    unsigned char Bench_Mode;
+    unsigned char SOV_Status;
+    unsigned char ABSW_Status;
+    unsigned int BrakePressureCommand_L;
+    unsigned int BrakePressureCommand_R;
+    unsigned char Work_Mode;
+}Device_status_d;
 
-void set_SOL(uint8_t statue);
-void set_SOV(uint8_t statue);
+extern Device_status_d device_status;
+void Set_ABSW(uint8_t statue);
+void Set_SOV(uint8_t statue);
 void Data_interaction(void);
-void Data_interaction(void);
-void RS232_Process(uint8_t *frame_data);
+void Signal_Output_Control(void);
 #endif /* USERCODE_DEVICE_CONTROL_H_ */

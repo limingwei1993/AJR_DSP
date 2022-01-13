@@ -1,0 +1,53 @@
+/*
+  ******************************************************************************
+  * @file    user_Main.c
+  * @author  JYS
+  * @version V1.0.0
+  * @date    2020-06-10
+  * @brief   Init
+  */
+
+#include "user_main.h"
+
+#define test_SD    0      /* 测试使用，置1后打开测试SD卡功能，置0则关闭*/
+#define test_SDRAM 1      /* 测试使用，置1后打开测试与FPGA通信的功能，置0则关闭*/
+#define test_DAC   0      /* 测试使用，置1后打开测试DAC功能，置0则关闭*/
+#define test_RS232 0      /* 测试使用，置1后打开测试RS232功能，置0则关闭*/
+#define test_SOV   0      /* 测试使用，置1后打开测试SOV功能，置0则关闭*/
+#define test_ABSW  0      /* 测试使用，置1后打开测试ABSW功能，置0则关闭*/
+uint8_t POWER_SOV = 0;    /* 测试使用，控制SOV参数*/
+uint8_t POWER_ABSW = 1;   /* 测试使用，控制ABSW参数*/
+uint8_t test_DAC_1=0;     /*测试使用，置1控制DAC1*/
+uint8_t test_DAC_2=0;     /*测试使用，置1控制DAC2*/
+uint16_t DAC_ValueO = 0;  /*测试使用，输出DAC1的值*/
+uint16_t DAC_ValueI = 0;  /*测试使用，输出DAC1的值*/
+FATFS   fs;         /*测试使用，测试SD卡*/
+FIL     file;       /*测试使用，测试SD卡*/
+uint8_t test_sd_read=0;/*测试使用，置1读取SD卡*/
+uint8_t test_sd_write=0;/*测试使用，置1写数据到SD卡*/
+uint8_t sd_write_buff[120]={0};/*测试使用，写入SD卡的数据*/
+uint8_t sd_read_buff[120]={0};/*测试使用，保存从SD卡读取的数据*/
+uint8_t readlen=0;/*测试使用，从SD卡读取的数据长度*/
+uint8_t SDRAM_RxTx=0;     /*FPGA读写数据的标志*/
+
+void user_main(void)
+{
+    initialization();
+    while (1)
+    {
+        if(SDRAM_RxTx==1) /*5ms*/
+        {
+            if(device_status.Work_Mode==NORMAL_MODE)
+            {
+                Data_interaction();
+            }
+            else
+            {
+                Test_Sdram_Data_Process();
+            }
+            SDRAM_RxTx=0;
+        }
+        Signal_Output_Control();
+    }
+}
+

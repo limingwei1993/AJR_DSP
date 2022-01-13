@@ -5,8 +5,7 @@
   * @version V1.0.0
   * @date    2020-06-10
   */
-#include "dac5689.h"
-
+#include "user_main.h"
 spiDAT1_t dataconfig1;
 unsigned char InputBuf[10]={0x00,0x00,0x00};
 unsigned char OutputBuf[10]={0x00,0x00,0x00};

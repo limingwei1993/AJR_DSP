@@ -18,8 +18,9 @@
 /
 /----------------------------------------------------------------------------*/
 #include "ff.h"	/* Declarations of FatFs API */
-
-
+#include "diskio.h"
+#include "stdio.h"
+#include "string.h"
 /*--------------------------------------------------------------------------
 
    Module Private Definitions

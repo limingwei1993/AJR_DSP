@@ -5,9 +5,7 @@
  *      Author: 15755
  */
 
-#include "sci.h"
-#include "rs232.h"
-#include "Device_control.h"
+#include "user_main.h"
 uint8_t temp_Recive_buf[10]={0}; /*保存接收到的数据*/
 uint8_t rs232_recive_len=0; /*保存接收到的数据的位置*/
 /**************************
@@ -58,11 +56,11 @@ void sciNotification(sciBASE_t *sci, uint32 flags)
             }
             else if(rs232_recive_len>0)
             {
-                temp_Recive_buf[0]=revice_data;
+                temp_Recive_buf[rs232_recive_len]=revice_data;
                 rs232_recive_len++;
                 if(rs232_recive_len>=8)
                 {
-                   if( CRC_AND(temp_Recive_buf,6)==temp_Recive_buf[7])
+                   if( CRC_AND(temp_Recive_buf,6)==temp_Recive_buf[6])
                    {
                        RS232_Process(temp_Recive_buf);
                    }
@@ -70,12 +68,6 @@ void sciNotification(sciBASE_t *sci, uint32 flags)
                 }
             }
 
-        }
-        else if (flags == SCI_TX_INT)
-        {
-        }
-        else
-        {
         }
     }
 }

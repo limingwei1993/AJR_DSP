@@ -5,9 +5,7 @@
  *      Author: liaot
  */
 
-#include "sdram.h"
-#include "reg_can.h"
-#include "reg_mibspi.h"
+#include "user_main.h"
 SDRAM_DATA MCB_Data[DATA_LEN];/* 接收来自FPGA的数据*/
 /**************************************
  * void Sdram_Init(void)

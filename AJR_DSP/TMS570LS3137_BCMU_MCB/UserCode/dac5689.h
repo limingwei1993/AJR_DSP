@@ -8,7 +8,7 @@
 #ifndef __DAC5689_H_
 #define __DAC5689_H_
 #include "global_Init.h"
-
+#include "spi.h"
 
 #define REG_WRITE_TO_INPUTREG               0x100000    //Command 1: Write to input register n (LDAC dependent)
 #define REG_UPDATE_DACREG_WITH_INPUTREG     0x200000    //Command 2: Update DAC register with Input register
@@ -21,8 +21,8 @@
 #define REG_READBACK                        0x900000    //Command 9: Setup readback register(Readback enable)
 
 //DAC SELECTION ADDRESS BITS
-#define DAC_O   0x010000    // Selects DAC A
-#define DAC_I   0x080000    // Selects DAC B
+#define DAC_R   0x010000    // Selects DAC A
+#define DAC_L   0x080000    // Selects DAC B
 #define DAC_ALL 0x090000    // Selects DAC A and DAC B
 
 //Daisy Chain Enable REGISTER

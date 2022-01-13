@@ -8,7 +8,7 @@
 /*-----------------------------------------------------------------------*/
 
 #include "diskio.h"		/* Declarations of disk functions */
-
+#include "sdcard.h"
 
 
 /* Definitions of physical drive number for each drive */

@@ -8,6 +8,7 @@
 unsigned short Board_ID=0;
 unsigned short SDRAM_READ_DATA_LEN=0;
 unsigned short SDRAM_WRITE_DATA_LEN=0;
+unsigned short Device_DATA_LEN=0;
 /*******************************
  * void initialization(void)
  * 设备初始化。
@@ -22,15 +23,14 @@ void initialization(void)
     muxInit();            /*引脚分配 初始化*/
     Sdram_Init();         /*SDRAM总线 初始化*/
     sciInit();            /*RS232 初始化*/
+    delay_ms(100);
+    SD_GPIO_Init();    /*SD卡I/O 口初始化*/
+    Other_GPIO_Init();
+    device_status_init();
+    Get_Master_Slave();
+    Get_Bench_Mode();
     rtiEnableNotification(rtiNOTIFICATION_COMPARE0); /*使能定时器COMPARE0 5ms*/
     rtiStartCounter(rtiCOUNTER_BLOCK0);  /*开始定时器BLOCK0计数*/
-    delay_ms(100);
-    canREG1->TIOC &=(~0x00000008);   /*can1_tx as i/o  to DSP_CL_N_SOV */
-    canREG1->TIOC |= 0x00000004;     /*can1_tx output */
-    canREG3->TIOC &=(~0x00000008);   /*can1_tx as i/o  to DSP_CL_AB_SW_SOL */
-    canREG3->TIOC |= 0x00000004;     /*can1_tx output */
-    SD_GPIO_Init();    /*SD卡I/O 口初始化*/
-    device_status_init();
 }
 /**********************
  * void device_status_init(void)
@@ -308,7 +308,7 @@ void device_status_init(void)
     MCB_Data[add_num++].value=0;
     MCB_Data[add_num].Addr=ADDR_DSP_MODE;
     MCB_Data[add_num++].value=0;
-
+    Device_DATA_LEN=add_num;
     Receive_Machine_Parameters.Right_Inboard_Brake_Control_Valve_Current=0;
     Receive_Machine_Parameters.Left_Inboard_Brake_Control_Valve_Current=0;
     Receive_Machine_Parameters.Inboard_Shutoff_Valve_Current=0;
@@ -405,6 +405,13 @@ void device_status_init(void)
     Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_351=0;
     Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_352=0;
     Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_353=0;
+    device_status.Work_Mode=NORMAL_MODE;
+    device_status.Bench_Mode=0;
+    device_status.Master_Salve_mode=INBOARD;
+    device_status.ABSW_Status=0;
+    device_status.SOV_Status=0;
+    device_status.BrakePressureCommand_L=0;
+    device_status.BrakePressureCommand_R=0;
 }
 
 
@@ -417,4 +424,56 @@ void SD_GPIO_Init(void)
     spiREG3->PC0 &=(~0x00000fff);    /*mbspi cs ENA CLK SIMO SOMI as i/o  to SCLK CS MOSI MISO     0--GPIO*/
     spiREG3->PC1 |=0x00000806;       /*SD_CLK 、 SD_CMD 、SD_ output 、SD_DATA3  output     0--INPUT  1--OUTPUT*/
     spiREG3->PC1 &=(~0x00000101);    /*SD_DAT0 、SD_CD                          INtput     0--INPUT  1--OUTPUT*/
+}
+
+/**********************
+ * void Other_GPIO_Init(void)
+ * 其它I/O口的配置
+ * ********************/
+void Other_GPIO_Init(void)
+{
+    canREG1->TIOC &=(~0x00000008);   /*can1_tx as i/o  to DSP_CL_N_SOV */
+    canREG1->TIOC |= 0x00000004;     /*can1_tx output */
+    canREG3->TIOC &=(~0x00000008);   /*can3_tx as i/o  to DSP_CL_AB_SW_SOL */
+    canREG3->TIOC |= 0x00000004;     /*can3_tx output */
+    canREG3->RIOC &=(~0x0000000C);   /*can3_rx as i/o  to DSP_M_S_MODE  intput*/
+    canREG1->RIOC &=(~0x0000000C);   /*can1_rx as i/o  to DSP_BENCH_MODE  intput*/
+}
+/**********************
+ * void Get_Master_Slave(void)
+ * 获取板卡主从状态
+ * 板卡ID--Board_ID
+ * 主板==Inboard ==A==0x001
+ * 从板==Outboard==B==0x002
+ * ********************/
+void Get_Master_Slave(void)
+{
+    if(((canREG3->RIOC) & 0x00000001)!=0) /*内轮板*/
+    {
+        Board_ID=0x001;
+        device_status.Master_Salve_mode=INBOARD;
+    }
+    else
+    {
+        Board_ID=0x002;
+        device_status.Master_Salve_mode=OUTBOARD;
+    }
+}
+
+/**********************
+ * void Get_Bench_Mode(void)
+ * 获取BENCH状态
+ * ********************/
+void Get_Bench_Mode(void)
+{
+    if(((canREG1->RIOC) & 0x00000001)!=0) /*内轮板*/
+    {
+        Board_ID=0x001;
+        device_status.Bench_Mode=INBOARD;
+    }
+    else
+    {
+        Board_ID=0x002;
+        device_status.Bench_Mode=OUTBOARD;
+    }
 }

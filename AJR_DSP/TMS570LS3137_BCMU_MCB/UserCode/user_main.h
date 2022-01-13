@@ -9,19 +9,38 @@
 
 #ifndef __USER_MAIN_H
 #define __USER_MAIN_H
-
-#include <rs232.h>
+/*=========================== sys_H ================================*/
+#include "het.h"
+#include "gio.h"
+#include "spi.h"
+#include "sci.h"
+#include "het.h"
 #include "rti.h"
-#include "sys_core.h"
-#include "global_Init.h"
+#include "pinmux.h"
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "reg_rti.h"
 #include "reg_can.h"
 #include "reg_mibspi.h"
 #include "reg_spi.h"
 #include "mibspi.h"
+#include "sys_core.h"
+/*============================ user_H ==============================*/
+#include "sdcard.h"
+#include "ff.h"
+#include "ffconf.h"
+#include "diskio.h"
+#include "sdram.h"
+#include "dac5689.h"
+#include "global_Init.h"
 #include "Brake.h"
 #include "init.h"
 #include "Device_control.h"
+#include "test.h"
+#include "rs232.h"
+#include "SD_card.h"
+#include "sdram.h"
 #define MASTER 1
 #define SLAVE 0
 #define Master_Slave  MASTER

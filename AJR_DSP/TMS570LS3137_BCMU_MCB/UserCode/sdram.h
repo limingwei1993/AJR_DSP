@@ -97,7 +97,7 @@ typedef  struct SDRAM_DATA_t
 typedef enum
 {
     OUTBOARD = 0x000,
-    INBOARD=0x002,
+    INBOARD=0x001,
 }BOARD_TYPE;
 typedef enum
 {

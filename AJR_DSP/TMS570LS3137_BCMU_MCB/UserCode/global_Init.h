@@ -59,26 +59,7 @@ enum CHANNEL
 };
 
 
-/*=========================== sys_H ================================*/
-#include "het.h"
-#include "gio.h"
-#include "spi.h"
-#include "sci.h"
-#include "het.h"
-#include "rti.h"
-#include "pinmux.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-/*============================ user_H ==============================*/
-#include "user_main.h"
-#include "sdcard.h"
-#include "ff.h"
-#include "ffconf.h"
-#include "diskio.h"
-#include "sdram.h"
-#include <rs232.h>
-#include "dac5689.h"
+
 extern void delay_ns(uint32_t ns);
 extern void delay_ms(uint32_t ms);
 extern void delay_us(uint32_t us);

@@ -1,10 +1,10 @@
 # FIXED
 
 hal/source/pinmux.obj: ../hal/source/pinmux.c
-hal/source/pinmux.obj: C:/Users/15755/Desktop/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/pinmux.h
-hal/source/pinmux.obj: C:/Users/15755/Desktop/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/reg_pinmux.h
-hal/source/pinmux.obj: C:/Users/15755/Desktop/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/sys_common.h
-hal/source/pinmux.obj: C:/Users/15755/Desktop/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/hal_stdtypes.h
+hal/source/pinmux.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/pinmux.h
+hal/source/pinmux.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/reg_pinmux.h
+hal/source/pinmux.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/sys_common.h
+hal/source/pinmux.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/hal_stdtypes.h
 hal/source/pinmux.obj: C:/ti/ccs1030/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS/include/stdint.h
 hal/source/pinmux.obj: C:/ti/ccs1030/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS/include/_ti_config.h
 hal/source/pinmux.obj: C:/ti/ccs1030/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS/include/linkage.h
@@ -19,13 +19,13 @@ hal/source/pinmux.obj: C:/ti/ccs1030/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS/in
 
 ../hal/source/pinmux.c:
 
-C:/Users/15755/Desktop/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/pinmux.h:
+C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/pinmux.h:
 
-C:/Users/15755/Desktop/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/reg_pinmux.h:
+C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/reg_pinmux.h:
 
-C:/Users/15755/Desktop/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/sys_common.h:
+C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/sys_common.h:
 
-C:/Users/15755/Desktop/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/hal_stdtypes.h:
+C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/hal_stdtypes.h:
 
 C:/ti/ccs1030/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS/include/stdint.h:
 

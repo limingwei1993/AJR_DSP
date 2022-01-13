@@ -9,7 +9,11 @@
 #define USERCODE_SD_CARD_H_
 #include "ff.h"
 
-
+extern FIL file;
+extern FATFS fs;
+extern FIL file_past_err;
 extern SdCardStatus sd_card_status;
 
+
+void SdCard_Maintenance(void);
 #endif /* USERCODE_SD_CARD_H_ */

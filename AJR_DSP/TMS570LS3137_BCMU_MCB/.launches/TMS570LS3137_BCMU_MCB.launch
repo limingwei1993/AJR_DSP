@@ -16,7 +16,7 @@
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROGRAM.TMS570LS3137.ccxml.Texas Instruments XDS100v3 USB Debug Probe/CortexR4" value="${build_artifact:TMS570LS3137_BCMU_MCB}"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROJECT.TMS570LS3137.ccxml.Texas Instruments XDS100v3 USB Debug Probe/CortexR4" value="TMS570LS3137_BCMU_MCB"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_TARGET_CONFIG" value="${target_config_active_default:TMS570LS3137_BCMU_MCB}"/>
-<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.TMS570LS3137.ccxml.Texas Instruments XDS100v3 USB Debug Probe/CortexR4" value="C:\Users\15755\Desktop\AJR_DSP\TMS570LS3137_BCMU_MCB\Debug\TMS570LS3137_BCMU_MCB.out"/>
+<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.TMS570LS3137.ccxml.Texas Instruments XDS100v3 USB Debug Probe/CortexR4" value="C:\Users\15755\Desktop\code\AJR\AJR_DSP\TMS570LS3137_BCMU_MCB\Debug\TMS570LS3137_BCMU_MCB.out"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/TMS570LS3137_BCMU_MCB"/>
 </listAttribute>

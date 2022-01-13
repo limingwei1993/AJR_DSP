@@ -11,6 +11,8 @@
  *----------------------------------------------------------------------------*/
 #include "sdcard.h"
 #include "reg_mibspi.h"
+#include "gio.h"
+#include "spi.h"
 SdCardStatus sd_card_status;
 SD_CardInfo SDCardInfo;
 unsigned int SPI_Speed = SPI_HIGH;

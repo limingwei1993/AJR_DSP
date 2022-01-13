@@ -4,11 +4,12 @@
  *  Created on: 2022Äê1ÔÂ11ÈÕ
  *      Author: 15755
  */
-#include "ff.h"
+#include "user_main.h"
 FIL file;
 FATFS fs;
+FIL file_past_err;
 SdCardStatus sd_card_status;
-void SdCardProcess(void)
+void SdCard_Maintenance(void)
 {
   unsigned char num_init = 10;
   if(get_SD_card_online_status() == 1)
