@@ -15,6 +15,7 @@ unsigned short Device_DATA_LEN=0;
  ******************************/
 void initialization(void)
 {
+    uint8_t i = 20;
     _enable_interrupt_(); /*使能中断*/
     _enable_IRQ();        /*使能中断*/
     rtiInit();            /*初始化定时器*/
@@ -29,6 +30,11 @@ void initialization(void)
     device_status_init();
     Get_Master_Slave();
     Get_Bench_Mode();
+     while (i && sd_card_status != Fatfs_Load_Success)
+     {
+         SdCard_Maintenance();
+       i--;
+     }
     rtiEnableNotification(rtiNOTIFICATION_COMPARE0); /*使能定时器COMPARE0 5ms*/
     rtiStartCounter(rtiCOUNTER_BLOCK0);  /*开始定时器BLOCK0计数*/
 }
@@ -189,6 +195,8 @@ void device_status_init(void)
      MCB_Data[add_num].Addr=ADDR_LEFT_BRAKE_CONTROL_VALVE_CURENT | 0x800;
      MCB_Data[add_num++].value=0;
      MCB_Data[add_num].Addr=ADDR_RIGHT_BRAKE_CONTROL_VALVE_CURENT | 0x800;
+     MCB_Data[add_num++].value=0;
+     MCB_Data[add_num].Addr=ADDR_LEFT_BRAKE_PRESSURE | 0x800;
      MCB_Data[add_num++].value=0;
      MCB_Data[add_num].Addr=ADDR_RIGHT_BRAKE_PRESSURE | 0x800;
      MCB_Data[add_num++].value=0;

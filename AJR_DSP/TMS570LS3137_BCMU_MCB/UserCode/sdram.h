@@ -88,7 +88,7 @@
 #define     ADDR_BEANCH_MODE                         0x47  /*BEANCH MODE*/
 #define     ADDR_DSP_MODE                            0x48  /*DSP主从机模式*/
 
-#define  DATA_LEN    (60*2+7)
+#define  DATA_LEN    (130)
 typedef  struct SDRAM_DATA_t
 {
     unsigned short Addr;

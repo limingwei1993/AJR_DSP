@@ -27,6 +27,7 @@ void user_main(void)
             SDRAM_RxTx=0;
         }
         Signal_Output_Control();
+      //  SdCard_Maintenance();
     }
 }
 

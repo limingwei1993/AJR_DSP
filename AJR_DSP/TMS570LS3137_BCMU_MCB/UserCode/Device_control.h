@@ -21,6 +21,7 @@ typedef  struct Device_status_s
     unsigned int BrakePressureCommand_L;
     unsigned int BrakePressureCommand_R;
     unsigned char Work_Mode;
+    SdCardStatus sd_status;
 }Device_status_d;
 
 extern Device_status_d device_status;

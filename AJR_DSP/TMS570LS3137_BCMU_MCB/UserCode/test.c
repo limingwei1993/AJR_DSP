@@ -132,7 +132,7 @@ void Read_Data_Process(uint16_t Addr,uint16_t value)
             }
             if(Addr==0x46)
             {
-                SD_Process(READ_DATA,value,&read_data);
+                SD_Process(SD_READ,value,&read_data);
                 frame_len-=2;
                 respond_frame[frame_len++]=read_data;
                 respond_frame[frame_len++]=0;
@@ -158,6 +158,7 @@ void SD_Process(uint8_t Read_Write,uint16_t value,uint8_t * readdata)
     unsigned char temp =0;
     unsigned int write_success_len =0;
     unsigned short i=0;
+    FRESULT res=FR_OK;
     if(sd_card_status!=Fatfs_Load_Success)
        return;
     if(Read_Write==SD_WRITE)
@@ -166,11 +167,14 @@ void SD_Process(uint8_t Read_Write,uint16_t value,uint8_t * readdata)
         {
             test_buff[i]=temp++;
         }
-        sprintf(dir,"0:%d",value);
-        f_open (&file,  (const TCHAR *)dir,  FA_OPEN_ALWAYS | FA_WRITE);  /*新建文件并打开*/
-        f_write(&file,test_buff,SD_TEST_LEN,&write_success_len);
-        f_sync(&file);
-        f_close(&file);
+        sprintf(dir,"0:%d.txt",value);
+        res=f_open (&file,  (const TCHAR *)dir,  FA_OPEN_ALWAYS | FA_WRITE);  /*新建文件并打开*/
+        if(res==FR_OK)
+        {
+            f_write(&file,test_buff,SD_TEST_LEN,&write_success_len);
+            f_sync(&file);
+            f_close(&file);
+        }
         *readdata=0;
     }
     else if(Read_Write==SD_READ)
@@ -179,10 +183,13 @@ void SD_Process(uint8_t Read_Write,uint16_t value,uint8_t * readdata)
         {
             test_buff[i]=0;
         }
-        sprintf(dir,"0:%d",value);
-        f_open (&file,  (const TCHAR *)dir,  FA_READ);  /*新建文件并打开*/
-        f_gets(test_buff,10,&file_past_err);
-        f_close(&file);
+        sprintf(dir,"0:%d.txt",value);
+        f_open (&file,  (const TCHAR *)dir,  FA_OPEN_EXISTING  |FA_READ);  /*新建文件并打开*/
+        if(res==FR_OK)
+        {
+            f_gets(test_buff,10,&file);
+            f_close(&file);
+        }
         *readdata=test_buff[0];
     }
 

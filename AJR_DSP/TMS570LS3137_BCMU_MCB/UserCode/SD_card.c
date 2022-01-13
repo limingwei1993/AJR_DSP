@@ -56,4 +56,5 @@ void SdCard_Maintenance(void)
         break;
     }
   }
+  device_status.sd_status=sd_card_status;
 }
