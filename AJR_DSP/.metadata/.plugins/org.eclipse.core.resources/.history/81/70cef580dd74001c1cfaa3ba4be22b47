@@ -87,7 +87,6 @@ void Data_interaction(void)
     Transmit_Machine_Parameters.BrakePressureCommand_L=test_outC.Output.BrakePressureCommand_L;
     Transmit_Machine_Parameters.BrakePressureCommand_R=test_outC.Output.BrakePressureCommand_R;
     Transmit_Machine_Parameters.CoilEnergized=test_outC.Output.BrakeAutoBKOut.CoilEnergized;
-    Transmit_Data_Process();
     SDRAM_Write();
 }
 
@@ -117,32 +116,4 @@ void Signal_Output_Control(void)
         device_status.BrakePressureCommand_R=Transmit_Machine_Parameters.BrakePressureCommand_R;
         DAC5689_SetVoltage_mv(DAC_R,device_status.BrakePressureCommand_R);
     }
-}
-/***************************
- * void Transmit_Data_Process(void)
- * 对传输的数据进行赋值
- * **************************/
-void Transmit_Data_Process(void)
-{
-    Transmit_Machine_Parameters.TX_429_Communication.Left_Inboard_Wheel_Speed_006=Receive_Machine_Parameters.LeftWheelSpeed.Value;
-    Transmit_Machine_Parameters.TX_429_Communication.Right_Inboard_Wheel_Speed_007=Receive_Machine_Parameters.RightWheelSpeed.Value;
-    Transmit_Machine_Parameters.TX_429_Communication.Right_Inboard_Brake_Control_Valve_Current_052=Receive_Machine_Parameters.Right_Inboard_Brake_Control_Valve_Current;
-    Transmit_Machine_Parameters.TX_429_Communication.Left_Inboard_Brake_Control_Valve_Current_051=Receive_Machine_Parameters.Left_Inboard_Brake_Control_Valve_Current;
-    Transmit_Machine_Parameters.TX_429_Communication.Left_Inboard_Brake_Pressure_070=Receive_Machine_Parameters.INBD_LT_TEMP;
-    Transmit_Machine_Parameters.TX_429_Communication.Right_Inboard_Brake_Pressure_071=Receive_Machine_Parameters.INBD_RT_BPSI;
-    Transmit_Machine_Parameters.TX_429_Communication.Inboard_Shutoff_Valve_Current_113=Receive_Machine_Parameters.Inboard_Shutoff_Valve_Current;
-    Transmit_Machine_Parameters.TX_429_Communication.Left_Inboard_Brake_Temperature_114=Receive_Machine_Parameters.INBD_LT_TEMP;
-    Transmit_Machine_Parameters.TX_429_Communication.Right_Inboard_Brake_Temperature_116=Receive_Machine_Parameters.INBD_RT_TEMP;
-    Transmit_Machine_Parameters.TX_429_Communication.Left_Brake_Pedal_Position_Pilot_171=Receive_Machine_Parameters.LeftPPedal.Value;
-    Transmit_Machine_Parameters.TX_429_Communication.Right_Brake_Pedal_Position_Pilot_172=Receive_Machine_Parameters.RightPPedal.Value;
-    Transmit_Machine_Parameters.TX_429_Communication.Left_Brake_Pedal_Position_Copilot_173=Receive_Machine_Parameters.LeftCptPedal.Value;
-    Transmit_Machine_Parameters.TX_429_Communication.Right_Brake_Pedal_Position_Copilot_174=Receive_Machine_Parameters.RightCptPedal.Value;
-    Transmit_Machine_Parameters.TX_429_Communication.Warning_270=0;
-    Transmit_Machine_Parameters.TX_429_Communication.Status_Word_1__271=0;
-    Transmit_Machine_Parameters.TX_429_Communication.Status_Word_2_272=0;
-    Transmit_Machine_Parameters.TX_429_Communication.BCU_Aircraft_Reference_Speed_302=0;
-    Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_350=0;
-    Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_351=0;
-    Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_352=0;
-    Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_353=0;
 }

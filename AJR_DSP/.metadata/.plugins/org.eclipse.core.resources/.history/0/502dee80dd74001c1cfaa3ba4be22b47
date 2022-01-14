@@ -60,7 +60,7 @@ void sciNotification(sciBASE_t *sci, uint32 flags)
                 rs232_recive_len++;
                 if(rs232_recive_len>=8)
                 {
-                   if( CRC_AND(&temp_Recive_buf[1],5)==temp_Recive_buf[6])
+                   if( CRC_AND(temp_Recive_buf,6)==temp_Recive_buf[6])
                    {
                        RS232_Process(temp_Recive_buf);
                    }

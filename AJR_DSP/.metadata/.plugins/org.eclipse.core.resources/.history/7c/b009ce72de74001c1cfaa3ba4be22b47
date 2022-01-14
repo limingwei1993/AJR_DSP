@@ -111,10 +111,6 @@ void rtiNotification(uint32 notification)
     {
         SDRAM_RxTx=1;
     }
-    if(notification==rtiNOTIFICATION_COMPARE3)/*10us*/
-    {
-        us_count++;
-    }
 /* USER CODE END */
 }
 

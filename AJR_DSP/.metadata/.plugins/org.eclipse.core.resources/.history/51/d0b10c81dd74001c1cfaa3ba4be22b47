@@ -61,7 +61,7 @@ uint8_t SDRAM_Read_Data( uint16_t Addr,uint32_t *Read_data)
         set_sdram_clk(HIGH);  /*读取低字节数据*/
         set_sdram_cs(HIGH);  /*工作模式为读取数据*/
         set_sdram_DWE(HIGH); /*DSP数据准备完成，告知FPGA读取数据*/
-        time_out=SDRAM_TIME_OUT;
+        time_out=100;
         while(Get_sdram_FWE()==LOW && time_out) /*等待DSP数据准备完成*/
         {
             time_out--;
@@ -106,7 +106,7 @@ uint8_t SDRAM_Read_Data( uint16_t Addr,uint32_t *Read_data)
     set_sdram_clk(LOW);  /*读取低字节数据*/
     set_sdram_cs(HIGH);  /*工作模式为读取数据*/
     set_sdram_DWE(HIGH); /*DSP数据准备完成，告知FPGA读取数据*/
-    time_out=SDRAM_TIME_OUT;
+    time_out=100;
     while(Get_sdram_FWE()==LOW && time_out) /*等待DSP数据准备完成*/
     {
         time_out--;
@@ -360,7 +360,7 @@ uint8_t SDRAM_Write_Data(uint16_t Addr, uint32_t Data)
         set_sdram_clk(HIGH);  /*读取低字节数据*/
         set_sdram_cs(LOW);  /*工作模式为读取数据*/
         set_sdram_DWE(HIGH); /*DSP数据准备完成，告知FPGA读取数据*/
-        time_out=SDRAM_TIME_OUT;
+        time_out=100;
         while(Get_sdram_FWE()==LOW && time_out) /*等待DSP数据准备完成*/
         {
             time_out--;
@@ -406,7 +406,7 @@ uint8_t SDRAM_Write_Data(uint16_t Addr, uint32_t Data)
     set_sdram_clk(LOW);  /*读取低字节数据*/
     set_sdram_cs(LOW);  /*工作模式为读取数据*/
     set_sdram_DWE(HIGH); /*DSP数据准备完成，告知FPGA读取数据*/
-    time_out=SDRAM_TIME_OUT;
+    time_out=100;
     while(Get_sdram_FWE()==LOW && time_out) /*等待DSP数据准备完成*/
     {
         time_out--;
@@ -428,7 +428,7 @@ void SDRAM_Write(void)
 {
     unsigned short i=0;
     /*将控制设备的参数赋给发送到FPGA的数据*/
-   /* for(i=SDRAM_READ_DATA_LEN;i<(SDRAM_WRITE_DATA_LEN+SDRAM_READ_DATA_LEN);i++)
+    for(i=SDRAM_READ_DATA_LEN;i<(SDRAM_WRITE_DATA_LEN+SDRAM_READ_DATA_LEN);i++)
     {
          switch(MCB_Data[i].Addr)
          {
@@ -584,7 +584,7 @@ void SDRAM_Write(void)
             break;
 
          }
-    }*/
+    }
       /*发送地址0x40--0x60的数据*/
     for(i=SDRAM_READ_DATA_LEN;i<(SDRAM_WRITE_DATA_LEN+SDRAM_READ_DATA_LEN);i++)
      {

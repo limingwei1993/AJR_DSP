@@ -29,5 +29,4 @@ void Set_ABSW(uint8_t statue);
 void Set_SOV(uint8_t statue);
 void Data_interaction(void);
 void Signal_Output_Control(void);
-void Transmit_Data_Process(void);
 #endif /* USERCODE_DEVICE_CONTROL_H_ */

@@ -61,7 +61,7 @@ uint8_t SDRAM_Read_Data( uint16_t Addr,uint32_t *Read_data)
         set_sdram_clk(HIGH);  /*读取低字节数据*/
         set_sdram_cs(HIGH);  /*工作模式为读取数据*/
         set_sdram_DWE(HIGH); /*DSP数据准备完成，告知FPGA读取数据*/
-        time_out=SDRAM_TIME_OUT;
+        time_out=100;
         while(Get_sdram_FWE()==LOW && time_out) /*等待DSP数据准备完成*/
         {
             time_out--;
@@ -106,7 +106,7 @@ uint8_t SDRAM_Read_Data( uint16_t Addr,uint32_t *Read_data)
     set_sdram_clk(LOW);  /*读取低字节数据*/
     set_sdram_cs(HIGH);  /*工作模式为读取数据*/
     set_sdram_DWE(HIGH); /*DSP数据准备完成，告知FPGA读取数据*/
-    time_out=SDRAM_TIME_OUT;
+    time_out=100;
     while(Get_sdram_FWE()==LOW && time_out) /*等待DSP数据准备完成*/
     {
         time_out--;
@@ -360,7 +360,7 @@ uint8_t SDRAM_Write_Data(uint16_t Addr, uint32_t Data)
         set_sdram_clk(HIGH);  /*读取低字节数据*/
         set_sdram_cs(LOW);  /*工作模式为读取数据*/
         set_sdram_DWE(HIGH); /*DSP数据准备完成，告知FPGA读取数据*/
-        time_out=SDRAM_TIME_OUT;
+        time_out=100;
         while(Get_sdram_FWE()==LOW && time_out) /*等待DSP数据准备完成*/
         {
             time_out--;
@@ -406,7 +406,7 @@ uint8_t SDRAM_Write_Data(uint16_t Addr, uint32_t Data)
     set_sdram_clk(LOW);  /*读取低字节数据*/
     set_sdram_cs(LOW);  /*工作模式为读取数据*/
     set_sdram_DWE(HIGH); /*DSP数据准备完成，告知FPGA读取数据*/
-    time_out=SDRAM_TIME_OUT;
+    time_out=100;
     while(Get_sdram_FWE()==LOW && time_out) /*等待DSP数据准备完成*/
     {
         time_out--;

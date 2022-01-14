@@ -37,8 +37,6 @@ void initialization(void)
      }
     rtiEnableNotification(rtiNOTIFICATION_COMPARE0); /*使能定时器COMPARE0 5ms*/
     rtiStartCounter(rtiCOUNTER_BLOCK0);  /*开始定时器BLOCK0计数*/
-    rtiEnableNotification(rtiNOTIFICATION_COMPARE3); /*使能定时器COMPARE0 5ms*/
-    rtiStartCounter(rtiCOUNTER_BLOCK1);  /*开始定时器BLOCK0计数*/
 }
 /**********************
  * void device_status_init(void)
@@ -458,7 +456,6 @@ void Other_GPIO_Init(void)
  * ********************/
 void Get_Master_Slave(void)
 {
-    unsigned short i=0;
     if(((canREG3->RIOC) & 0x00000001)!=0) /*内轮板*/
     {
         Board_ID=0x001;
@@ -469,14 +466,6 @@ void Get_Master_Slave(void)
         Board_ID=0x002;
         device_status.Master_Salve_mode=OUTBOARD;
     }
-    for(i=(SDRAM_READ_DATA_LEN+SDRAM_WRITE_DATA_LEN);i<Device_DATA_LEN;i++)
-    {
-        if(MCB_Data[i].Addr==ADDR_DSP_MODE)
-        {
-            MCB_Data[i].value=device_status.Master_Salve_mode;
-            break;
-        }
-    }
 }
 
 /**********************
@@ -485,7 +474,6 @@ void Get_Master_Slave(void)
  * ********************/
 void Get_Bench_Mode(void)
 {
-    unsigned short i=0;
     if(((canREG1->RIOC) & 0x00000001)!=0) /*内轮板*/
     {
         Board_ID=0x001;
@@ -495,13 +483,5 @@ void Get_Bench_Mode(void)
     {
         Board_ID=0x002;
         device_status.Bench_Mode=OUTBOARD;
-    }
-    for(i=(SDRAM_READ_DATA_LEN+SDRAM_WRITE_DATA_LEN);i<Device_DATA_LEN;i++)
-    {
-        if(MCB_Data[i].Addr==ADDR_BEANCH_MODE)
-        {
-            MCB_Data[i].value=device_status.Bench_Mode;
-            break;
-        }
     }
 }
