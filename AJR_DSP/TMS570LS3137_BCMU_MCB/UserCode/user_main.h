@@ -122,7 +122,7 @@ typedef  struct RX_FPGA_DATA
         bool spare ;                                        /*备用信号 */
         bool PIN_PGR_1  ;                                   /*PIN PGR 1 */
         bool PIN_PGR_2  ;                                   /*PIN PGR 2 */
-        bool Work_mode  ;                                   /*模式信号 */
+        bool Work_mode  ;                                   /*工作模式 */
         bool Master_Salve  ;                                /*FPGA主从机模式 */
 
         RX_429_DATA RX_429_Communication;

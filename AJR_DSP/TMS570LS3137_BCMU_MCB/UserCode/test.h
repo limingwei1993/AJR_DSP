@@ -19,4 +19,5 @@ void Read_Data_Process(uint16_t Addr,uint16_t value);
 void SD_Process(uint8_t Read_Write,uint16_t value);
 void RS232_Process(uint8_t *frame_data);
 void Test_Sdram_Data_Process(void);
+void TEST_SDRAM_Write(void);
 #endif /* USERCODE_TEST_H_ */

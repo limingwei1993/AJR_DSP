@@ -223,10 +223,22 @@ void SD_Process(uint8_t Read_Write,uint16_t value)
         respond_frame[frame_len++]=0x55;
         RS232_Send(frame_len,respond_frame);
     }
-
-
 }
 
+
+/**************************************
+ * void TEST_SDRAM_Write(void)
+ * 发送所有数据到FPGA--测试使用
+ * ************************************/
+void TEST_SDRAM_Write(void)
+{
+    unsigned short i=0;
+    /*发送地址0x40--0x60的数据*/
+    for(i=SDRAM_READ_DATA_LEN;i<(SDRAM_WRITE_DATA_LEN+SDRAM_READ_DATA_LEN);i++)
+    {
+        SDRAM_Write_Data(MCB_Data[i].Addr,MCB_Data[i].value);
+    }
+}
 /**************************
  * void Test_Sdram_Data_Process(void)
  * 测试模式下DSP与FPGA进行数据交互
@@ -266,5 +278,5 @@ void Test_Sdram_Data_Process(void)
         }
     }
     SDRAM_Read();
-    SDRAM_Write();
+    TEST_SDRAM_Write();
 }
