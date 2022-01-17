@@ -23,7 +23,7 @@
 
 #define FF_DEFINED	86604	/* Revision ID */
 
-#include "global_Init.h"
+#include "delay.h"
 
 
 #ifdef __cplusplus

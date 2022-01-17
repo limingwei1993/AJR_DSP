@@ -242,13 +242,13 @@ void SDRAM_Read(void)
                Receive_Machine_Parameters.SpoilerStoredSignal_Right=Receive_Machine_Parameters.SpoilerStoredSignal_Left=(MCB_Data[i].value >> 1) &0x01;
                Receive_Machine_Parameters.LeftThrottleIdle=Receive_Machine_Parameters.RightThrottleIdle=(MCB_Data[i].value >> 2) &0x01;
                Receive_Machine_Parameters.Inner_wheel_ABS_start_signal=(MCB_Data[i].value >> 3) &0x01;
-               Receive_Machine_Parameters.Work_mode=(MCB_Data[i].value >> 4) &0x01;
+               Receive_Machine_Parameters.Bench_mode=(MCB_Data[i].value >> 4) &0x01;
                Receive_Machine_Parameters.spare=(MCB_Data[i].value >> 5) &0x01;
                Receive_Machine_Parameters.LandingGearExtentionandRetractionCommand=(MCB_Data[i].value >> 6) &0x01;
                Receive_Machine_Parameters.PIN_PGR_1=(MCB_Data[i].value >> 7) &0x01;
                Receive_Machine_Parameters.PIN_PGR_2=(MCB_Data[i].value >> 8) &0x01;
                Receive_Machine_Parameters.Parking_brake_signal=(MCB_Data[i].value >> 9) &0x01;
-               Receive_Machine_Parameters.Master_Salve=(MCB_Data[i].value >> 4) &0x01;
+               Receive_Machine_Parameters.Master_Salve=(MCB_Data[i].value >> 10) &0x01;
            }
            break;
            default:
@@ -275,7 +275,7 @@ void SDRAM_Read(void)
              }
              else if(MCB_Data[i].Addr==ADDR_AIRSPEED)
              {
-                 Receive_Machine_Parameters.RX_429_Communication.Airspeed.Value=((MCB_Data[i].value>>14)&0x2fff)*0.0625;
+                 Receive_Machine_Parameters.RX_429_Communication.Airspeed.Value=((MCB_Data[i].value>>14)&0x3fff)*0.0625;
              }
              else if(MCB_Data[i].Addr==ADDR_DATE_MASTER)
              {

@@ -33,7 +33,7 @@
 #include "diskio.h"
 #include "sdram.h"
 #include "dac5689.h"
-#include "global_Init.h"
+#include "delay.h"
 #include "Brake.h"
 #include "init.h"
 #include "Device_control.h"
@@ -89,6 +89,7 @@ typedef  struct RX_FPGA_DATA
         float    Right_Inboard_Brake_Control_Valve_Current; /*--右轮刹车控制阀电流*//*回采*/
         float    Left_Inboard_Brake_Control_Valve_Current;  /*--左轮刹车控制阀电流 *//*回采*/
         float    Inboard_Shutoff_Valve_Current;             /*切断阀电流检测 *//*回采*/
+        float    Inner_wheel_ABS_Valve_Current;             /*自动刹车电流 *//*回采*/
         float    INBD_RT_BPSI;                              /*右内轮刹车压力 */
         float    INBD_LT_BPSI;                              /*左内轮刹车压力 */
         float    INBD_RT_TEMP;                              /*右内轮温度 */
@@ -123,8 +124,8 @@ typedef  struct RX_FPGA_DATA
         bool PIN_PGR_1  ;                                   /*PIN PGR 1 */
         bool PIN_PGR_2  ;                                   /*PIN PGR 2 */
         bool Work_mode  ;                                   /*工作模式 */
+        bool Bench_mode  ;                                  /*Bench模式 */
         bool Master_Salve  ;                                /*FPGA主从机模式 */
-
         RX_429_DATA RX_429_Communication;
 } RX_FPGA_DATA;
 typedef  struct TX_FPGA_DATA

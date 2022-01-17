@@ -2,7 +2,7 @@
 
 SdCard/ffunicode.obj: ../SdCard/ffunicode.c
 SdCard/ffunicode.obj: ../SdCard/ff.h
-SdCard/ffunicode.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/UserCode/global_Init.h
+SdCard/ffunicode.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/UserCode/delay.h
 SdCard/ffunicode.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/sys_common.h
 SdCard/ffunicode.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/hal_stdtypes.h
 SdCard/ffunicode.obj: C:/ti/ccs1030/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS/include/stdint.h
@@ -22,7 +22,7 @@ SdCard/ffunicode.obj: ../SdCard/ffconf.h
 
 ../SdCard/ff.h:
 
-C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/UserCode/global_Init.h:
+C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/UserCode/delay.h:
 
 C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/sys_common.h:
 

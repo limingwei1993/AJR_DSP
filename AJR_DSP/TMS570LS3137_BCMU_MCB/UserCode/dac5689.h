@@ -7,7 +7,7 @@
   */
 #ifndef __DAC5689_H_
 #define __DAC5689_H_
-#include "global_Init.h"
+#include "delay.h"
 #include "spi.h"
 
 #define REG_WRITE_TO_INPUTREG               0x100000    //Command 1: Write to input register n (LDAC dependent)
@@ -51,8 +51,6 @@
 #define PD_DACB_THREE_STATE    0X0000F0   //Puts DAC B in powerdown mode: Three state
 
 #define NO_OF_BYTES 0x03 //Size of Register in Bytes
-
-extern spiDAT1_t dataconfig1;
 
 extern void DAC5689_Init(void);
 extern void WriteData(unsigned int commandmode, unsigned int DACselect, unsigned int Data);

@@ -4,7 +4,7 @@
 /*------------------------------------------------------------------------*/
 
 
-#include "global_Init.h"
+#include "delay.h"
 
 
 #if FF_USE_LFN == 3	/* Dynamic memory allocation */

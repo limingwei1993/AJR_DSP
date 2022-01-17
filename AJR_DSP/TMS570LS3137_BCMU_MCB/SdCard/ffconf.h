@@ -6,7 +6,7 @@
 
 #define FFCONF_DEF	86604	/* Revision ID */
 
-#include "global_Init.h"
+#include "delay.h"
 
 /*---------------------------------------------------------------------------/
 / Function Configurations

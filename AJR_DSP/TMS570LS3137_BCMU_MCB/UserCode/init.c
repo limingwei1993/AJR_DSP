@@ -322,6 +322,7 @@ void device_status_init(void)
     Receive_Machine_Parameters.Right_Inboard_Brake_Control_Valve_Current=0;
     Receive_Machine_Parameters.Left_Inboard_Brake_Control_Valve_Current=0;
     Receive_Machine_Parameters.Inboard_Shutoff_Valve_Current=0;
+    Receive_Machine_Parameters.Inner_wheel_ABS_Valve_Current=0;
     Receive_Machine_Parameters.INBD_RT_BPSI=0;
     Receive_Machine_Parameters.INBD_LT_BPSI=0;
     Receive_Machine_Parameters.INBD_RT_TEMP=0;
@@ -335,6 +336,14 @@ void device_status_init(void)
     Receive_Machine_Parameters.RightPPedal.Valid=1;
     Receive_Machine_Parameters.RightPPedal.Value=0;
     Receive_Machine_Parameters.MaxPedal=0;
+    Receive_Machine_Parameters.Inner_wheel_ABS_start_signal=0;
+    Receive_Machine_Parameters.Parking_brake_signal=0;
+    Receive_Machine_Parameters.SpoilerStoredSignal_Left=0;
+    Receive_Machine_Parameters.SpoilerStoredSignal_Right=0;
+    Receive_Machine_Parameters.LeftWOW=0;
+    Receive_Machine_Parameters.RightWOW=0;
+    Receive_Machine_Parameters.zong.Valid=1;
+    Receive_Machine_Parameters.zong.Value=0;
     Receive_Machine_Parameters.NLGWOW=0;
     Receive_Machine_Parameters.LeftThrottleIdle=0;
     Receive_Machine_Parameters.RightThrottleIdle=0;
@@ -361,6 +370,7 @@ void device_status_init(void)
     Receive_Machine_Parameters.PIN_PGR_2=0;
     Receive_Machine_Parameters.Work_mode=0;
     Receive_Machine_Parameters.Master_Salve=0;
+    Receive_Machine_Parameters.Bench_mode=0;
     Receive_Machine_Parameters.RX_429_Communication.Hydraulic_System_Pressure_1_60=0;
     Receive_Machine_Parameters.RX_429_Communication.Accumulator_System_Pressure_1_126=0;
     Receive_Machine_Parameters.RX_429_Communication.TLA_Position_Left_133=0;
@@ -432,8 +442,8 @@ void device_status_init(void)
 void SD_GPIO_Init(void)
 {
     spiREG3->PC0 &=(~0x00000fff);    /*mbspi cs ENA CLK SIMO SOMI as i/o  to SCLK CS MOSI MISO     0--GPIO*/
-    spiREG3->PC1 |=0x00000806;       /*SD_CLK 、 SD_CMD 、SD_ output 、SD_DATA3  output     0--INPUT  1--OUTPUT*/
-    spiREG3->PC1 &=(~0x00000101);    /*SD_DAT0 、SD_CD                          INtput     0--INPUT  1--OUTPUT*/
+    spiREG3->PC1 |=0x00000806;       /*SD_CLK 、 SD_CMD  、SD_DATA3  output     0--INPUT  1--OUTPUT*/
+    spiREG3->PC1 &=(~0x00000101);    /*SD_DAT0 、SD_CD              INtput     0--INPUT  1--OUTPUT*/
 }
 
 /**********************
@@ -486,7 +496,7 @@ void Get_Master_Slave(void)
 void Get_Bench_Mode(void)
 {
     unsigned short i=0;
-    if(((canREG1->RIOC) & 0x00000001)!=0) /*坪態医*/
+    if(((canREG1->RIOC) & 0x00000001)!=0) /**/
     {
         Board_ID=0x001;
         device_status.Bench_Mode=INBOARD;

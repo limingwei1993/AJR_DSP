@@ -26,7 +26,7 @@ void RS232_Process(uint8_t *frame_data)
            respond_frame[frame_len++]=0x00;
            respond_frame[frame_len++]=0x00;
            respond_frame[frame_len++]=0x00;
-           respond_frame[frame_len++]=CRC_AND(&respond_frame[1],frame_len);
+           respond_frame[frame_len++]=CRC_AND(&respond_frame[1],frame_len-1);
            respond_frame[frame_len++]=0x55;
            RS232_Send(frame_len,respond_frame);
            device_status.Work_Mode=TEST_MODE;
@@ -43,12 +43,12 @@ void RS232_Process(uint8_t *frame_data)
        break;
        case QUIT_DBUG:
           respond_frame[frame_len++]=0xAA;
-          respond_frame[frame_len++]=ENTER_DBUG;
+          respond_frame[frame_len++]=QUIT_DBUG;
           respond_frame[frame_len++]=0x00;
           respond_frame[frame_len++]=0x00;
           respond_frame[frame_len++]=0x00;
           respond_frame[frame_len++]=0x00;
-          respond_frame[frame_len++]=CRC_AND(&respond_frame[1],frame_len);
+          respond_frame[frame_len++]=CRC_AND(&respond_frame[1],frame_len-1);
           respond_frame[frame_len++]=0x55;
           RS232_Send(frame_len,respond_frame);
           device_status.Work_Mode=NORMAL_MODE;
@@ -96,7 +96,7 @@ void Write_Data_Process(uint16_t Addr,uint16_t value)
                     respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>0)&0xff);
                     respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>8)&0xff);
                 }
-                respond_frame[frame_len++]=CRC_AND(&respond_frame[1],frame_len);
+                respond_frame[frame_len++]=CRC_AND(&respond_frame[1],frame_len-1);
                 respond_frame[frame_len++]=0x55;
                 RS232_Send(frame_len,respond_frame);
             }
@@ -141,7 +141,7 @@ void Read_Data_Process(uint16_t Addr,uint16_t value)
                     respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>0)&0xff);
                     respond_frame[frame_len++]=(unsigned char)((MCB_Data[i].value>>8)&0xff);
                 }
-                respond_frame[frame_len++]=CRC_AND(&respond_frame[1],frame_len);
+                respond_frame[frame_len++]=CRC_AND(&respond_frame[1],frame_len-1);
                 respond_frame[frame_len++]=0x55;
                 RS232_Send(frame_len,respond_frame);
             }
@@ -192,7 +192,7 @@ void SD_Process(uint8_t Read_Write,uint16_t value)
         respond_frame[frame_len++]=(unsigned char)((ADDR_SD_CARD>>8)&0xff);
         respond_frame[frame_len++]=(unsigned char)((value>>0)&0xff);
         respond_frame[frame_len++]=(unsigned char)((value>>8)&0xff);
-        respond_frame[frame_len++]=CRC_AND(&respond_frame[1],frame_len);
+        respond_frame[frame_len++]=CRC_AND(&respond_frame[1],frame_len-1);
         respond_frame[frame_len++]=0x55;
         RS232_Send(frame_len,respond_frame);
     }
@@ -219,7 +219,7 @@ void SD_Process(uint8_t Read_Write,uint16_t value)
         respond_frame[frame_len++]=(unsigned char)((ADDR_SD_CARD>>8)&0xff);
         respond_frame[frame_len++]=(unsigned char)((test_buff[0]>>0)&0xff);
         respond_frame[frame_len++]=(unsigned char)((test_buff[0]>>8)&0xff);
-        respond_frame[frame_len++]=CRC_AND(&respond_frame[1],frame_len);
+        respond_frame[frame_len++]=CRC_AND(&respond_frame[1],frame_len-1);
         respond_frame[frame_len++]=0x55;
         RS232_Send(frame_len,respond_frame);
     }

@@ -55,7 +55,7 @@ hal/source/notification.obj: C:/ti/ccs1030/ccs/tools/compiler/ti-cgt-arm_20.2.4.
 hal/source/notification.obj: C:/ti/ccs1030/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS/include/stdarg.h
 hal/source/notification.obj: C:/ti/ccs1030/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS/include/stdlib.h
 hal/source/notification.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/SdCard/sdcard.h
-hal/source/notification.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/UserCode/global_Init.h
+hal/source/notification.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/UserCode/delay.h
 hal/source/notification.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/SdCard/ff.h
 hal/source/notification.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/SdCard/ffconf.h
 hal/source/notification.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/SdCard/diskio.h
@@ -220,7 +220,7 @@ C:/ti/ccs1030/ccs/tools/compiler/ti-cgt-arm_20.2.4.LTS/include/stdlib.h:
 
 C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/SdCard/sdcard.h:
 
-C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/UserCode/global_Init.h:
+C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/UserCode/delay.h:
 
 C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/SdCard/ff.h:
 

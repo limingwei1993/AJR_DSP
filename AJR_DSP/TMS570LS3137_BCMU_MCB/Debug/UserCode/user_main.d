@@ -36,7 +36,7 @@ UserCode/user_main.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCM
 UserCode/user_main.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/mibspi.h
 UserCode/user_main.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/sys_core.h
 UserCode/user_main.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/SdCard/sdcard.h
-UserCode/user_main.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/UserCode/global_Init.h
+UserCode/user_main.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/UserCode/delay.h
 UserCode/user_main.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/SdCard/ff.h
 UserCode/user_main.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/SdCard/ffconf.h
 UserCode/user_main.obj: C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/SdCard/diskio.h
@@ -163,7 +163,7 @@ C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/hal/include/sys_co
 
 C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/SdCard/sdcard.h:
 
-C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/UserCode/global_Init.h:
+C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/UserCode/delay.h:
 
 C:/Users/15755/Desktop/code/AJR/AJR_DSP/TMS570LS3137_BCMU_MCB/SdCard/ff.h:
 

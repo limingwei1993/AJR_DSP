@@ -7,25 +7,25 @@
 
 #ifndef USERCODE_SDRAM_H_
 #define USERCODE_SDRAM_H_
-#include "global_Init.h"
+#include <delay.h>
 /*板卡ID--Board_ID
  * 主板==Inboard ==A==0x001
  * 从板==Outboard==B==0x002
  *
  * */
 /*429 read ADDR*/
-#define       ADDR_HYDRAULIC_SYSTEM_PRESSURE        (0x400 | (0x030) | Board_ID <<8)                 /*油源压力1_60*/
+#define       ADDR_HYDRAULIC_SYSTEM_PRESSURE        (0x400 | (0x030) | Board_ID <<8)                /*油源压力1_60*/
 #define       ADDR_ACCUMULATOR_SYSTEM_PRESSURE      (0x400 | (0x056) | Board_ID<<8)                 /*蓄压器压力1_126*/
-#define       ADDR_TLA_POSITION_LEFT                (0x400 | (0x05B) & 0x7ff | 0x001)  /*左油门杆位置_133*/
-#define       ADDR_TLA_POSITION_RIGHT               (0x400 | (0x05B) & 0x7ff | 0x000)  /*右油门杆位置_133*/
+#define       ADDR_TLA_POSITION_LEFT                (0x400 | (0x05B) | (Board_ID&0x001)<<8 | 0x200) /*左油门杆位置_133*/
+#define       ADDR_TLA_POSITION_RIGHT               (0x400 | (0x05B) | (Board_ID&0x001)<<8 | 0x000) /*右油门杆位置_133*/
 #define       ADDR_MASTER_TIME                      (0x400 | (0x068) | Board_ID<<8)                 /*主机时间_150*/
 #define       ADDR_AIRSPEED                         (0x400 | (0x086) | Board_ID<<8)                 /*Computed_Air_Speed_206--计算空速*/
 #define       ADDR_DATE_MASTER                      (0x400 | (0x0B0) | Board_ID<<8)                 /*主机日期_260*/
 #define       ADDR_LG_GEARDOWN_LOCKED               (0x400 | (0x0BA) | Board_ID<<8)                 /*Gear_Position_1_272（Bit13）--起落架位置1*/
-#define       ADDR_COMPUTED_WOW_DATA1               (0x400 | (0x0BF) | 0x002<<8)                    /*计算轮载数据1_277*/
-#define       ADDR_COMPUTED_WOW_DATA2               (0x400 | (0x0BF) | 0x001<<8)                    /*计算轮载数据2_277*/
-#define       ADDR_AIRCRAFTACCELERATION_LEFT        (0x400 | (0x0D9) | 0x002<<8)                    /*Longitudinal_Acceleration_Body_Left_331--机体左侧纵向加速度*/
-#define       ADDR_AIRCRAFTACCELERATION_RIGHT       (0x400 | (0x0D9) | 0x001<<8)                    /*Longitudinal_Acceleration_Body_Right_331--机体右侧纵向加速度*/
+#define       ADDR_COMPUTED_WOW_DATA1               (0x400 | (0x0BF) | 0x001<<8)                    /*计算轮载数据1_277*/
+#define       ADDR_COMPUTED_WOW_DATA2               (0x400 | (0x0BF) | 0x002<<8)                    /*计算轮载数据2_277*/
+#define       ADDR_AIRCRAFTACCELERATION_LEFT        (0x400 | (0x0D9) | 0x001<<8)                    /*Longitudinal_Acceleration_Body_Left_331--机体左侧纵向加速度*/
+#define       ADDR_AIRCRAFTACCELERATION_RIGHT       (0x400 | (0x0D9) | 0x002<<8)                    /*Longitudinal_Acceleration_Body_Right_331--机体右侧纵向加速度*/
 /*429 write ADDR*/
 #define       ADDR_LEFT_WHEEL_SPEED                 (0x400 | (0x006) | Board_ID<<8)                 /*--左轮轮速_006*/
 #define       ADDR_RIGHT_WHEEL_SPEED                (0x400 | (0x007) | Board_ID<<8)                 /*--右轮轮速_007*/

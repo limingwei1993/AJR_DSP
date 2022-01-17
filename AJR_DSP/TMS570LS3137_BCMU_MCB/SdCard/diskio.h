@@ -1,7 +1,7 @@
 /*-----------------------------------------------------------------------/
 /  Low level disk interface modlue include file   (C)ChaN, 2014          /
 /-----------------------------------------------------------------------*/
-#include "global_Init.h"
+#include "delay.h"
 
 #ifndef __DISKIO_H
 #define __DISKIO_H
