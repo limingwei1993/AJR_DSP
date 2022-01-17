@@ -32,44 +32,14 @@ void RS232_Process(uint8_t *frame_data)
            device_status.Work_Mode=TEST_MODE;
        break;
        case WRITE_DATA:
-           if(device_status.Work_Mode==TEST_MODE)
-           {
-               Data_Addr=(unsigned short)(frame_data[2] | frame_data[3]<<8);
-               Data_value=(unsigned int)(frame_data[4] | frame_data[5]<<8);
-               Write_Data_Process(Data_Addr,Data_value);
-           }
-           else
-           {
-              respond_frame[frame_len++]=0xAA;
-              respond_frame[frame_len++]=WRITE_DATA;
-              respond_frame[frame_len++]=0;
-              respond_frame[frame_len++]=0;
-              respond_frame[frame_len++]=0;
-              respond_frame[frame_len++]=0;
-              respond_frame[frame_len++]=CRC_AND(&respond_frame[1],frame_len-1);
-              respond_frame[frame_len++]=0x55;
-              RS232_Send(frame_len,respond_frame);
-           }
+           Data_Addr=(unsigned short)(frame_data[2] | frame_data[3]<<8);
+           Data_value=(unsigned int)(frame_data[4] | frame_data[5]<<8);
+           Write_Data_Process(Data_Addr,Data_value);
        break;
        case READ_DATA:
-           if(device_status.Work_Mode==TEST_MODE)
-           {
-               Data_Addr=(unsigned short)(frame_data[2] | frame_data[3]<<8);
-               Data_value=(unsigned int)(frame_data[4] | frame_data[5]<<8);
-               Read_Data_Process(Data_Addr,Data_value);
-           }
-           else
-          {
-             respond_frame[frame_len++]=0xAA;
-             respond_frame[frame_len++]=READ_DATA;
-             respond_frame[frame_len++]=0;
-             respond_frame[frame_len++]=0;
-             respond_frame[frame_len++]=0;
-             respond_frame[frame_len++]=0;
-             respond_frame[frame_len++]=CRC_AND(&respond_frame[1],frame_len-1);
-             respond_frame[frame_len++]=0x55;
-             RS232_Send(frame_len,respond_frame);
-          }
+           Data_Addr=(unsigned short)(frame_data[2] | frame_data[3]<<8);
+           Data_value=(unsigned int)(frame_data[4] | frame_data[5]<<8);
+           Read_Data_Process(Data_Addr,Data_value);
        break;
        case QUIT_DBUG:
           respond_frame[frame_len++]=0xAA;
@@ -85,7 +55,6 @@ void RS232_Process(uint8_t *frame_data)
       break;
    }
 }
-
 /**************************
  * void Write_Data_Process(uint16_t Addr,uint16_t value)
  * RS232 写数据指令处理
@@ -135,7 +104,6 @@ void Write_Data_Process(uint16_t Addr,uint16_t value)
         }
     }
 }
-
 /**************************
  * void Read_Data_Process(uint16_t Addr,uint16_t value)
  * RS232 读数据指令处理
@@ -181,7 +149,6 @@ void Read_Data_Process(uint16_t Addr,uint16_t value)
         }
     }
 }
-
 /**************************
  * void SD_Process(uint8_t Read_Write,uint16_t value,uint8_t * readdata)
  * RS232 根据RS232指令对SD进行读写处理。用于测试
@@ -272,7 +239,6 @@ void TEST_SDRAM_Write(void)
         SDRAM_Write_Data(MCB_Data[i].Addr,MCB_Data[i].value);
     }
 }
-
 /**************************
  * void Test_Sdram_Data_Process(void)
  * 测试模式下DSP与FPGA进行数据交互

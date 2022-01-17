@@ -20,7 +20,6 @@ void DAC5689_Init(void)
     gioSetBit(spiPORT1,SPI_PIN_CS2,1);//RESET_H;
     delay_us(100);
 }
-
 /*******************************
  * void WriteData(unsigned int commandmode, unsigned int DACselect, unsigned int Data)
  * 写数据
@@ -35,7 +34,6 @@ void WriteData(unsigned int commandmode, unsigned int DACselect, unsigned int Da
     WriteRegister(RegisterData);
 
 }
-
 /*******************************
  * void WriteRegister(unsigned long int WriteData)
  * 写数据寄存器
@@ -51,7 +49,6 @@ void WriteRegister(unsigned long int WriteData)
     }
     SpiReadWrite( InputBuf, OutputBuf, NO_OF_BYTES); //Writes data to the specified register
 }
-
 /*******************************
  * void SpiReadWrite(unsigned char *InBuf, unsigned char *OutBuf, unsigned char NoOfBytes)
  * SPI读写
@@ -104,7 +101,6 @@ void SpiReadWrite(unsigned char *InBuf, unsigned char *OutBuf, unsigned char NoO
     gioSetBit(spiPORT1,SPI_PIN_ENA,1);/*SYNC_H*/;
     delay_us(50);
 }
-
 /*******************************
  * void DAC5689_SetVoltage_mv(unsigned int DACselect, unsigned int Voltage)
  * 输出DAC值。

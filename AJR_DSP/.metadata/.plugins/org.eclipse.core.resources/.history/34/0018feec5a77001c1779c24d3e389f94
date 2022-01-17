@@ -25,10 +25,9 @@ void Set_SOV(uint8_t statue)
     }
     else
     {
-       canREG1->TIOC |=0x00000002;
+        canREG1->TIOC |=0x00000002;
     }
 }
-
 /***************************
  * void set_ABSW(uint8_t statue)
  * 设置ABSW信号
@@ -42,10 +41,9 @@ void Set_ABSW(uint8_t statue)
     }
     else
     {
-       canREG3->TIOC |=0x00000002;
+        canREG3->TIOC |=0x00000002;
     }
 }
-
 /***************************
  * void Data_interaction(void)
  * 定时接收FPGA的数据，传递到刹车模型，从刹车模型读取返回的控制信息，发送数据到FPGA
@@ -120,7 +118,6 @@ void Signal_Output_Control(void)
         DAC5689_SetVoltage_mv(DAC_R,device_status.BrakePressureCommand_R);
     }
 }
-
 /***************************
  * void Transmit_Data_Process(void)
  * 对传输的数据进行赋值

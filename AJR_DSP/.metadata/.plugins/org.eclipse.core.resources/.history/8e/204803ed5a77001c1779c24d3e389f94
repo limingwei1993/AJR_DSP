@@ -11,6 +11,7 @@
 
 extern FIL file;
 extern FATFS fs;
+extern FIL file_past_err;
 extern SdCardStatus sd_card_status;
 
 

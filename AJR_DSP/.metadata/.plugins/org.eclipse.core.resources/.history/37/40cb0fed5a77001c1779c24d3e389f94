@@ -6,7 +6,7 @@
  */
 
 #include "user_main.h"
-SDRAM_DATA MCB_Data[DATA_LEN];/* 保存所有通信用到的地址和其对应的数据*/
+SDRAM_DATA MCB_Data[DATA_LEN];/* 接收来自FPGA的数据*/
 /**************************************
  * void Sdram_Init(void)
  * 与FPGA通信的初始化
@@ -23,7 +23,6 @@ void Sdram_Init(void)
     mibspiREG5->PC1 |=(0x00000A01);     /*CS、CLK、DWE output*/
     mibspiREG5->PC1 &=(~0x00000400);    /*FWE intput*/
 }
-
 /**************************************
  * void SDRAM_Set_IO_To_Read_Mode(void)
  * 将SDRAM的IO设置为读模式
@@ -35,7 +34,6 @@ void SDRAM_Set_IO_To_Read_Mode(void)
     gioPORTA->DIR &= (~ 0X000000E4);    /*INPUT--DATA:2 5 6 7*/
     canREG2->RIOC &=(~0x00000004);      /*can2_Rx as i/o  to DATA_A12   INPUT*/
 }
-
 /**************************************
  * uint8_t SDRAM_Read_Data( uint8_t Addr,uint16_t *Read_data)
  * 从FPGA指定地址读取数据
@@ -319,7 +317,6 @@ void SDRAM_Set_IO_To_Write_Mode(void)
       gioPORTA->DIR |=  0X000000E4;      /*0NPUT--DATA:2 5 6 7*/
       canREG2->RIOC |=  0x00000004;        /*can2_Rx  0NPUT*/
 }
-
 /**************************************
  * void SDRAM_Write_Data(uint8_t Addr, uint16_t Data)
  * 发送数据到FPGA指定地址
@@ -606,7 +603,6 @@ uint8_t GetBit(int data, int index)
 {
     return ((data & (1 << index)) > 0) ? 1: 0;
 }
-
 /***************************
  *void set_sdram_clk(uint8_t statue)
  * 设置Clk信号(F2-HL)（1--高字节；0--低字节）
@@ -635,7 +631,6 @@ uint8_t Get_sdram_FWE(void)
     recv=(uint16_t)((mibspiREG5->PC2) &0x00000400)>0?1:0;
     return recv;
 }
-
 /***************************
  * uint16_t set_sdram_cs( void)
  * 设置CS信号(RW)（1--读；0--写）
@@ -652,7 +647,6 @@ void set_sdram_cs(uint8_t statue)
         mibspiREG5->PC3 &=(~0x00000001);
     }
 }
-
 /***************************
  * uint16_t set_sdram_DWE( void)
  * 设置DWE信号(DSP_DR)
@@ -669,7 +663,6 @@ void set_sdram_DWE(uint8_t statue)
         mibspiREG5->PC3 &=(~0x00000800);
     }
 }
-
 /***************************
  * uint16_t get_sdram_DATA_A12( void)
  * 获取数据线 12信号状态
@@ -698,7 +691,6 @@ void set_sdram_DATA_A12(uint8_t statue)
         canREG2->RIOC |=0x00000002;
     }
 }
-
 /***************************
  * void can2_tx_SetBit(uint8_t statue)
  * 设置CAN2 Tx信号

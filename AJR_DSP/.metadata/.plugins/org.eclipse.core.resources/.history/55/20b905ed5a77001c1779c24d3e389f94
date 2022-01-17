@@ -25,22 +25,21 @@ void initialization(void)
     Sdram_Init();         /*SDRAM总线 初始化*/
     sciInit();            /*RS232 初始化*/
     delay_ms(100);
-    SD_GPIO_Init();       /*SD卡I/O 口初始化*/
+    SD_GPIO_Init();    /*SD卡I/O 口初始化*/
     Other_GPIO_Init();
     device_status_init();
     Get_Master_Slave();
     Get_Bench_Mode();
-    while (i && sd_card_status != Fatfs_Load_Success)
-    {
-       SdCard_Maintenance();
+     while (i && sd_card_status != Fatfs_Load_Success)
+     {
+         SdCard_Maintenance();
        i--;
-    }
+     }
     rtiEnableNotification(rtiNOTIFICATION_COMPARE0); /*使能定时器COMPARE0 5ms*/
-    rtiStartCounter(rtiCOUNTER_BLOCK0);              /*开始定时器BLOCK0计数*/
+    rtiStartCounter(rtiCOUNTER_BLOCK0);  /*开始定时器BLOCK0计数*/
     rtiEnableNotification(rtiNOTIFICATION_COMPARE3); /*使能定时器COMPARE0 5ms*/
-    rtiStartCounter(rtiCOUNTER_BLOCK1);              /*开始定时器BLOCK0计数*/
+    rtiStartCounter(rtiCOUNTER_BLOCK1);  /*开始定时器BLOCK0计数*/
 }
-
 /**********************
  * void device_status_init(void)
  * 设备状态参数和变量初始化

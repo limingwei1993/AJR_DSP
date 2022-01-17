@@ -7,11 +7,8 @@
 #include "user_main.h"
 FIL file;
 FATFS fs;
-SdCardStatus sd_card_status;/*SD¿¨×´Ì¬*/
-/**************************
- * void SdCard_Maintenance(void)
- * SD¿¨×´Ì¬Î¬»¤
- * ****************************/
+FIL file_past_err;
+SdCardStatus sd_card_status;
 void SdCard_Maintenance(void)
 {
   unsigned char num_init = 10;
