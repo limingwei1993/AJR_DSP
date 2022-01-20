@@ -27,8 +27,8 @@ void initialization(void)
     delay_ms(100);
     SD_GPIO_Init();       /*SD¿¨I/O ¿Ú³õÊ¼»¯*/
     Other_GPIO_Init();
-    device_status_init();
     Get_Master_Slave();
+    device_status_init();
     Get_Bench_Mode();
     while (i && sd_card_status != Fatfs_Load_Success)
     {
@@ -499,12 +499,10 @@ void Get_Bench_Mode(void)
     unsigned short i=0;
     if(((canREG1->RIOC) & 0x00000001)!=0) /**/
     {
-        Board_ID=0x001;
         device_status.Bench_Mode=INBOARD;
     }
     else
     {
-        Board_ID=0x002;
         device_status.Bench_Mode=OUTBOARD;
     }
     for(i=(SDRAM_READ_DATA_LEN+SDRAM_WRITE_DATA_LEN);i<Device_DATA_LEN;i++)

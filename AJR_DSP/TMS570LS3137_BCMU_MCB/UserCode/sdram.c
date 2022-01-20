@@ -71,7 +71,7 @@ uint8_t SDRAM_Read_Data( uint16_t Addr,uint32_t *Read_data)
         if(time_out==0)
         {
             set_sdram_DWE(LOW); /*DSP读取数据完成，告知FPGA读取数据完成*/
-            return 0;
+ //           return 0;
         }
         /*GET-DATA*/
         *Read_data |=((gioGetBit(gioPORTA, 2)>0)  ? 0x00010000:0);
@@ -372,7 +372,7 @@ uint8_t SDRAM_Write_Data(uint16_t Addr, uint32_t Data)
         if(time_out==0)
         {
             set_sdram_DWE(LOW); /*DSP读取数据完成，告知FPGA读取数据完成*/
-            return 0;
+     //       return 0;
         }
         set_sdram_DWE(LOW); /*DSP读取数据完成，告知FPGA读取数据完成*/
     }
@@ -494,7 +494,7 @@ void SDRAM_Write(void)
               break;
              case ADDR_SPINUP_SIGNAL:
             {
-               MCB_Data[i].value=(Transmit_Machine_Parameters.INBD_LT_SPINUP>0 ? 0x01:0x00)| (Transmit_Machine_Parameters.INBD_RT_SPINUP>0 ? 0x02:0x00) | (Transmit_Machine_Parameters.ARM_SIG>0 ? 0x03:0x00);
+               MCB_Data[i].value=(Transmit_Machine_Parameters.INBD_LT_SPINUP>0 ? 0x01:0x00)| (Transmit_Machine_Parameters.INBD_RT_SPINUP>0 ? 0x02:0x00) | (Transmit_Machine_Parameters.ARM_SIG>0 ? 0x04:0x00);
             }
             break;
             default:
@@ -602,7 +602,7 @@ void SDRAM_Write(void)
  * uint8_t GetBit(int data, int index)
  * 得到数据第n位的值
  * ********************************/
-uint8_t GetBit(int data, int index)
+uint8_t GetBit(unsigned int data, unsigned int index)
 {
     return ((data & (1 << index)) > 0) ? 1: 0;
 }
