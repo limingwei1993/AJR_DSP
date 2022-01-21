@@ -266,6 +266,7 @@ void SD_Process(uint8_t Read_Write,uint16_t value)
 void TEST_SDRAM_Write(void)
 {
     unsigned short i=0;
+    SDRAM_Set_IO_To_Write_Mode();
     /*发送地址0x40--0x60的数据*/
     for(i=SDRAM_READ_DATA_LEN;i<(SDRAM_WRITE_DATA_LEN+SDRAM_READ_DATA_LEN);i++)
     {

@@ -159,62 +159,62 @@ void SDRAM_Read(void)
         {
             case ADDR_INBD_LT_TEMP:
             {
-                Receive_Machine_Parameters.INBD_LT_TEMP=MCB_Data[i].value;
+                Receive_Machine_Parameters.INBD_LT_TEMP=(float)(MCB_Data[i].value*5000.0/32768/10);
             }
             break;
             case ADDR_INBD_RT_TEMP:
             {
-                Receive_Machine_Parameters.INBD_RT_TEMP=MCB_Data[i].value;
+                Receive_Machine_Parameters.INBD_RT_TEMP=(float)(MCB_Data[i].value*5000.0/32768/10);
             }
             break;
             case ADDR_INBD_LT_BPSI:
             {
-                Receive_Machine_Parameters.INBD_LT_BPSI=MCB_Data[i].value;
+                Receive_Machine_Parameters.INBD_LT_BPSI=(float)(MCB_Data[i].value*5.0/32768);
             }
             break;
             case ADDR_INBD_RT_BPSI:
             {
-                Receive_Machine_Parameters.INBD_RT_BPSI=MCB_Data[i].value;
+                Receive_Machine_Parameters.INBD_RT_BPSI=(float)(MCB_Data[i].value*5.0/32768);
             }
             break;
             case ADDR_LEFTPPEDAL:
             {
-                Receive_Machine_Parameters.LeftPPedal.Value=MCB_Data[i].value;
+                Receive_Machine_Parameters.LeftPPedal.Value=(float)(MCB_Data[i].value*5.0/32768);
             }
             break;
             case ADDR_RIGHTPPEDAL:
             {
-                Receive_Machine_Parameters.RightPPedal.Value=MCB_Data[i].value;
+                Receive_Machine_Parameters.RightPPedal.Value=(float)(MCB_Data[i].value*5.0/32768);
             }
             break;
             case ADDR_LEFTCPEDAL:
             {
-                Receive_Machine_Parameters.LeftCptPedal.Value=MCB_Data[i].value;
+                Receive_Machine_Parameters.LeftCptPedal.Value=(float)(MCB_Data[i].value*5.0/32768);
             }
             break;
             case ADDR_RIGHTCPEDAL:
             {
-               Receive_Machine_Parameters.RightCptPedal.Value=MCB_Data[i].value;
+               Receive_Machine_Parameters.RightCptPedal.Value=(float)(MCB_Data[i].value*5.0/32768);
             }
             break;
             case ADDR_INNER_WHEEL_ABS_START_SIGNAL:
             {
-               Receive_Machine_Parameters.Inner_wheel_ABS_start_signal=MCB_Data[i].value;
+               Receive_Machine_Parameters.Inner_wheel_ABS_Valve_Current=(float)(MCB_Data[i].value*5.0/32768);
             }
             break;
             case ADDR_INBOARD_SHUTOFF_VALVE_CURRENT:
             {
-               Receive_Machine_Parameters.Inboard_Shutoff_Valve_Current=MCB_Data[i].value;
+               Receive_Machine_Parameters.Inboard_Shutoff_Valve_Current=(float)(MCB_Data[i].value*5.0/32768);
             }
             break;
             case ADDR_LEFT_INBOARD_BRAKE_CONTROL_VALVE_CURRENT:
             {
-               Receive_Machine_Parameters.Left_Inboard_Brake_Control_Valve_Current=MCB_Data[i].value;
+               Receive_Machine_Parameters.Left_Inboard_Brake_Control_Valve_Current=(float)(MCB_Data[i].value*5.0/32768);
             }
             break;
             case ADDR_RIGHT_INBOARD_BRAKE_CONTROL_VALVE_CURRENT:
             {
-               Receive_Machine_Parameters.Right_Inboard_Brake_Control_Valve_Current=MCB_Data[i].value;
+               Receive_Machine_Parameters.Right_Inboard_Brake_Control_Valve_Current=(float)(MCB_Data[i].value*5.0/32768);
             }
             break;
             case ADDR_LEFTWHEELSPEED:

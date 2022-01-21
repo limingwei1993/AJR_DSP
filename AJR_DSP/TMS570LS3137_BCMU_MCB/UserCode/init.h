@@ -9,6 +9,7 @@
 #define USERCODE_INIT_H_
 
 extern unsigned short Board_ID;
+extern unsigned short Other_Board_ID;
 extern unsigned short SDRAM_READ_DATA_LEN;
 extern unsigned short SDRAM_WRITE_DATA_LEN;
 extern unsigned short Device_DATA_LEN;
