@@ -14,6 +14,7 @@ uint8_t SD_Process_Mode=0;
 uint16_t File_Name=0;
 extern uint32 us_count;
 uint32 test_us_count=0;
+uint16_t i=0;
 void user_main(void)
 {
     initialization();

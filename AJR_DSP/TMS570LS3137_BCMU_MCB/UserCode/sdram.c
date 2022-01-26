@@ -68,11 +68,6 @@ uint8_t SDRAM_Read_Data( uint16_t Addr,uint32_t *Read_data)
         {
             time_out--;
         }
-        if(time_out==0)
-        {
-            set_sdram_DWE(LOW); /*DSP读取数据完成，告知FPGA读取数据完成*/
- //           return 0;
-        }
         /*GET-DATA*/
         *Read_data |=((gioGetBit(gioPORTA, 2)>0)  ? 0x00010000:0);
         *Read_data |=((gioGetBit(gioPORTA, 5)>0)  ? 0x00020000:0);
@@ -113,11 +108,6 @@ uint8_t SDRAM_Read_Data( uint16_t Addr,uint32_t *Read_data)
     {
         time_out--;
     }
-    if(time_out==0)
-    {
-        set_sdram_DWE(LOW); /*DSP读取数据完成，告知FPGA读取数据完成*/
-        return 0;
-    }
     /*GET-DATA*/
     *Read_data |=((gioGetBit(gioPORTA, 2)>>0)  ? 0x00000001:0);
     *Read_data |=((gioGetBit(gioPORTA, 5)>>0)  ? 0x00000002:0);
@@ -143,9 +133,13 @@ uint8_t SDRAM_Read_Data( uint16_t Addr,uint32_t *Read_data)
  * void SDRAM_Read(void)
  * 从FPGA读取所有数据
  * ************************************/
+unsigned char test_rs232_buff[4*130]={0};
+unsigned char test_len=0;
 void SDRAM_Read(void)
 {
     unsigned char i=0;
+    signed short temp=0;
+  //  signed short pressure=0;
     SDRAM_Set_IO_To_Read_Mode();
     /*读取数据,FGPA采集的数据和429数据以及对板数据*/
     for(i=0;i<SDRAM_READ_DATA_LEN;i++)
@@ -155,66 +149,71 @@ void SDRAM_Read(void)
     /*以下将从FPGA读取到的数据赋值给设备的状态参数*/
     for(i=0;i<SDRAM_READ_DATA_LEN;i++)
     {
+        temp=MCB_Data[i].value&0xffff;
         switch(MCB_Data[i].Addr)
         {
             case ADDR_INBD_LT_TEMP:
             {
-                Receive_Machine_Parameters.INBD_LT_TEMP=(float)(MCB_Data[i].value*5000.0/32768/10);
+                Receive_Machine_Parameters.INBD_LT_TEMP=(float)(temp*5000.0*2/32768/10);
             }
             break;
             case ADDR_INBD_RT_TEMP:
             {
-                Receive_Machine_Parameters.INBD_RT_TEMP=(float)(MCB_Data[i].value*5000.0/32768/10);
+                Receive_Machine_Parameters.INBD_RT_TEMP=(float)(temp*5000.0*2/32768/10);
             }
             break;
             case ADDR_INBD_LT_BPSI:
             {
-                Receive_Machine_Parameters.INBD_LT_BPSI=(float)(MCB_Data[i].value*5.0/32768);
+            //    pressure=((float)(temp*5.0/32768))>=0.48?((float)(temp*5.0/32768))*8:0;
+            //    Receive_Machine_Parameters.INBD_LT_BPSI=pressure;
+                Receive_Machine_Parameters.INBD_LT_BPSI=((float)(temp*5.0/32768));
             }
             break;
             case ADDR_INBD_RT_BPSI:
             {
-                Receive_Machine_Parameters.INBD_RT_BPSI=(float)(MCB_Data[i].value*5.0/32768);
+              //    pressure=((float)(temp*5.0/32768))>=0.48?((float)(temp*5.0/32768))*8:0;
+              //    Receive_Machine_Parameters.INBD_RT_BPSI=pressure;
+                Receive_Machine_Parameters.INBD_RT_BPSI=(float)(temp*5.0/32768);
             }
             break;
             case ADDR_LEFTPPEDAL:
             {
-                Receive_Machine_Parameters.LeftPPedal.Value=(float)(MCB_Data[i].value*5.0/32768);
+                Receive_Machine_Parameters.LeftPPedal.Value=(float)(temp*5.0/32768);
             }
             break;
             case ADDR_RIGHTPPEDAL:
             {
-                Receive_Machine_Parameters.RightPPedal.Value=(float)(MCB_Data[i].value*5.0/32768);
+                Receive_Machine_Parameters.RightPPedal.Value=(float)(temp*5.0/32768);
             }
             break;
             case ADDR_LEFTCPEDAL:
             {
-                Receive_Machine_Parameters.LeftCptPedal.Value=(float)(MCB_Data[i].value*5.0/32768);
+                Receive_Machine_Parameters.LeftCptPedal.Value=(float)(temp*5.0/32768);
             }
             break;
             case ADDR_RIGHTCPEDAL:
             {
-               Receive_Machine_Parameters.RightCptPedal.Value=(float)(MCB_Data[i].value*5.0/32768);
+               Receive_Machine_Parameters.RightCptPedal.Value=(float)(temp*5.0/32768);
             }
             break;
             case ADDR_INNER_WHEEL_ABS_START_SIGNAL:
             {
-               Receive_Machine_Parameters.Inner_wheel_ABS_Valve_Current=(float)(MCB_Data[i].value*5.0/32768);
+               Receive_Machine_Parameters.Inner_wheel_ABS_Valve_Current=(float)(temp*5.0/32768);
             }
             break;
             case ADDR_INBOARD_SHUTOFF_VALVE_CURRENT:
             {
-               Receive_Machine_Parameters.Inboard_Shutoff_Valve_Current=(float)(MCB_Data[i].value*5.0/32768);
+               Receive_Machine_Parameters.Inboard_Shutoff_Valve_Current=(float)(temp*5.0/32768);
             }
             break;
             case ADDR_LEFT_INBOARD_BRAKE_CONTROL_VALVE_CURRENT:
             {
-               Receive_Machine_Parameters.Left_Inboard_Brake_Control_Valve_Current=(float)(MCB_Data[i].value*5.0/32768);
+               Receive_Machine_Parameters.Left_Inboard_Brake_Control_Valve_Current=(float)(temp*5.0/32768);
             }
             break;
             case ADDR_RIGHT_INBOARD_BRAKE_CONTROL_VALVE_CURRENT:
             {
-               Receive_Machine_Parameters.Right_Inboard_Brake_Control_Valve_Current=(float)(MCB_Data[i].value*5.0/32768);
+               Receive_Machine_Parameters.Right_Inboard_Brake_Control_Valve_Current=(float)(temp*5.0/32768);
             }
             break;
             case ADDR_LEFTWHEELSPEED:
@@ -368,11 +367,6 @@ uint8_t SDRAM_Write_Data(uint16_t Addr, uint32_t Data)
         while(Get_sdram_FWE()==LOW && time_out) /*等待DSP数据准备完成*/
         {
             time_out--;
-        }
-        if(time_out==0)
-        {
-            set_sdram_DWE(LOW); /*DSP读取数据完成，告知FPGA读取数据完成*/
-     //       return 0;
         }
         set_sdram_DWE(LOW); /*DSP读取数据完成，告知FPGA读取数据完成*/
     }

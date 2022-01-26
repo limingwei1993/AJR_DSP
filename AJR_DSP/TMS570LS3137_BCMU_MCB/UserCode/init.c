@@ -38,8 +38,10 @@ void initialization(void)
     }
     rtiEnableNotification(rtiNOTIFICATION_COMPARE0); /*使能定时器COMPARE0 5ms*/
     rtiStartCounter(rtiCOUNTER_BLOCK0);              /*开始定时器BLOCK0计数*/
-    rtiEnableNotification(rtiNOTIFICATION_COMPARE3); /*使能定时器COMPARE0 5ms*/
-    rtiStartCounter(rtiCOUNTER_BLOCK1);              /*开始定时器BLOCK0计数*/
+    Set_SOV(0);
+    Set_ABSW(0);
+  //  rtiEnableNotification(rtiNOTIFICATION_COMPARE3); /*使能定时器COMPARE0 5ms*/
+  //  rtiStartCounter(rtiCOUNTER_BLOCK1);              /*开始定时器BLOCK0计数*/
 }
 
 /**********************
@@ -483,8 +485,8 @@ void Get_Master_Slave(void)
         Other_Board_ID=0x001;
         device_status.Master_Salve_mode=OUTBOARD;
     }
-    Board_ID=0x002;
-    Other_Board_ID=0x001;
+   Board_ID=0x002;
+   Other_Board_ID=0x001;
     for(i=(SDRAM_READ_DATA_LEN+SDRAM_WRITE_DATA_LEN);i<Device_DATA_LEN;i++)
     {
         if(MCB_Data[i].Addr==ADDR_DSP_MODE)

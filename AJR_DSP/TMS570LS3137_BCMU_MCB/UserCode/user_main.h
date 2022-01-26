@@ -137,17 +137,17 @@ typedef  struct TX_FPGA_DATA
         bool ARM_SIG;                           /*ARM_SIG */
         bool INBD_LT_SPINUP;                    /*左轮起转信号 */
         bool INBD_RT_SPINUP;                    /* 右轮起转信号*/
-        float TEST_DAC_BCV_LT;                  /*测试信号左轮刹车控制阀 */
-        float TEST_DAC_BCV_RT;                  /*测试信号右轮刹车控制阀 */
-        float TEST_DAC_CV_LT;                   /*测试信号CV左 */
-        float TEST_DAC_CV_RT;                   /*测试信号CV右 */
-        float TEST_DAC_WHELL_SPEED_LT;          /*测试信号内轮轮速 LT */
-        float TEST_DAC_WHELL_SPEED_RT;          /*测试信号内轮轮速 RT */
-        float TEST_DAC_SOV;                     /*测试信号SOV */
-        float TEST_DAC_PLT_LT;                  /*BRK PDL CH1 PLT LT  脚蹬信号 */
-        float TEST_DAC_PLT_RT;                  /*BRK PDL CH1 PLT RT  脚蹬信号 */
-        float TEST_DAC_CPLT_LT;                 /*BRK PDL CH1 CPLT LT  脚蹬信号 */
-        float TEST_DAC_CPLT_RT;                 /*BRK PDL CH1 CPLT RT  脚蹬信号 */
+        float TEST_DAC_BCV_LT;                  /*测试信号左轮刹车控制阀 *//*输入范围0~0xffff对应0~5V*/
+        float TEST_DAC_BCV_RT;                  /*测试信号右轮刹车控制阀 *//*输入范围0~0xffff对应0~5V*/
+        float TEST_DAC_CV_LT;                   /*测试信号CV左 *//*输入范围0~0xffff对应0~5V*/
+        float TEST_DAC_CV_RT;                   /*测试信号CV右 *//*输入范围0~0xffff对应0~5V*/
+        float TEST_DAC_WHELL_SPEED_LT;          /*测试信号内轮轮速 LT *//*输入范围0~0xffff对应0~5V*/
+        float TEST_DAC_WHELL_SPEED_RT;          /*测试信号内轮轮速 RT *//*输入范围0~0xffff对应0~5V*/
+        float TEST_DAC_SOV;                     /*测试信号SOV *//*输入范围0~0xffff对应0~5V*/
+        float TEST_DAC_PLT_LT;                  /*BRK PDL CH1 PLT LT  脚蹬信号 *//*输入范围0~0xffff对应0~5V*/
+        float TEST_DAC_PLT_RT;                  /*BRK PDL CH1 PLT RT  脚蹬信号 *//*输入范围0~0xffff对应0~5V*/
+        float TEST_DAC_CPLT_LT;                 /*BRK PDL CH1 CPLT LT  脚蹬信号 *//*输入范围0~0xffff对应0~5V*/
+        float TEST_DAC_CPLT_RT;                 /*BRK PDL CH1 CPLT RT  脚蹬信号 *//*输入范围0~0xffff对应0~5V*/
         TX_429_DATA TX_429_Communication;
 } TX_FPGA_DATA;
 
