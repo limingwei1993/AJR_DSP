@@ -430,8 +430,6 @@ void device_status_init(void)
     Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_352=0;
     Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_353=0;
     device_status.Work_Mode=NORMAL_MODE;
-    device_status.Bench_Mode=0;
-    device_status.Master_Salve_mode=INBOARD;
     device_status.ABSW_Status=0;
     device_status.SOV_Status=0;
     device_status.BrakePressureCommand_L=0;
@@ -485,8 +483,8 @@ void Get_Master_Slave(void)
         Other_Board_ID=0x001;
         device_status.Master_Salve_mode=OUTBOARD;
     }
-   Board_ID=0x002;
-   Other_Board_ID=0x001;
+  // Board_ID=0x002;
+  // Other_Board_ID=0x001;
     for(i=(SDRAM_READ_DATA_LEN+SDRAM_WRITE_DATA_LEN);i<Device_DATA_LEN;i++)
     {
         if(MCB_Data[i].Addr==ADDR_DSP_MODE)

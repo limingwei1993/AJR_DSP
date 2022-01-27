@@ -97,8 +97,8 @@
 #define       ADDR_INBOARD_SHUTOFF_VALVE_CURRENT                0x00A  /*切断阀电流检测 *//*回采*/
 #define       ADDR_LEFT_INBOARD_BRAKE_CONTROL_VALVE_CURRENT     0x00B  /*--右轮刹车控制阀电流*//*回采*/
 #define       ADDR_RIGHT_INBOARD_BRAKE_CONTROL_VALVE_CURRENT    0x00C  /*--左轮刹车控制阀电流 *//*回采*/
-#define       ADDR_LEFTWHEELSPEED                               0x011  /*INBD_LT_WST--左轮轮速*/
-#define       ADDR_RIGHTWHEELSPEED                              0x012  /*INBD_RT_WST--右轮轮速*/
+#define       ADDR_LEFTWHEELSPEED                               0x012  /*INBD_LT_WST--左轮轮速*/
+#define       ADDR_RIGHTWHEELSPEED                              0x011  /*INBD_RT_WST--右轮轮速*/
 #define       ADDR_AUTO_BRAKE_SW_SIGNAL                         0x013  /*自动刹车开关量信号*/
 #define       ADDR_OTHER_SW_SIGNAL                              0x014  /*其它开关量信号*/
 /*FPGA本板卡输出信号*/

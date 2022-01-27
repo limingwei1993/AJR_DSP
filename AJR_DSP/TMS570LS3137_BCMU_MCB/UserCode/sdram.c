@@ -139,7 +139,7 @@ void SDRAM_Read(void)
 {
     unsigned char i=0;
     signed short temp=0;
-  //  signed short pressure=0;
+    signed short pressure=0;
     SDRAM_Set_IO_To_Read_Mode();
     /*读取数据,FGPA采集的数据和429数据以及对板数据*/
     for(i=0;i<SDRAM_READ_DATA_LEN;i++)
@@ -154,12 +154,12 @@ void SDRAM_Read(void)
         {
             case ADDR_INBD_LT_TEMP:
             {
-                Receive_Machine_Parameters.INBD_LT_TEMP=(float)(temp*5000.0*2/32768/10);
+                Receive_Machine_Parameters.INBD_LT_TEMP=(float)(temp*5000.0/32768/10)*2;
             }
             break;
             case ADDR_INBD_RT_TEMP:
             {
-                Receive_Machine_Parameters.INBD_RT_TEMP=(float)(temp*5000.0*2/32768/10);
+                Receive_Machine_Parameters.INBD_RT_TEMP=(float)(temp*5000.0/32768/10)*2;
             }
             break;
             case ADDR_INBD_LT_BPSI:
@@ -178,21 +178,29 @@ void SDRAM_Read(void)
             break;
             case ADDR_LEFTPPEDAL:
             {
+           //     pressure=(float)(temp*5.0/32768)>=0.28 ?((float)(temp*5.0/32768)-0.28)*100/2.76:0;
+           //     Receive_Machine_Parameters.LeftPPedal.Value=pressure;
                 Receive_Machine_Parameters.LeftPPedal.Value=(float)(temp*5.0/32768);
             }
             break;
             case ADDR_RIGHTPPEDAL:
             {
+           //     pressure=(float)(temp*5.0/32768)>=0.28 ?((float)(temp*5.0/32768)-0.28)*100/2.76:0;
+          //      Receive_Machine_Parameters.RightPPedal.Value=pressure;
                 Receive_Machine_Parameters.RightPPedal.Value=(float)(temp*5.0/32768);
             }
             break;
             case ADDR_LEFTCPEDAL:
             {
+         //       pressure=(float)(temp*5.0/32768)>=0.28 ?((float)(temp*5.0/32768)-0.28)*100/2.76:0;
+         //       Receive_Machine_Parameters.LeftCptPedal.Value=pressure;
                 Receive_Machine_Parameters.LeftCptPedal.Value=(float)(temp*5.0/32768);
             }
             break;
             case ADDR_RIGHTCPEDAL:
             {
+         //      pressure=(float)(temp*5.0/32768)>=0.28 ?((float)(temp*5.0/32768)-0.28)*100/2.76:0;
+         //      Receive_Machine_Parameters.RightCptPedal.Value=pressure;
                Receive_Machine_Parameters.RightCptPedal.Value=(float)(temp*5.0/32768);
             }
             break;
@@ -208,11 +216,13 @@ void SDRAM_Read(void)
             break;
             case ADDR_LEFT_INBOARD_BRAKE_CONTROL_VALVE_CURRENT:
             {
+             //   Receive_Machine_Parameters.Left_Inboard_Brake_Control_Valve_Current=(float)(temp*33.0/32768);
                Receive_Machine_Parameters.Left_Inboard_Brake_Control_Valve_Current=(float)(temp*5.0/32768);
             }
             break;
             case ADDR_RIGHT_INBOARD_BRAKE_CONTROL_VALVE_CURRENT:
             {
+            //    Receive_Machine_Parameters.Right_Inboard_Brake_Control_Valve_Current=(float)(temp*33.0/32768);
                Receive_Machine_Parameters.Right_Inboard_Brake_Control_Valve_Current=(float)(temp*5.0/32768);
             }
             break;
