@@ -110,6 +110,7 @@ void rtiNotification(uint32 notification)
     if(notification==rtiNOTIFICATION_COMPARE0)/*5ms*/
     {
         SDRAM_RxTx=1;
+        get_bench_mode_time_count++;
     }
   //  if(notification==rtiNOTIFICATION_COMPARE3)/*10us*/
   //  {

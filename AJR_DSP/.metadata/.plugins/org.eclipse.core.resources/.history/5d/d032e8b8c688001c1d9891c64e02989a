@@ -1,0 +1,58 @@
+/*
+  ******************************************************************************
+  * @file    user_Main.c
+  * @author  JYS
+  * @version V1.0.0
+  * @date    2020-06-10
+  * @brief   Init
+  */
+
+#include "user_main.h"
+uint8_t SDRAM_RxTx=0;     /*FPGA读写数据的标志*/
+uint8_t SD_Process_Flag=0; /*测试模式下，用于SD卡操作标志*/
+uint8_t SD_Process_Mode=0; /*测试模式下，用于SD卡读写标志*/
+uint16_t File_Name=0;  /*测试模式下，用于SD卡里的文件名*/
+extern uint32 us_count;  /*测试使用*/
+uint32 test_us_count=0; /*测试使用*/
+uint16_t test_send_message_time_count=0;  /*测试模式下，用于上报采集信息的时间计数*/
+uint16_t get_bench_mode_time_count=0;  /*用于判断Bench Mode的时间计数*/
+void user_main(void)
+{
+    initialization();
+    while (1)
+    {
+        if(SDRAM_RxTx==1) /*5ms*/
+        {
+            us_count=0;
+            if(device_status.Work_Mode==NORMAL_MODE)
+            {
+                Data_interaction();
+            }
+            else
+            {
+                Test_Sdram_Data_Process();
+                test_send_message_time_count++;
+                if(test_send_message_time_count>=100)
+                {
+                    test_send_message_time_count=0;
+                    Send_Test_Message();
+                }
+            }
+            SDRAM_RxTx=0;
+            test_us_count=us_count;
+        }
+        if(get_bench_mode_time_count>=200)  /*1s*/
+        {
+            get_bench_mode_time_count=0;
+            Get_Bench_Mode();
+        }
+        Signal_Output_Control();
+        SdCard_Maintenance();
+        if(SD_Process_Flag==1)
+        {
+            SD_Process_Flag=0;
+           SD_Process(SD_Process_Mode,File_Name);
+        }
+    }
+}
+

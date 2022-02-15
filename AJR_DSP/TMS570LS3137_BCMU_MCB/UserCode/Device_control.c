@@ -85,10 +85,10 @@ void Data_interaction(void)
     /******以上，读FPGA*******/
     Brake(&test_inC, &test_outC);
     /******以下，写FPGA*******/
-  //  Transmit_Machine_Parameters.SOV_Open=test_outC.Output.SOV_Open;
-  //  Transmit_Machine_Parameters.BrakePressureCommand_L=test_outC.Output.BrakePressureCommand_L;
-  //  Transmit_Machine_Parameters.BrakePressureCommand_R=test_outC.Output.BrakePressureCommand_R;
-  //  Transmit_Machine_Parameters.CoilEnergized=test_outC.Output.BrakeAutoBKOut.CoilEnergized;
+    Transmit_Machine_Parameters.SOV_Open=test_outC.Output.SOV_Open;
+    Transmit_Machine_Parameters.BrakePressureCommand_L=test_outC.Output.BrakePressureCommand_L;
+    Transmit_Machine_Parameters.BrakePressureCommand_R=test_outC.Output.BrakePressureCommand_R;
+    Transmit_Machine_Parameters.CoilEnergized=test_outC.Output.BrakeAutoBKOut.CoilEnergized;
     Transmit_Data_Process();
     SDRAM_Write();
 }

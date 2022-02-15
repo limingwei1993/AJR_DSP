@@ -17,20 +17,20 @@ unsigned short Device_DATA_LEN=0;
 void initialization(void)
 {
     uint8_t i = 20;
-    _enable_interrupt_(); /*使能中断*/
-    _enable_IRQ();        /*使能中断*/
-    rtiInit();            /*初始化定时器*/
-    DAC5689_Init();       /*DAC5689初始化*/
-    gioInit();            /*I/O 初始化*/
-    muxInit();            /*引脚分配 初始化*/
-    Sdram_Init();         /*SDRAM总线 初始化*/
-    sciInit();            /*RS232 初始化*/
+    _enable_interrupt_();   /*使能中断*/
+    _enable_IRQ();          /*使能中断*/
+    rtiInit();              /*初始化定时器*/
+    DAC5689_Init();         /*DAC5689初始化*/
+    gioInit();              /*I/O 初始化*/
+    muxInit();              /*引脚分配 初始化*/
+    Sdram_Init();           /*SDRAM总线 初始化*/
+    sciInit();              /*RS232 初始化*/
     delay_ms(100);
-    SD_GPIO_Init();       /*SD卡I/O 口初始化*/
-    Other_GPIO_Init();
-    Get_Master_Slave();
-    device_status_init();
-    Get_Bench_Mode();
+    SD_GPIO_Init();         /*SD卡I/O 口初始化*/
+    Other_GPIO_Init();      /*其它IO口初始化*/
+    Get_Master_Slave();     /*获取DSP主从模式（内轮/外轮）*/
+    device_status_init();   /*设备变量初始化*/
+    Get_Bench_Mode();       /*获取Bench_Mode信号*/
     while (i && sd_card_status != Fatfs_Load_Success)
     {
        SdCard_Maintenance();
@@ -38,10 +38,8 @@ void initialization(void)
     }
     rtiEnableNotification(rtiNOTIFICATION_COMPARE0); /*使能定时器COMPARE0 5ms*/
     rtiStartCounter(rtiCOUNTER_BLOCK0);              /*开始定时器BLOCK0计数*/
-    Set_SOV(0);
-    Set_ABSW(0);
-  //  rtiEnableNotification(rtiNOTIFICATION_COMPARE3); /*使能定时器COMPARE0 5ms*/
-  //  rtiStartCounter(rtiCOUNTER_BLOCK1);              /*开始定时器BLOCK0计数*/
+    Set_SOV(0);   /*设置SOV上电状态*/
+    Set_ABSW(0);  /*设置ABSW上电状态*/
 }
 
 /**********************
@@ -483,8 +481,6 @@ void Get_Master_Slave(void)
         Other_Board_ID=0x001;
         device_status.Master_Salve_mode=OUTBOARD;
     }
-  // Board_ID=0x002;
-  // Other_Board_ID=0x001;
     for(i=(SDRAM_READ_DATA_LEN+SDRAM_WRITE_DATA_LEN);i<Device_DATA_LEN;i++)
     {
         if(MCB_Data[i].Addr==ADDR_DSP_MODE)

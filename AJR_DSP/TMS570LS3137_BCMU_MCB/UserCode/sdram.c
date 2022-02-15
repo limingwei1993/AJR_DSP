@@ -133,8 +133,6 @@ uint8_t SDRAM_Read_Data( uint16_t Addr,uint32_t *Read_data)
  * void SDRAM_Read(void)
  * 从FPGA读取所有数据
  * ************************************/
-unsigned char test_rs232_buff[4*130]={0};
-unsigned char test_len=0;
 void SDRAM_Read(void)
 {
     unsigned char i=0;
@@ -264,54 +262,57 @@ void SDRAM_Read(void)
            break;
            default:
            {
-               if(MCB_Data[i].Addr==ADDR_HYDRAULIC_SYSTEM_PRESSURE)
-              {
-                  Receive_Machine_Parameters.RX_429_Communication.Hydraulic_System_Pressure_1_60=(MCB_Data[i].value>>16)&0xfff;
-              }
-              else if(MCB_Data[i].Addr==ADDR_ACCUMULATOR_SYSTEM_PRESSURE)
-              {
-                 Receive_Machine_Parameters.RX_429_Communication.Accumulator_System_Pressure_1_126=(MCB_Data[i].value>>16)&0xfff;
-              }
-              else if(MCB_Data[i].Addr==ADDR_TLA_POSITION_LEFT)
-              {
-                  Receive_Machine_Parameters.RX_429_Communication.TLA_Position_Left_133=((MCB_Data[i].value>>16)&0xfff)*0.00390652;
-              }
-              else if(MCB_Data[i].Addr==ADDR_TLA_POSITION_RIGHT)
-              {
-                  Receive_Machine_Parameters.RX_429_Communication.TLA_Position_Right_133=((MCB_Data[i].value>>16)&0xfff)*0.00390652;
-              }
-              else if(MCB_Data[i].Addr==ADDR_MASTER_TIME)
-             {
-                Receive_Machine_Parameters.RX_429_Communication.Master_Time_150=(MCB_Data[i].value>>11)&0x1ffff;
-             }
-             else if(MCB_Data[i].Addr==ADDR_AIRSPEED)
-             {
-                 Receive_Machine_Parameters.RX_429_Communication.Airspeed.Value=((MCB_Data[i].value>>14)&0x3fff)*0.0625;
-             }
-             else if(MCB_Data[i].Addr==ADDR_DATE_MASTER)
-             {
-                 Receive_Machine_Parameters.RX_429_Communication.Date_Master_260=(MCB_Data[i].value>>10)&0x7ffff;
-             }
-             else if(MCB_Data[i].Addr==ADDR_LG_GEARDOWN_LOCKED)
-             {
-               Receive_Machine_Parameters.RX_429_Communication.LG_GearDown_Locked=(MCB_Data[i].value>>10)&0x3ffff;
-             }
-             else if(MCB_Data[i].Addr==ADDR_COMPUTED_WOW_DATA1)
-             {
-                  Receive_Machine_Parameters.RX_429_Communication.Computed_WOW_Data_1_277=(MCB_Data[i].value>>10)&0xf;
-             }
-             else if(MCB_Data[i].Addr==ADDR_COMPUTED_WOW_DATA2)
-             {
-                Receive_Machine_Parameters.RX_429_Communication.Computed_WOW_Data_2_277=(MCB_Data[i].value>>10)&0xf;
-             }
-             else if(MCB_Data[i].Addr==ADDR_AIRCRAFTACCELERATION_LEFT)
-             {
-               Receive_Machine_Parameters.RX_429_Communication.AircraftAcceleration_Left.Value=((MCB_Data[i].value>>13)&0x7fff)*0.00012;
-             }
-             else if(MCB_Data[i].Addr==ADDR_AIRCRAFTACCELERATION_RIGHT)
-             {
-               Receive_Machine_Parameters.RX_429_Communication.AircraftAcceleration1_Right.Value=((MCB_Data[i].value>>13)&0x7fff)*0.00012;
-             }
+               if(Get_Odd_value(MCB_Data[i].value)==((MCB_Data[i].value>>31)&0x01))
+               {
+                     if(MCB_Data[i].Addr==ADDR_HYDRAULIC_SYSTEM_PRESSURE)
+                     {
+                         Receive_Machine_Parameters.RX_429_Communication.Hydraulic_System_Pressure_1_60=(MCB_Data[i].value>>16)&0xfff;
+                     }
+                     else if(MCB_Data[i].Addr==ADDR_ACCUMULATOR_SYSTEM_PRESSURE)
+                     {
+                         Receive_Machine_Parameters.RX_429_Communication.Accumulator_System_Pressure_1_126=(MCB_Data[i].value>>16)&0xfff;
+                     }
+                     else if(MCB_Data[i].Addr==ADDR_TLA_POSITION_LEFT)
+                     {
+                         Receive_Machine_Parameters.RX_429_Communication.TLA_Position_Left_133=((MCB_Data[i].value>>16)&0xfff)*0.00390652;
+                     }
+                     else if(MCB_Data[i].Addr==ADDR_TLA_POSITION_RIGHT)
+                     {
+                         Receive_Machine_Parameters.RX_429_Communication.TLA_Position_Right_133=((MCB_Data[i].value>>16)&0xfff)*0.00390652;
+                     }
+                     else if(MCB_Data[i].Addr==ADDR_MASTER_TIME)
+                     {
+                         Receive_Machine_Parameters.RX_429_Communication.Master_Time_150=(MCB_Data[i].value>>11)&0x1ffff;
+                     }
+                     else if(MCB_Data[i].Addr==ADDR_AIRSPEED)
+                     {
+                         Receive_Machine_Parameters.RX_429_Communication.Airspeed.Value=((MCB_Data[i].value>>14)&0x3fff)*0.0625;
+                     }
+                     else if(MCB_Data[i].Addr==ADDR_DATE_MASTER)
+                     {
+                         Receive_Machine_Parameters.RX_429_Communication.Date_Master_260=(MCB_Data[i].value>>10)&0x7ffff;
+                     }
+                     else if(MCB_Data[i].Addr==ADDR_LG_GEARDOWN_LOCKED)
+                     {
+                         Receive_Machine_Parameters.RX_429_Communication.LG_GearDown_Locked=(MCB_Data[i].value>>10)&0x3ffff;
+                     }
+                     else if(MCB_Data[i].Addr==ADDR_COMPUTED_WOW_DATA1)
+                     {
+                         Receive_Machine_Parameters.RX_429_Communication.Computed_WOW_Data_1_277=(MCB_Data[i].value>>10)&0xf;
+                     }
+                     else if(MCB_Data[i].Addr==ADDR_COMPUTED_WOW_DATA2)
+                     {
+                         Receive_Machine_Parameters.RX_429_Communication.Computed_WOW_Data_2_277=(MCB_Data[i].value>>10)&0xf;
+                     }
+                     else if(MCB_Data[i].Addr==ADDR_AIRCRAFTACCELERATION_LEFT)
+                     {
+                         Receive_Machine_Parameters.RX_429_Communication.AircraftAcceleration_Left.Value=((MCB_Data[i].value>>13)&0x7fff)*0.00012;
+                     }
+                     else if(MCB_Data[i].Addr==ADDR_AIRCRAFTACCELERATION_RIGHT)
+                     {
+                         Receive_Machine_Parameters.RX_429_Communication.AircraftAcceleration1_Right.Value=((MCB_Data[i].value>>13)&0x7fff)*0.00012;
+                     }
+               }
            }
            break;
            }
@@ -326,7 +327,7 @@ void SDRAM_Set_IO_To_Write_Mode(void)
       /*置1输出。将IO扣配置为发送数据到PFGA的模式*/
       hetPORT1->DIR |=  0x0555DC00;      /*0NPUT--DATA:10-12 14-16 18 20 22 24 26*/
       gioPORTA->DIR |=  0X000000E4;      /*0NPUT--DATA:2 5 6 7*/
-      canREG2->RIOC |=  0x00000004;        /*can2_Rx  0NPUT*/
+      canREG2->RIOC |=  0x00000004;      /*can2_Rx  0NPUT*/
 }
 
 /**************************************
@@ -337,7 +338,7 @@ void SDRAM_Set_IO_To_Write_Mode(void)
 uint8_t SDRAM_Write_Data(uint16_t Addr, uint32_t Data)
 {
     uint16_t time_out=100;
-    if((Addr & 0x400) !=0)/*429数据*/
+    if((Addr & 0x400) !=0)  /*429数据*/
     {
         /*SET-ADDR*/
         gioSetBit(hetPORT1,PIN_HET_0,GetBit(Addr,0));   /*[A0]*/
@@ -497,16 +498,16 @@ void SDRAM_Write(void)
               }
               break;
              case ADDR_SPINUP_SIGNAL:
-            {
-               MCB_Data[i].value=(Transmit_Machine_Parameters.INBD_LT_SPINUP>0 ? 0x01:0x00)| (Transmit_Machine_Parameters.INBD_RT_SPINUP>0 ? 0x02:0x00) | (Transmit_Machine_Parameters.ARM_SIG>0 ? 0x04:0x00);
-            }
-            break;
-            default:
-            {
+             {
+                    MCB_Data[i].value=(Transmit_Machine_Parameters.INBD_LT_SPINUP>0 ? 0x01:0x00)| (Transmit_Machine_Parameters.INBD_RT_SPINUP>0 ? 0x02:0x00) | (Transmit_Machine_Parameters.ARM_SIG>0 ? 0x04:0x00);
+             }
+             break;
+             default:
+             {
                  MCB_Data[i].value &=0x600003ff;
                  if( MCB_Data[i].Addr==ADDR_LEFT_WHEEL_SPEED)
                  {
-                    MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Left_Inboard_Wheel_Speed_006/0.125)&0xfff)<<16;
+                     MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Left_Inboard_Wheel_Speed_006/0.125)&0xfff)<<16;
                  }
                  else if( MCB_Data[i].Addr==ADDR_RIGHT_WHEEL_SPEED)
                  {
@@ -514,79 +515,79 @@ void SDRAM_Write(void)
                  }
                  else if( MCB_Data[i].Addr==ADDR_LEFT_BRAKE_CONTROL_VALVE_CURENT)
                  {
-                   MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Left_Inboard_Brake_Control_Valve_Current_051/0.1)&0xfff)<<16;
+                     MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Left_Inboard_Brake_Control_Valve_Current_051/0.1)&0xfff)<<16;
                  }
                  else if( MCB_Data[i].Addr==ADDR_RIGHT_BRAKE_CONTROL_VALVE_CURENT)
                  {
-                   MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Right_Inboard_Brake_Control_Valve_Current_052/0.1)&0xfff)<<16;
+                     MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Right_Inboard_Brake_Control_Valve_Current_052/0.1)&0xfff)<<16;
                  }
                  else if( MCB_Data[i].Addr==ADDR_LEFT_BRAKE_PRESSURE)
                  {
-                   MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Left_Inboard_Brake_Pressure_070)&0xfff)<<16;
+                     MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Left_Inboard_Brake_Pressure_070)&0xfff)<<16;
                  }
                  else if( MCB_Data[i].Addr==ADDR_RIGHT_BRAKE_PRESSURE)
                  {
-                   MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Right_Inboard_Brake_Pressure_071)&0xfff)<<16;
+                     MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Right_Inboard_Brake_Pressure_071)&0xfff)<<16;
                  }
                  else if( MCB_Data[i].Addr==ADDR_SHUTOFF_VALVE_CURRENT)
                  {
-                   MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Inboard_Shutoff_Valve_Current_113)&0xfff)<<16;
+                     MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Inboard_Shutoff_Valve_Current_113)&0xfff)<<16;
                  }
                  else if( MCB_Data[i].Addr==ADDR_LEFT_BRAKE_TEMPERATURE)
                  {
-                   MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Left_Inboard_Brake_Temperature_114)&0xfff)<<16;
+                     MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Left_Inboard_Brake_Temperature_114)&0xfff)<<16;
                  }
                  else if( MCB_Data[i].Addr==ADDR_RIGHT_BRAKE_TEMPERATURE)
                  {
-                   MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Right_Inboard_Brake_Temperature_116)&0xfff)<<16;
+                     MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Right_Inboard_Brake_Temperature_116)&0xfff)<<16;
                  }
                  else if( MCB_Data[i].Addr==ADDR_LEFT_BRAKE_PEDAL_POSITION_PILOT)
                  {
-                   MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Left_Brake_Pedal_Position_Pilot_171/0.01)&0xff)<<20;
+                     MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Left_Brake_Pedal_Position_Pilot_171/0.01)&0xff)<<20;
                  }
                  else if( MCB_Data[i].Addr==ADDR_RIGHT_BRAKE_PEDAL_POSITION_PILOT)
                  {
-                   MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Right_Brake_Pedal_Position_Pilot_172/0.01)&0xff)<<20;
+                     MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Right_Brake_Pedal_Position_Pilot_172/0.01)&0xff)<<20;
                  }
                  else if( MCB_Data[i].Addr==ADDR_LEFT_BRAKE_PEDAL_POSITION_COPILOT)
                  {
-                   MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Left_Brake_Pedal_Position_Copilot_173/0.01)&0xff)<<20;
+                     MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Left_Brake_Pedal_Position_Copilot_173/0.01)&0xff)<<20;
                  }
                  else if( MCB_Data[i].Addr==ADDR_RIGHT_BRAKE_PEDAL_POSITION_COPILOT)
                  {
-                   MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Right_Brake_Pedal_Position_Copilot_174/0.01)&0xff)<<20;
+                     MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.Right_Brake_Pedal_Position_Copilot_174/0.01)&0xff)<<20;
                  }
                  else if( MCB_Data[i].Addr==ADDR_WARNING)
                  {
-                   MCB_Data[i].value |=(Transmit_Machine_Parameters.TX_429_Communication.Warning_270&0x7ffff)<<10;
+                     MCB_Data[i].value |=(Transmit_Machine_Parameters.TX_429_Communication.Warning_270&0x7ffff)<<10;
                  }
                  else if( MCB_Data[i].Addr==ADDR_STATUS_1)
                  {
-                   MCB_Data[i].value |=(Transmit_Machine_Parameters.TX_429_Communication.Status_Word_1__271&0x7ffff)<<10;
+                     MCB_Data[i].value |=(Transmit_Machine_Parameters.TX_429_Communication.Status_Word_1__271&0x7ffff)<<10;
                  }
                  else if( MCB_Data[i].Addr==ADDR_STATUS_2)
                  {
-                   MCB_Data[i].value |=(Transmit_Machine_Parameters.TX_429_Communication.Status_Word_2_272&0x7ffff)<<10;
+                     MCB_Data[i].value |=(Transmit_Machine_Parameters.TX_429_Communication.Status_Word_2_272&0x7ffff)<<10;
                  }
                  else if( MCB_Data[i].Addr==ADDR_BCU_AIRCRAFT_REFERENCE_SPEED)
                  {
-                   MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.BCU_Aircraft_Reference_Speed_302/0.125)&0xfff)<<16;
+                     MCB_Data[i].value |=((unsigned int)(Transmit_Machine_Parameters.TX_429_Communication.BCU_Aircraft_Reference_Speed_302/0.125)&0xfff)<<16;
                  }
                  else if( MCB_Data[i].Addr==ADDR_FAILURE_WORD_1)
                  {
-                   MCB_Data[i].value |=(Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_350&0x7ffff)<<10;
+                     MCB_Data[i].value |=(Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_350&0x7ffff)<<10;
                  }
                  else if( MCB_Data[i].Addr==ADDR_FAILURE_WORD_2)
                  {
-                   MCB_Data[i].value |=(Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_351&0x7ffff)<<10;
+                     MCB_Data[i].value |=(Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_351&0x7ffff)<<10;
                  }
                  else if( MCB_Data[i].Addr==ADDR_FAILURE_WORD_3)
                  {
-                   MCB_Data[i].value |=(Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_352&0x7ffff)<<10;
+                     MCB_Data[i].value |=(Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_352&0x7ffff)<<10;
                  }
                  else if( MCB_Data[i].Addr==ADDR_FAILURE_WORD_4)
                  {
-                   MCB_Data[i].value |=(Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_353&0x7ffff)<<10;
+                     MCB_Data[i].value |=(Transmit_Machine_Parameters.TX_429_Communication.Failure_Word_1_353&0x7ffff)<<10;
                  }
                  MCB_Data[i].value |=(Get_Odd_value(MCB_Data[i].value)<<31);
             }

@@ -281,7 +281,7 @@ void TEST_SDRAM_Write(void)
 void Test_Sdram_Data_Process(void)
 {
     unsigned short i=0;
-    for(i=Device_DATA_LEN-7;i<Device_DATA_LEN;i++)
+    for(i=Device_DATA_LEN-7;i<Device_DATA_LEN;i++)  /*根据RS232接收的数据，修改控制DSP输出的参数*/
     {
         if(MCB_Data[i].Addr==ADDR_SOV_Open)
         {

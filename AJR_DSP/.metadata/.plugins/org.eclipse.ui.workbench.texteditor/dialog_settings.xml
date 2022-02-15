@@ -7,6 +7,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="SDRAM_RxTx"/>
 			<item value="SDRAM_Set_IO_To_Read_Mode"/>
 			<item value="DATA_LEN"/>
 			<item value="Transmit_Machine_Parameters.TEST_DAC_BCV_LT"/>

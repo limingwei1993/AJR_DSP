@@ -7,7 +7,7 @@
 
 #include "user_main.h"
 uint8_t temp_Recive_buf[10]={0}; /*保存接收到的数据*/
-uint8_t rs232_recive_len=0; /*保存接收到的数据的位置*/
+uint8_t rs232_recive_len=0;     /*保存接收到的数据的位置*/
 /**************************
  * void RS232_Send(uint32_t length, uint8_t * data)
  * RS232 发送数据
@@ -88,4 +88,42 @@ uint8_t CRC_AND(uint8_t * buff,uint16_t data_len)
         data+=buff[i];
     }
     return data;
+}
+
+
+/*******************************************************************************
+Function:       // Send_Test_Message
+Description:    // In test mode, the collected data is sent through the serial port
+Input:          // none
+Output:         // none
+*******************************************************************************/
+void Send_Test_Message(void)
+{
+   uint8_t frame_buff[100]={0};
+   uint8_t i=0;
+   uint16_t frame_len=0;
+   uint16_t len=0;
+   frame_buff[frame_len++]=0xaa;
+   frame_buff[frame_len++]=0x0f;
+   frame_buff[frame_len++]=0;
+   for(i=0;i<0x10;i++)
+   {
+       frame_buff[frame_len++]=i%0xff;
+       frame_buff[frame_len++]=i/0xff;
+       frame_buff[frame_len++]=MCB_Data[i].value%0xff;
+       frame_buff[frame_len++]=MCB_Data[i].value/0xff;
+   }
+   frame_buff[frame_len++]=ADDR_BEANCH_MODE%0xff;
+   frame_buff[frame_len++]=ADDR_BEANCH_MODE/0xff;
+   frame_buff[frame_len++]=device_status.Bench_Mode%0xff;
+   frame_buff[frame_len++]=device_status.Bench_Mode/0xff;
+   frame_buff[frame_len++]=ADDR_DSP_MODE%0xff;
+   frame_buff[frame_len++]=ADDR_DSP_MODE/0xff;
+   frame_buff[frame_len++]=device_status.Master_Salve_mode%0xff;
+   frame_buff[frame_len++]=device_status.Master_Salve_mode/0xff;
+   frame_buff[2]=frame_len-3;
+   len=frame_len-1;
+   frame_buff[frame_len++]=CRC_AND(frame_buff,len);
+   frame_buff[frame_len++]=0x55;
+   RS232_Send(frame_len, frame_buff);
 }
