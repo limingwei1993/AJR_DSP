@@ -1,8 +1,8 @@
-CCStudioUIStartup.CCS_IMAGE_INFO=C\:/Users/15755/Desktop/code/AJR/AJR_DSP|C\:/ti/ccs1030/ccs|10.3.0.00007
-com.ti.ccstudio.ui.CCS_INSTALL_LOCATION=C\:/ti/ccs1030/ccs
+CCStudioUIStartup.CCS_IMAGE_INFO=D\:/code/AJR/AJR_DSP|D\:/APP/ti/ccs|10.3.0.00007
+com.ti.ccstudio.ui.CCS_INSTALL_LOCATION=D\:/APP/ti/ccs
 com.ti.ccstudio.ui.CCS_UI_LAYOUT_VERSION=5.1.1
 com.ti.ccstudio.ui.CCS_VERSION=10.3.0.00007
-com.ti.ccstudio.ui.CCS_WORKSPACE_LOCATION=C\:/Users/15755/Desktop/code/AJR/AJR_DSP
+com.ti.ccstudio.ui.CCS_WORKSPACE_LOCATION=D\:/code/AJR/AJR_DSP
 com.ti.ccstudio.ui.IS_NOT_FIRST_CCE_LAUNCH=true
 com.ti.ccstudio.ui.IS_NOT_FIRST_CCS_LAUNCH=true
 eclipse.preferences.version=1
