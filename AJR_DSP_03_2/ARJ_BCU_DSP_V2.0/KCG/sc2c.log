@@ -1,0 +1,264 @@
+$**************  SCADETOC Version R16.2 (build i10) **************
+** Generation date: 2022-08-11T09:48:58
+** Command: scade -code "S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\BCS_BRAKE.etp" -root Brake -conf KCG
+*************************************************************$
+*** Generated Files Information (GENFIL): KCG- Generated files
+ ~kcg_trace.xml
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\kcg_trace.xml, line 0, character 0
+ ~kcg_metrics.txt
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\kcg_metrics.txt, line 0, character 0
+ ~Brake.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Brake.c, line 0, character 0
+ ~IO_Processing.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\IO_Processing.c, line 0, character 0
+ ~Speed_Processing.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Speed_Processing.c, line 0, character 0
+ ~m_to_ft_unit.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\m_to_ft_unit.c, line 0, character 0
+ ~g_to_mps2_unit.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\g_to_mps2_unit.c, line 0, character 0
+ ~HzTOradpersec.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\HzTOradpersec.c, line 0, character 0
+ ~Acc_average.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Acc_average.c, line 0, character 0
+ ~Ref_cal.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Ref_cal.c, line 0, character 0
+ ~m_to_kt_unit.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\m_to_kt_unit.c, line 0, character 0
+ ~ft_to_m_unit.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\ft_to_m_unit.c, line 0, character 0
+ ~HydraulicData_Processing.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\HydraulicData_Processing.c, line 0, character 0
+ ~Throttle_Processing.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Throttle_Processing.c, line 0, character 0
+ ~LGData_Processing.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\LGData_Processing.c, line 0, character 0
+ ~Pedal_Processing.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Pedal_Processing.c, line 0, character 0
+ ~Max3_math_float32.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Max3_math_float32.c, line 0, character 0
+ ~AutoBRKData_Processing.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\AutoBRKData_Processing.c, line 0, character 0
+ ~WOW_Processing.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\WOW_Processing.c, line 0, character 0
+ ~Int2BoolVect_digital_uint32_32.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Int2BoolVect_digital_uint32_32.c, line 0, character 0
+ ~Int2BoolVectElt_digital_uint32.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Int2BoolVectElt_digital_uint32.c, line 0, character 0
+ ~BTI.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\BTI.c, line 0, character 0
+ ~AutoBrake.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\AutoBrake.c, line 0, character 0
+ ~PI_Controller.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\PI_Controller.c, line 0, character 0
+ ~IntegratorLimit.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\IntegratorLimit.c, line 0, character 0
+ ~Rate_select.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Rate_select.c, line 0, character 0
+ ~Autobrake_EnaletoApplication.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Autobrake_EnaletoApplication.c, line 0, character 0
+ ~Autobrake_ARMtoEnable.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Autobrake_ARMtoEnable.c, line 0, character 0
+ ~stm.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\stm.c, line 0, character 0
+ ~RTOApplicationDisarmed_.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\RTOApplicationDisarmed_.c, line 0, character 0
+ ~RTOEnabledtoApplication.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\RTOEnabledtoApplication.c, line 0, character 0
+ ~RTOArmedtoEnabled.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\RTOArmedtoEnabled.c, line 0, character 0
+ ~OFFtoRTOArmed.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\OFFtoRTOArmed.c, line 0, character 0
+ ~OFFtoAutobrakeArmed.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\OFFtoAutobrakeArmed.c, line 0, character 0
+ ~Autobrake_Application_Disarmed.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Autobrake_Application_Disarmed.c, line 0, character 0
+ ~Brake_Skid.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Brake_Skid.c, line 0, character 0
+ ~SC_Wheel.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\SC_Wheel.c, line 0, character 0
+ ~SC_Function.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\SC_Function.c, line 0, character 0
+ ~Blending.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Blending.c, line 0, character 0
+ ~SC_SlipControl.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\SC_SlipControl.c, line 0, character 0
+ ~SC_LowSpeedMonitor.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\SC_LowSpeedMonitor.c, line 0, character 0
+ ~PI_Control.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\PI_Control.c, line 0, character 0
+ ~Lockwheel.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Lockwheel.c, line 0, character 0
+ ~Delay_OFF.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Delay_OFF.c, line 0, character 0
+ ~sigle.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\sigle.c, line 0, character 0
+ ~TDP.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\TDP.c, line 0, character 0
+ ~Delay_ON.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Delay_ON.c, line 0, character 0
+ ~Spindown.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Spindown.c, line 0, character 0
+ ~LimiterF32.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\LimiterF32.c, line 0, character 0
+ ~Counter.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Counter.c, line 0, character 0
+ ~BrakeInhibit.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\BrakeInhibit.c, line 0, character 0
+ ~BrakeSelect.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\BrakeSelect.c, line 0, character 0
+ ~BoolVect2Int16_digital_3.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\BoolVect2Int16_digital_3.c, line 0, character 0
+ ~BrakePress.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\BrakePress.c, line 0, character 0
+ ~PedalF.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\PedalF.c, line 0, character 0
+ ~equ_2.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\equ_2.c, line 0, character 0
+ ~equ_3.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\equ_3.c, line 0, character 0
+ ~equ_4.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\equ_4.c, line 0, character 0
+ ~equ_5.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\equ_5.c, line 0, character 0
+ ~equ_6.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\equ_6.c, line 0, character 0
+ ~Brake.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Brake.h, line 0, character 0
+ ~IO_Processing.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\IO_Processing.h, line 0, character 0
+ ~Speed_Processing.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Speed_Processing.h, line 0, character 0
+ ~m_to_ft_unit.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\m_to_ft_unit.h, line 0, character 0
+ ~g_to_mps2_unit.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\g_to_mps2_unit.h, line 0, character 0
+ ~HzTOradpersec.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\HzTOradpersec.h, line 0, character 0
+ ~Acc_average.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Acc_average.h, line 0, character 0
+ ~Ref_cal.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Ref_cal.h, line 0, character 0
+ ~m_to_kt_unit.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\m_to_kt_unit.h, line 0, character 0
+ ~ft_to_m_unit.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\ft_to_m_unit.h, line 0, character 0
+ ~HydraulicData_Processing.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\HydraulicData_Processing.h, line 0, character 0
+ ~Throttle_Processing.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Throttle_Processing.h, line 0, character 0
+ ~LGData_Processing.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\LGData_Processing.h, line 0, character 0
+ ~Pedal_Processing.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Pedal_Processing.h, line 0, character 0
+ ~Max3_math_float32.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Max3_math_float32.h, line 0, character 0
+ ~AutoBRKData_Processing.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\AutoBRKData_Processing.h, line 0, character 0
+ ~WOW_Processing.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\WOW_Processing.h, line 0, character 0
+ ~Int2BoolVect_digital_uint32_32.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Int2BoolVect_digital_uint32_32.h, line 0, character 0
+ ~Int2BoolVectElt_digital_uint32.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Int2BoolVectElt_digital_uint32.h, line 0, character 0
+ ~BTI.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\BTI.h, line 0, character 0
+ ~AutoBrake.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\AutoBrake.h, line 0, character 0
+ ~PI_Controller.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\PI_Controller.h, line 0, character 0
+ ~IntegratorLimit.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\IntegratorLimit.h, line 0, character 0
+ ~Rate_select.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Rate_select.h, line 0, character 0
+ ~Autobrake_EnaletoApplication.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Autobrake_EnaletoApplication.h, line 0, character 0
+ ~Autobrake_ARMtoEnable.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Autobrake_ARMtoEnable.h, line 0, character 0
+ ~stm.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\stm.h, line 0, character 0
+ ~RTOApplicationDisarmed_.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\RTOApplicationDisarmed_.h, line 0, character 0
+ ~RTOEnabledtoApplication.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\RTOEnabledtoApplication.h, line 0, character 0
+ ~RTOArmedtoEnabled.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\RTOArmedtoEnabled.h, line 0, character 0
+ ~OFFtoRTOArmed.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\OFFtoRTOArmed.h, line 0, character 0
+ ~OFFtoAutobrakeArmed.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\OFFtoAutobrakeArmed.h, line 0, character 0
+ ~Autobrake_Application_Disarmed.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Autobrake_Application_Disarmed.h, line 0, character 0
+ ~Brake_Skid.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Brake_Skid.h, line 0, character 0
+ ~SC_Wheel.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\SC_Wheel.h, line 0, character 0
+ ~SC_Function.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\SC_Function.h, line 0, character 0
+ ~Blending.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Blending.h, line 0, character 0
+ ~SC_SlipControl.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\SC_SlipControl.h, line 0, character 0
+ ~SC_LowSpeedMonitor.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\SC_LowSpeedMonitor.h, line 0, character 0
+ ~PI_Control.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\PI_Control.h, line 0, character 0
+ ~Lockwheel.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Lockwheel.h, line 0, character 0
+ ~Delay_OFF.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Delay_OFF.h, line 0, character 0
+ ~sigle.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\sigle.h, line 0, character 0
+ ~TDP.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\TDP.h, line 0, character 0
+ ~Delay_ON.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Delay_ON.h, line 0, character 0
+ ~Spindown.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Spindown.h, line 0, character 0
+ ~LimiterF32.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\LimiterF32.h, line 0, character 0
+ ~Counter.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\Counter.h, line 0, character 0
+ ~BrakeInhibit.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\BrakeInhibit.h, line 0, character 0
+ ~BrakeSelect.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\BrakeSelect.h, line 0, character 0
+ ~BoolVect2Int16_digital_3.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\BoolVect2Int16_digital_3.h, line 0, character 0
+ ~BrakePress.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\BrakePress.h, line 0, character 0
+ ~PedalF.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\PedalF.h, line 0, character 0
+ ~equ_2.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\equ_2.h, line 0, character 0
+ ~equ_3.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\equ_3.h, line 0, character 0
+ ~equ_4.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\equ_4.h, line 0, character 0
+ ~equ_5.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\equ_5.h, line 0, character 0
+ ~equ_6.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\equ_6.h, line 0, character 0
+ ~kcg_types.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\kcg_types.h, line 0, character 0
+ ~kcg_consts.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\kcg_consts.h, line 0, character 0
+ ~kcg_sensors.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\kcg_sensors.h, line 0, character 0
+ ~kcg_types.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\kcg_types.c, line 0, character 0
+ ~kcg_consts.c
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\kcg_consts.c, line 0, character 0
+*** Generated Files Information (GENFIL): Code Generator Generated files
+ ~user_macros.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\user_macros.h, line 0, character 0
+ ~kcg_imported_types.h
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\kcg_imported_types.h, line 0, character 0
+ ~sc2c.log
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\sc2c.log, line 0, character 0
+ ~sc2c_integration_files.txt
+  at file S:\CR929\BrakeControlLow\SCADE_Mod\BCS_Model_V3\BCS_Brake\KCG\sc2c_integration_files.txt, line 0, character 0
+$**************  SCADETOC Version R16.2 (build i10) **************
+** Generation date: 2022-08-11T09:49:12
+** sc2c.log
+*************************************************************$

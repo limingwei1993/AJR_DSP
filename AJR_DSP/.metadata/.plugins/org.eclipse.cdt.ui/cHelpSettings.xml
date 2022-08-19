@@ -9,4 +9,13 @@
 <book enabled="true" title="RTSC Content"/>
 </provider>
 </project>
+<project name="ARJ_BCU_DSP_V2.0">
+<provider id="ProductHelpProvider">
+<book enabled="true" title="CCS Product Content"/>
+</provider>
+<provider id="org.eclipse.cdt.ui.provider1"/>
+<provider id="RTSCHelpProvider">
+<book enabled="true" title="RTSC Content"/>
+</provider>
+</project>
 </cHelpSettings>

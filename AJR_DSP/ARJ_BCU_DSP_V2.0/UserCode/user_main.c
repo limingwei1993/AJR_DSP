@@ -15,6 +15,11 @@ uint8_t SD_Process_Mode=0;  /*测试模式下，用于SD卡读写标志*/
 uint16_t File_Name=0;       /*测试模式下，用于SD卡里的文件名*/
 uint16_t test_send_message_time_count=0;  /*测试模式下，用于上报采集信息的时间计数*/
 uint16_t get_bench_mode_time_count=0;     /*用于判断Bench Mode的时间计数*/
+short temp_read_right=0;    /*右轮温度的ADC读取值*/
+float temp_value_right=0;   /*右轮温度值*/
+short temp_read_left=0;     /*左轮温度的ADC读取值*/
+float temp_value_left=0;    /*左轮温度值*/
+uint8_t get_temp_glag=0;    /*DSP读取温度的标志*/
 void user_main(void)
 {
     initialization();
@@ -22,23 +27,60 @@ void user_main(void)
     {
         if(SDRAM_RxTx==1) /*5ms*/
         {
+
             if(device_status.Work_Mode==NORMAL_MODE) /*正常运行模式*/
             {
-
                 Data_interaction();
-
             }
             else /*测试模式*/
             {
                 Test_Sdram_Data_Process();
                 test_send_message_time_count++;
-                if(test_send_message_time_count>=100) /*500ms，发送RS232数据*/
+                if(test_send_message_time_count>=50) /*100ms，发送RS232数据*/
                 {
                     test_send_message_time_count=0;
                     Send_Test_Message();
                 }
             }
             SDRAM_RxTx=0;
+        }
+        if(get_temp_glag==1)
+        {
+            get_temp_glag=0;
+            temp_read_right=SpiRead_Right();
+            if(temp_read_right>=0)
+            {
+               temp_value_right=(temp_read_right>>3)*0.25;
+               if(device_status.Master_Salve_mode==1) //内轮板
+               {
+                   temp_value_right=temp_value_right*1.1016-29.48;
+
+               }
+               else   //外轮板
+               {
+                   temp_value_right=temp_value_right*1.1011-41.065;
+
+               }
+            //   temp_value_right=temp_value_right*0.9269-35.426;
+             //  temp_value_right=temp_value_right-50-(temp_value_right/100)*8+5;
+            }
+
+            temp_read_left=SpiRead_Left();
+            if(temp_read_left>=0)
+            {
+                temp_value_left=(temp_read_left>>3)*0.25;
+                if(device_status.Master_Salve_mode==1)  //内轮板
+               {
+                    temp_value_left=temp_value_left*1.0992-23.782;
+               }
+                else    //外轮板
+                {
+                   temp_value_left=temp_value_left*1.1017-35.168;
+                }
+              //  temp_value_left=temp_value_left*1.1009-52.387;
+              //  temp_value_left=temp_value_left*0.9269-35.426;
+             //   temp_value_left=temp_value_left-50-(temp_value_left/100)*8;
+            }
         }
         if(get_bench_mode_time_count>=200)  /*1s，定时获取Banch_mode信号*/
         {

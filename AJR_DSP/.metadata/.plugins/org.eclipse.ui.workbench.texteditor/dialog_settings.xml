@@ -7,8 +7,13 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="DELAY_TIME"/>
 			<item value="SDRAM_RxTx"/>
+			<item value="get_bench_mode_time_count"/>
+			<item value="OTHER_ADDR_AIRCRAFTACCELERATION_LEFT"/>
+			<item value="Transmit_Machine_Parameters.BrakePressureCommand_L"/>
+			<item value="device_status.BrakePressureCommand_L"/>
+			<item value="test_send_message_time_count"/>
+			<item value="DELAY_TIME"/>
 			<item value="SDRAM_Set_IO_To_Read_Mode"/>
 			<item value="DATA_LEN"/>
 			<item value="Transmit_Machine_Parameters.TEST_DAC_BCV_LT"/>
@@ -17,9 +22,6 @@
 			<item value="SDRAM_BOARD"/>
 			<item value="ADDR_DAC1_GET"/>
 			<item value="SPI_HIGH"/>
-			<item value="Brake"/>
-			<item value="RS232_Send"/>
-			<item value="SDRAM_revice"/>
 		</list>
 		<list key="replacehistory">
 		</list>

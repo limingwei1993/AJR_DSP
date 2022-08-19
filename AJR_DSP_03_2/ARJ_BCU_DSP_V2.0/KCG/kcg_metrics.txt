@@ -1,0 +1,29 @@
+$********** SCADE Suite KCG 64-bit 6.5 (build i12) ***********
+** Command: kcg65.exe -config S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BCS_Brake/KCG/config.txt
+** Generation date: 2022-08-11T09:49:10
+*************************************************************$
+Data structures
+  Structures
+    Max members in a single structure: 27
+  Arrays
+    Max number of dimensions for an array: 1
+    Maximum size for a dimension: 32
+  Enumeration
+    Max of enum constants in a single enumeration: 15
+Control structures
+  Max numbers of case labels in a switch: 8
+  Max number of nesting levels in compound statement: 7
+Program size
+  Functions
+    Max number of function parameters in definition: 14
+    Max number of function arguments in a call: 14
+  Expressions
+    Max number of nesting levels of parenthesized expression in a full expression: 5
+  Identifiers
+    Max number of identifiers with block scope declared in one block: 11
+    Max number of macro identifiers simultaneously defined in one preprocessing translation unit: 228
+    Max number of extern identifiers in one translation unit: 146
+$********** SCADE Suite KCG 64-bit 6.5 (build i12) ***********
+** kcg_metrics.txt
+** Generation date: 2022-08-11T09:49:10
+*************************************************************$

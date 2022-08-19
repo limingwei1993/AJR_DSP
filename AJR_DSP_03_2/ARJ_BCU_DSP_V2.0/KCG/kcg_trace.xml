@@ -1,0 +1,2199 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--$********** SCADE Suite KCG 64-bit 6.5 (build i12) ***********
+** Command: kcg65.exe -config S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BCS_Brake/KCG/config.txt
+** Generation date: 2022-08-11T09:49:10
+*************************************************************$-->
+<Model date="2022-08-11T09:49:10" commandLine="kcg65.exe -config S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BCS_Brake/KCG/config.txt">
+  <Option name="xml_basename" value="kcg_xml_filter_out.scade"/>
+  <Option name="state_vector" value="#off#"/>
+  <Option name="static" value="#off#"/>
+  <Option name="separate_io_all" value="#off#"/>
+  <Option name="no_separate_io" value="#off#"/>
+  <Option name="separate_io" value="#off#"/>
+  <Option name="warn_error" value="#off#"/>
+  <Option name="short_circuit" value="#off#"/>
+  <Option name="wrap_c_ops" value="#off#"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/IO_Processing.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/HzTOradpersec.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/Speed_Processing2.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/Ref_cal2.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/Acc_average.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/BTI.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/HydraulicData_Processing.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/LGData_Processing.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/Throttle_Processing.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/WOW_Processing.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/AutoBRKData_Processing.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/Acc_av.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/Ref_cal.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/Speed_Processing.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/Pedal_Processing.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/IO_Processing/IO_Processing/IO_Processing1.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/TouchDownProtection/Operator1.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/SpinDownBrake/SpinDownBrake.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/SpinDownBrake/Operator1.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BrakeInhibit/Operator1.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Brake_Skid/SC_SlipControl1.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Brake_Skid/Brake_Skid.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Brake_Skid/PI_Control.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Brake_Skid/SC_Function.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Brake_Skid/SC_LowSpeedMonitor.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Brake_Skid/SC_SlipControl.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Brake_Skid/SC_Wheel.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Brake_Skid/Operator1.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BrakeSelect/Operator1.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/Rate_select.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/AutoBrake_EnabletoDisArm.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/Autobrake_ARMtoEnable.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/Operator14.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/Operator13.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/Operator12.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/Operator11.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/Operator10.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/Operator9.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/Operator8.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/Operator7.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/Operator6.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/Operator3.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/Operator2.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/autobrake.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/autobrake/Operator1.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Pedal_Curve_copy/PedalCurve/Operator7.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Pedal_Curve_copy/PedalCurve/PedalCurve.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Pedal_Curve_copy/PedalCurve/equ_2.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Pedal_Curve_copy/PedalCurve/equ_3.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Pedal_Curve_copy/PedalCurve/equ_4.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Pedal_Curve_copy/PedalCurve/equ_5.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Pedal_Curve_copy/PedalCurve/equ_6.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/Pedal_Curve_copy/PedalCurve/Operator1.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/LockedWheel/LOCKEDWHEEL/Operator2.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/LockedWheel/LOCKEDWHEEL/LOCKEDWHEEL.xscade"/>
+  <Option name="input_file"
+      value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/LockedWheel/LOCKEDWHEEL/Operator1.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BCS_Lib/unit.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BCS_Lib/PI_Controller.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BCS_Lib/IntegratorLimit.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BCS_Lib/Integrator.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BCS_Lib/Blending.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BCS_Lib/Delay_OFF.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BCS_Lib/Delay_ON.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BCS_Lib/Operator2.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BCS_Lib/Operator1.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BCS_Lib/BCS_Lib.xscade"/>
+  <Option name="input_file" value="D:/software/scade/SCADE/libraries/SC65/libverif/libverif.xscade"/>
+  <Option name="input_file" value="D:/software/scade/SCADE/libraries/SC65/libpwlinear/lut.xscade"/>
+  <Option name="input_file" value="D:/software/scade/SCADE/libraries/SC65/libpwlinear/pwlinear.xscade"/>
+  <Option name="input_file" value="D:/software/scade/SCADE/libraries/SC65/libmathext/mathext.xscade"/>
+  <Option name="input_file" value="D:/software/scade/SCADE/libraries/SC65/libmath/math.xscade"/>
+  <Option name="input_file" value="D:/software/scade/SCADE/libraries/SC65/libmath/vect.xscade"/>
+  <Option name="input_file" value="D:/software/scade/SCADE/libraries/SC65/liblinear/filters.xscade"/>
+  <Option name="input_file" value="D:/software/scade/SCADE/libraries/SC65/liblinear/linear.xscade"/>
+  <Option name="input_file" value="D:/software/scade/SCADE/libraries/SC65/libdigital/TruthTables.xscade"/>
+  <Option name="input_file" value="D:/software/scade/SCADE/libraries/SC65/libdigital/digital.xscade"/>
+  <Option name="input_file" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BCS_Brake/Operator1.xscade"/>
+  <Option name="probes" value="#off#"/>
+  <Option name="debug" value="#off#"/>
+  <Option name="no_observe" value="#off#"/>
+  <Option name="observe" value="#off#"/>
+  <Option name="user_config" value="./user_macros.h"/>
+  <Option name="input_threshold" value="#off#"/>
+  <Option name="header" value="#off#"/>
+  <Option name="significance_length" value="31"/>
+  <Option name="name_length" value="200"/>
+  <Option name="globals_prefix" value="#off#"/>
+  <Option name="keep_asserts" value="#off#"/>
+  <Option name="global_root_context" value="#off#"/>
+  <Option name="expall" value="#off#"/>
+  <Option name="noexp" value="#off#"/>
+  <Option name="exp" value="#off#"/>
+  <Option name="target_dir" value="S:/CR929/BrakeControlLow/SCADE_Mod/BCS_Model_V3/BCS_Brake/KCG"/>
+  <Option name="target" value="C"/>
+  <Option name="root" value="Brake"/>
+  <Option name="auth" value="#off#"/>
+  <RootNode scadeName="Brake" headerFile="Brake.h" targetCycleFct="Brake" targetInitFct="Brake_reset"
+      targetInitializationFct="Brake_init">
+    <Input scadeName="Input" scadeType="tData_to_DSP" targetName="Input" targetType="tData_to_DSP" inCtx="true"/>
+    <Output scadeName="Output" scadeType="tOutPut" targetName="Output" targetType="tOutPut" inCtx="true"/>
+    <Local scadeName="BrakeSelectOut" scadeType="tBrakeSelectOut" targetName="BrakeSelectOut" targetType="tBrakeSelectOut"/>
+    <Local scadeName="BrakeSkidOut" scadeType="tBrakeSkidOut" targetName="BrakeSkidOut" targetType="tBrakeSkidOut"/>
+    <Local scadeName="BrakeInhibitOut" scadeType="tBrakeInhibitOut" targetName="BrakeInhibitOut"
+        targetType="tBrakeInhibitOut"/>
+    <Local scadeName="BrakePdlOut" scadeType="tBrakePdlOut" targetName="BrakePdlOut" targetType="tBrakePdlOut"/>
+    <Local scadeName="BrakeAutoBKOut" scadeType="tBrakeAutoBKOut" targetName="BrakeAutoBKOut" targetType="tBrakeAutoBKOut"/>
+    <Local scadeName="BrakeIfbOut" scadeType="tBrakeIfbOut" targetName="BrakeIfbOut" targetType="tBrakeIfbOut"/>
+    <Local scadeName="App" scadeType="tINPUT_Data" targetName="App" targetType="tINPUT_Data"/>
+    <Local scadeName="_L14" scadeType="tBrakePdlOut" targetName="BrakePdlOut" targetType="tBrakePdlOut"/>
+    <Local scadeName="_L15" scadeType="tBrakeSelectOut" targetName="BrakeSelectOut" targetType="tBrakeSelectOut"/>
+    <Local scadeName="_L18" scadeType="tBrakeSelectOut" targetName="BrakeSelectOut" targetType="tBrakeSelectOut"/>
+    <Local scadeName="_L19" scadeType="tBrakeInhibitOut" targetName="BrakeInhibitOut" targetType="tBrakeInhibitOut"/>
+    <Local scadeName="_L20" scadeType="tBrakeSelectOut" targetName="BrakeSelectOut" targetType="tBrakeSelectOut"/>
+    <Local scadeName="_L23" scadeType="tOutPut" targetName="Output" targetType="tOutPut" inCtx="true"/>
+    <Local scadeName="_L24" scadeType="tBrakeInhibitOut" targetName="BrakeInhibitOut" targetType="tBrakeInhibitOut"/>
+    <Local scadeName="_L25" scadeType="tBrakeSelectOut" targetName="BrakeSelectOut" targetType="tBrakeSelectOut"/>
+    <Local scadeName="_L26" scadeType="tBrakeSkidOut" targetName="BrakeSkidOut" targetType="tBrakeSkidOut"/>
+    <Local scadeName="_L27" scadeType="tBrakeAutoBKOut" targetName="BrakeAutoBKOut" targetType="tBrakeAutoBKOut"/>
+    <Local scadeName="_L28" scadeType="tBrakePdlOut" targetName="BrakePdlOut" targetType="tBrakePdlOut"/>
+    <Local scadeName="_L44" scadeType="tBrakeIfbOut" targetName="BrakeIfbOut" targetType="tBrakeIfbOut"/>
+    <Local scadeName="_L52" scadeType="tBrakeIfbOut" targetName="BrakeIfbOut" targetType="tBrakeIfbOut"/>
+    <Local scadeName="_L59" scadeType="tBrakeIfbOut" targetName="BrakeIfbOut" targetType="tBrakeIfbOut"/>
+    <Local scadeName="_L62" scadeType="bool" targetName="_L62" targetType="kcg_bool"/>
+    <Local scadeName="_L61" scadeType="bool" targetName="_L61" targetType="kcg_bool"/>
+    <Local scadeName="_L63" scadeType="tBrakeSkidOut" targetName="BrakeSkidOut" targetType="tBrakeSkidOut"/>
+    <Local scadeName="_L64" scadeType="tBrakeAutoBKOut" targetName="BrakeAutoBKOut" targetType="tBrakeAutoBKOut"/>
+    <Local scadeName="_L65" scadeType="tINPUT_Data" targetName="App" targetType="tINPUT_Data"/>
+    <Local scadeName="_L66" scadeType="tData_to_DSP" targetName="Input" targetType="tData_to_DSP"/>
+    <NodeInstance scadeName="BrakePress" instName="3" refName="BrakePress"/>
+    <NodeInstance scadeName="BrakeSelect" instName="1" refName="BrakeSelect"/>
+    <NodeInstance scadeName="BrakeInhibit" instName="1" refName="BrakeInhibit"/>
+    <NodeInstance scadeName="Spindown" instName="3" refName="Spindown">
+      <OutCtxVar targetName="Context_3"/>
+    </NodeInstance>
+    <NodeInstance scadeName="TDP" instName="3" refName="TDP">
+      <OutCtxVar targetName="_2_Context_3"/>
+    </NodeInstance>
+    <NodeInstance scadeName="Lockwheel" instName="4" refName="Lockwheel">
+      <OutCtxVar targetName="Context_4"/>
+    </NodeInstance>
+    <NodeInstance scadeName="Brake_Skid" instName="3" refName="Brake_Skid">
+      <OutCtxVar targetName="_1_Context_3"/>
+    </NodeInstance>
+    <NodeInstance scadeName="AutoBrake" instName="2" refName="AutoBrake">
+      <OutCtxVar targetName="Context_2"/>
+    </NodeInstance>
+    <NodeInstance scadeName="IO_Processing" instName="1" refName="IO_Processing">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <OutCtxType targetName="outC_Brake"/>
+    <InCtxType targetName="inC_Brake"/>
+  </RootNode>
+  <Package scadeName="digital">
+    <NoExpNode scadeName="BoolVect2Int16" headerFile="BoolVect2Int16_digital_3.h" targetCycleFct="BoolVect2Int16_digital_3">
+      <Local scadeName="_L2" scadeType="int16" targetName="Out" targetType="kcg_int16"/>
+      <Local scadeName="_L4" scadeType="bool^(digital::BoolVect2Int16::Nbool)" targetName="BV" targetType="array_bool_3"/>
+      <Input scadeName="BV" scadeType="bool^(digital::BoolVect2Int16::Nbool)" targetName="BV" targetType="array_bool_3"/>
+      <Output scadeName="Out" scadeType="int16" targetName="Out" targetType="kcg_int16"/>
+    </NoExpNode>
+    <NoExpNode scadeName="Int2BoolVect" headerFile="Int2BoolVect_digital_uint32_32.h"
+        targetCycleFct="Int2BoolVect_digital_uint32_32">
+      <Local scadeName="Acc" scadeType="&apos;T" targetName="Acc" targetType="kcg_uint32"/>
+      <Local scadeName="_L1" scadeType="&apos;T" targetName="In" targetType="kcg_uint32"/>
+      <Local scadeName="_L4" scadeType="bool^(digital::Int2BoolVect::Nbool)" targetName="_L4" targetType="bool_word"/>
+      <Local scadeName="_L5" scadeType="bool^(digital::Int2BoolVect::Nbool)" targetName="BV" targetType="bool_word"/>
+      <Iterator iteratorKind="mapfold" scadeSize="32" targetSize="32">
+        <NodeInstance scadeName="digital::Int2BoolVectElt" instName="1" refName="Int2BoolVectElt_digital_uint32"/>
+      </Iterator>
+      <Input scadeName="In" scadeType="&apos;T" targetName="In" targetType="kcg_uint32"/>
+      <Output scadeName="BV" scadeType="bool^(digital::Int2BoolVect::Nbool)" targetName="BV" targetType="bool_word"/>
+    </NoExpNode>
+    <NoExpNode scadeName="Int2BoolVectElt" headerFile="Int2BoolVectElt_digital_uint32.h"
+        targetCycleFct="Int2BoolVectElt_digital_uint32">
+      <Local scadeName="_L1" scadeType="&apos;T" targetName="Acc" targetType="kcg_uint32"/>
+      <Local scadeName="_L10" scadeType="&apos;T" targetName="AccOut" targetType="kcg_uint32"/>
+      <Local scadeName="_L12" scadeType="bool" targetName="bi" targetType="kcg_bool"/>
+      <NodeInstance scadeName="div" instName="1"/>
+      <NodeInstance scadeName="mod" instName="2"/>
+      <NodeInstance scadeName="=" instName="3"/>
+      <Input scadeName="Acc" scadeType="&apos;T" targetName="Acc" targetType="kcg_uint32"/>
+      <Output scadeName="AccOut" scadeType="&apos;T" targetName="AccOut" targetType="kcg_uint32"/>
+      <Output scadeName="bi" scadeType="bool" targetName="bi" targetType="kcg_bool"/>
+    </NoExpNode>
+  </Package>
+  <Package scadeName="truthtables">
+    <EnumType scadeName="TruthTableValues" targetName="TruthTableValues_truthtables">
+      <EnumVal scadeName="T" targetName="T_truthtables"/>
+      <EnumVal scadeName="F" targetName="F_truthtables"/>
+      <EnumVal scadeName="X" targetName="X_truthtables"/>
+    </EnumType>
+  </Package>
+  <Package scadeName="linear"/>
+  <Package scadeName="filters"/>
+  <Package scadeName="vect"/>
+  <Package scadeName="math">
+    <ExpNode scadeName="BoolToFloat32"/>
+    <ExpNode scadeName="Max"/>
+    <ExpNode scadeName="Abs"/>
+    <ExpNode scadeName="Min"/>
+    <NoExpNode scadeName="Max3" headerFile="Max3_math_float32.h" targetCycleFct="Max3_math_float32">
+      <Local scadeName="_L1" scadeType="&apos;T" targetName="I1" targetType="kcg_float32"/>
+      <Local scadeName="_L2" scadeType="&apos;T" targetName="I2" targetType="kcg_float32"/>
+      <Local scadeName="_L3" scadeType="&apos;T" targetName="I3" targetType="kcg_float32"/>
+      <Local scadeName="_L8" scadeType="&apos;T" targetName="Ma3_Output" targetType="kcg_float32"/>
+      <NodeInstance scadeName="&gt;=" instName="1"/>
+      <NodeInstance scadeName="&gt;=" instName="2"/>
+      <NodeInstance scadeName="&gt;=" instName="3"/>
+      <NodeInstance scadeName="and" instName="4"/>
+      <NodeInstance scadeName="if" instName="5"/>
+      <NodeInstance scadeName="if" instName="8"/>
+      <Input scadeName="I1" scadeType="&apos;T" targetName="I1" targetType="kcg_float32"/>
+      <Input scadeName="I2" scadeType="&apos;T" targetName="I2" targetType="kcg_float32"/>
+      <Input scadeName="I3" scadeType="&apos;T" targetName="I3" targetType="kcg_float32"/>
+      <Output scadeName="Ma3_Output" scadeType="&apos;T" targetName="Ma3_Output" targetType="kcg_float32"/>
+    </NoExpNode>
+  </Package>
+  <Package scadeName="mathext">
+    <Package scadeName="mathextimpl"/>
+    <NamedType scadeName="Type1" targetName="Type1_mathext" refType="kcg_int32"/>
+  </Package>
+  <Package scadeName="pwlinear"/>
+  <Package scadeName="lut"/>
+  <Package scadeName="verif"/>
+  <Constant scadeName="zero_" scadeType="int64" targetName="zero_" targetType="kcg_int64" macroDef="true"/>
+  <Constant scadeName="Zero" scadeType="float32" targetName="Zero" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Tol_R" scadeType="float32" targetName="Tol_R" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Tol_LM" scadeType="float32" targetName="Tol_LM" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Tol_L" scadeType="float32" targetName="Tol_L" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Tol__" scadeType="float32" targetName="Tol__" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Slip_min" scadeType="float32" targetName="Slip_min" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Slip_ini" scadeType="float32" targetName="Slip_ini" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Sl_P" scadeType="float32" targetName="Sl_P" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Sl_m" scadeType="float32" targetName="Sl_m" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="one_" scadeType="int64" targetName="one_" targetType="kcg_int64" macroDef="true"/>
+  <Constant scadeName="MaxPressure" scadeType="float32" targetName="MaxPressure" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="Log_Sl_P" scadeType="float32" targetName="Log_Sl_P" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Log_Sl_m" scadeType="float32" targetName="Log_Sl_m" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Kp" scadeType="float32" targetName="Kp" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Ki" scadeType="float32" targetName="Ki" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="huashui" scadeType="float32" targetName="huashui" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Gain_Kp" scadeType="float32" targetName="Gain_Kp" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Gain_Ki" scadeType="float32" targetName="Gain_Ki" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="DT_T" scadeType="float32" targetName="DT_T" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="DT_R" scadeType="float32" targetName="DT_R" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="DT_L" scadeType="float32" targetName="DT_L" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="C_SKID_Y_PSI" scadeType="float32^(5)" targetName="C_SKID_Y_PSI" targetType="array_float32_5"/>
+  <Constant scadeName="C_SKID_X_MPA" scadeType="float32^(5)" targetName="C_SKID_X_MPA" targetType="array_float32_5"/>
+  <Constant scadeName="C_SC_BLENDING_RATE" scadeType="float32" targetName="C_SC_BLENDING_RATE" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="C_SC_BLENDING_MAX_STEPS" scadeType="float32" targetName="C_SC_BLENDING_MAX_STEPS"
+      targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="brakecmd" scadeType="float32" targetName="brakecmd" targetType="kcg_float32" macroDef="true"/>
+  <NamedType scadeName="tValidityU32" targetName="tValidityU32" refType="tValidityU32"/>
+  <NamedType scadeName="tValidityS32" targetName="tValidityS32" refType="tValidityS32"/>
+  <NamedType scadeName="tValidityF32" targetName="tValidityF32" refType="tValidityF32"/>
+  <NamedType scadeName="tValidityBool" targetName="tValidityBool" refType="tValidityBool"/>
+  <NamedType scadeName="tIOR_ProcessPedalData" targetName="tIOR_ProcessPedalData" refType="tIOR_ProcessPedalData"/>
+  <NamedType scadeName="tIOR_ProcessSpeedData" targetName="tIOR_ProcessSpeedData" refType="tIOR_ProcessSpeedData"/>
+  <NamedType scadeName="tINPUT_Data" targetName="tINPUT_Data" refType="tINPUT_Data"/>
+  <NamedType scadeName="tIOR_ProcessAircraftData" targetName="tIOR_ProcessAircraftData"
+      refType="tIOR_ProcessAircraftData"/>
+  <NamedType scadeName="tIOR_ProcessWowData" targetName="tIOR_ProcessWowData" refType="tIOR_ProcessWowData"/>
+  <NamedType scadeName="tIOR_ProcessAutobrakeData" targetName="tIOR_ProcessAutobrakeData"
+      refType="tIOR_ProcessAutobrakeData"/>
+  <NamedType scadeName="tIOR_ProcessHydraulicData" targetName="tIOR_ProcessHydraulicData"
+      refType="tIOR_ProcessHydraulicData"/>
+  <NamedType scadeName="tIOR_ProcessThrottleData" targetName="tIOR_ProcessThrottleData"
+      refType="tIOR_ProcessThrottleData"/>
+  <NamedType scadeName="tIOR_ProcessLandingGearData" targetName="tIOR_ProcessLandingGearData"
+      refType="tIOR_ProcessLandingGearData"/>
+  <NamedType scadeName="tIOR_ProcessAutoFlightData" targetName="tIOR_ProcessAutoFlightData"
+      refType="tIOR_ProcessAutoFlightData"/>
+  <NamedType scadeName="tBrakeInhibits" targetName="tBrakeInhibits" refType="tBrakeInhibits"/>
+  <NamedType scadeName="tBrakeAutoBKOut" targetName="tBrakeAutoBKOut" refType="tBrakeAutoBKOut"/>
+  <NamedType scadeName="tBrakePdlOut" targetName="tBrakePdlOut" refType="tBrakePdlOut"/>
+  <NamedType scadeName="tBrakeSelectOut" targetName="tBrakeSelectOut" refType="tBrakeSelectOut"/>
+  <NamedType scadeName="tBrakeSkidOut" targetName="tBrakeSkidOut" refType="tBrakeSkidOut"/>
+  <NamedType scadeName="tBrakeIfbOut" targetName="tBrakeIfbOut" refType="tBrakeIfbOut"/>
+  <NamedType scadeName="tBrakeInhibitOut" targetName="tBrakeInhibitOut" refType="tBrakeInhibitOut"/>
+  <NamedType scadeName="tOutPut" targetName="tOutPut" refType="tOutPut"/>
+  <NamedType scadeName="tAutobrakeState" targetName="tAutobrakeState" refType="tAutobrakeState"/>
+  <NamedType scadeName="tBCU_an" targetName="tBCU_an" refType="tBCU_an"/>
+  <NamedType scadeName="tData_to_DSP" targetName="tData_to_DSP" refType="tData_to_DSP"/>
+  <NamedType scadeName="bool_word" targetName="bool_word" refType="bool_word"/>
+  <NamedType scadeName="bool_wordshort" targetName="bool_wordshort" refType="bool_wordshort"/>
+  <NamedType scadeName="HcDiscreteWord" targetName="HcDiscreteWord" refType="HcDiscreteWord"/>
+  <NamedType scadeName="A429_Valid_short" targetName="A429_Valid_short" refType="A429_Valid_short"/>
+  <NamedType scadeName="tIn_Discrete" targetName="tIn_Discrete" refType="tIn_Discrete"/>
+  <NamedType scadeName="tTestData" targetName="tTestData" refType="tTestData"/>
+  <NoExpNode scadeName="LimiterF32" headerFile="LimiterF32.h" targetCycleFct="LimiterF32">
+    <Input scadeName="Input1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Input scadeName="HighLimit" scadeType="float32" targetName="HighLimit" targetType="kcg_float32"/>
+    <Input scadeName="LowLimit" scadeType="float32" targetName="LowLimit" targetType="kcg_float32"/>
+    <Output scadeName="Output1" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <Local scadeName="_L1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L4" scadeType="float32" targetName="HighLimit" targetType="kcg_float32"/>
+    <Local scadeName="_L5" scadeType="float32" targetName="LowLimit" targetType="kcg_float32"/>
+    <Local scadeName="_L6" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <NodeInstance scadeName="&lt;=" instName="1"/>
+    <NodeInstance scadeName="&gt;=" instName="1"/>
+    <NodeInstance scadeName="if" instName="1"/>
+    <NodeInstance scadeName="if" instName="2"/>
+  </NoExpNode>
+  <NoExpNode scadeName="Counter" headerFile="Counter.h" targetCycleFct="Counter" targetInitFct="Counter_reset"
+      targetInitializationFct="Counter_init">
+    <Input scadeName="Reset" scadeType="bool" targetName="Reset" targetType="kcg_bool"/>
+    <Output scadeName="count" scadeType="int32" targetName="count" targetType="kcg_int32" inCtx="true"/>
+    <Memory scadeName="_L3" scadeType="int32" targetName="_L3" targetType="kcg_int32" inCtx="true"/>
+    <Local scadeName="_L7" scadeType="bool" targetName="Reset" targetType="kcg_bool"/>
+    <Local scadeName="_L9" scadeType="int32" targetName="count" targetType="kcg_int32" inCtx="true"/>
+    <NodeInstance scadeName="if" instName="1"/>
+    <NodeInstance scadeName="+" instName="1"/>
+    <FbyOp instName="1">
+      <Memory targetName="_L3" targetType="kcg_int32" inCtx="true"/>
+      <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+    </FbyOp>
+    <NodeInstance scadeName="if" instName="3"/>
+    <NodeInstance scadeName="&lt;" instName="1"/>
+    <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+    <OutCtxType targetName="outC_Counter"/>
+  </NoExpNode>
+  <NoExpNode scadeName="Delay_ON" headerFile="Delay_ON.h" targetCycleFct="Delay_ON" targetInitFct="Delay_ON_reset"
+      targetInitializationFct="Delay_ON_init">
+    <Input scadeName="Input1" scadeType="bool" targetName="Input1" targetType="kcg_bool"/>
+    <Input scadeName="cycles" scadeType="int32" targetName="cycles" targetType="kcg_int32"/>
+    <Output scadeName="Output1" scadeType="bool" targetName="Output1" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L2" scadeType="int32" targetName="cycles" targetType="kcg_int32"/>
+    <Local scadeName="_L3" scadeType="bool" targetName="Input1" targetType="kcg_bool"/>
+    <Local scadeName="_L4" scadeType="bool" targetName="Output1" targetType="kcg_bool" inCtx="true"/>
+    <NodeInstance scadeName="Counter" instName="1" refName="Counter">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="&gt;=" instName="1"/>
+    <OutCtxType targetName="outC_Delay_ON"/>
+  </NoExpNode>
+  <NoExpNode scadeName="Delay_OFF" headerFile="Delay_OFF.h" targetCycleFct="Delay_OFF" targetInitFct="Delay_OFF_reset"
+      targetInitializationFct="Delay_OFF_init">
+    <Input scadeName="Input1" scadeType="bool" targetName="Input1" targetType="kcg_bool"/>
+    <Input scadeName="Cycles" scadeType="int32" targetName="Cycles" targetType="kcg_int32"/>
+    <Output scadeName="Output1" scadeType="bool" targetName="Output1" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L2" scadeType="int32" targetName="Cycles" targetType="kcg_int32"/>
+    <Local scadeName="_L3" scadeType="bool" targetName="Input1" targetType="kcg_bool"/>
+    <Local scadeName="_L4" scadeType="bool" targetName="Output1" targetType="kcg_bool" inCtx="true"/>
+    <NodeInstance scadeName="Counter" instName="1" refName="Counter">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="&lt;=" instName="1"/>
+    <OutCtxType targetName="outC_Delay_OFF"/>
+  </NoExpNode>
+  <NoExpNode scadeName="Blending" headerFile="Blending.h" targetCycleFct="Blending" targetInitFct="Blending_reset"
+      targetInitializationFct="Blending_init">
+    <Input scadeName="Pressure" scadeType="float32" targetName="Pressure" targetType="kcg_float32"/>
+    <Input scadeName="BlendToTarget" scadeType="bool" targetName="BlendToTarget" targetType="kcg_bool"/>
+    <Input scadeName="TargetPressure" scadeType="float32" targetName="TargetPressure" targetType="kcg_float32"/>
+    <Input scadeName="BlendRatePerSec" scadeType="float32" targetName="BlendRatePerSec" targetType="kcg_float32"/>
+    <Input scadeName="TimeCycle" scadeType="float32" targetName="TimeCycle" targetType="kcg_float32"/>
+    <Input scadeName="MaxSteps" scadeType="float32" targetName="MaxSteps" targetType="kcg_float32"/>
+    <Output scadeName="BlendedPressure" scadeType="float32" targetName="BlendedPressure" targetType="kcg_float32"
+        inCtx="true"/>
+    <Output scadeName="BlendingDone" scadeType="bool" targetName="BlendingDone" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="BlendStep" scadeType="float32" targetName="BlendStep" targetType="kcg_float32" reused="true"/>
+    <Local scadeName="_L1" scadeType="float32" targetName="Pressure" targetType="kcg_float32"/>
+    <Local scadeName="_L2" scadeType="bool" targetName="BlendToTarget" targetType="kcg_bool"/>
+    <Local scadeName="_L3" scadeType="float32" targetName="TargetPressure" targetType="kcg_float32"/>
+    <Local scadeName="_L7" scadeType="float32" targetName="BlendedPressure" targetType="kcg_float32" inCtx="true"/>
+    <Local scadeName="_L13" scadeType="float32" targetName="tmp" targetType="kcg_float32" reused="true"/>
+    <Local scadeName="_L19" scadeType="bool" targetName="BlendingDone" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L25" scadeType="float32" targetName="BlendStep" targetType="kcg_float32" reused="true"/>
+    <Local scadeName="_L26" scadeType="float32" targetName="Pressure" targetType="kcg_float32"/>
+    <Local scadeName="_L27" scadeType="float32" targetName="TargetPressure" targetType="kcg_float32"/>
+    <Local scadeName="_L32" scadeType="float32" targetName="BlendStep" targetType="kcg_float32" reused="true"/>
+    <Local scadeName="_L34" scadeType="float32" targetName="BlendStep" targetType="kcg_float32" reused="true"/>
+    <Local scadeName="_L35" scadeType="float32" targetName="BlendStep" targetType="kcg_float32" reused="true"/>
+    <Local scadeName="_L44" scadeType="float32" targetName="MaxSteps" targetType="kcg_float32"/>
+    <Local scadeName="_L46" scadeType="float32" targetName="BlendRatePerSec" targetType="kcg_float32"/>
+    <Local scadeName="_L47" scadeType="float32" targetName="TimeCycle" targetType="kcg_float32"/>
+    <Memory scadeName="_L53" scadeType="float32" targetName="_L53" targetType="kcg_float32" inCtx="true"/>
+    <NodeInstance scadeName="*" instName="1"/>
+    <NodeInstance scadeName="+" instName="1"/>
+    <NodeInstance scadeName="*" instName="2"/>
+    <ActivateEveryDefault instName="1">
+      <Condition targetName="BlendToTarget"/>
+      <Default/>
+      <NodeInstance scadeName="$+$" instName="2"/>
+    </ActivateEveryDefault>
+    <FbyOp instName="1">
+      <Memory targetName="_L53" targetType="kcg_float32" inCtx="true"/>
+    </FbyOp>
+    <NodeInstance scadeName="-" instName="1"/>
+    <NodeInstance scadeName="&gt;" instName="1"/>
+    <NodeInstance scadeName="not" instName="1"/>
+    <NodeInstance scadeName="-" instName="2"/>
+    <NodeInstance scadeName="/" instName="1"/>
+    <NodeInstance scadeName="/" instName="2"/>
+    <NodeInstance scadeName="*" instName="3"/>
+    <NodeInstance scadeName="/" instName="3"/>
+    <NodeInlining scadeName="math::Abs" instName="1">
+      <Local scadeName="_L5" scadeType="&apos;T" targetName="BlendStep" targetType="kcg_float32" reused="true"/>
+      <NodeInstance scadeName="&lt;=" instName="1"/>
+      <NodeInstance scadeName="if" instName="2"/>
+      <NodeInstance scadeName="-" instName="5"/>
+      <Input scadeName="A_Input" scadeType="&apos;T" targetName="BlendStep" targetType="kcg_float32" reused="true"/>
+    </NodeInlining>
+    <NodeInstance scadeName="LimiterF32" instName="1" refName="LimiterF32"/>
+    <NodeInstance scadeName="LimiterF32" instName="3" refName="LimiterF32"/>
+    <OutCtxType targetName="outC_Blending"/>
+  </NoExpNode>
+  <NoExpNode scadeName="IntegratorLimit" headerFile="IntegratorLimit.h" targetCycleFct="IntegratorLimit"
+      targetInitFct="IntegratorLimit_reset" targetInitializationFct="IntegratorLimit_init">
+    <Input scadeName="Signal" scadeType="float32" targetName="Signal" targetType="kcg_float32"/>
+    <Input scadeName="Initial" scadeType="float32" targetName="Initial" targetType="kcg_float32"/>
+    <Input scadeName="Reset" scadeType="bool" targetName="Reset" targetType="kcg_bool"/>
+    <Input scadeName="TimeCycle" scadeType="float32" targetName="TimeCycle" targetType="kcg_float32"/>
+    <Input scadeName="LowLimit" scadeType="float32" targetName="LowLimit" targetType="kcg_float32"/>
+    <Input scadeName="HiLimit" scadeType="float32" targetName="HiLimit" targetType="kcg_float32"/>
+    <Output scadeName="IntegralSignal" scadeType="float32" targetName="IntegralSignal" targetType="kcg_float32"
+        mem="true" inCtx="true"/>
+    <Local scadeName="_L40" scadeType="float32" targetName="_L40" targetType="kcg_float32"/>
+    <Local scadeName="_L38" scadeType="float32" targetName="HiLimit" targetType="kcg_float32"/>
+    <Memory scadeName="_L37" scadeType="float32" targetName="IntegralSignal" targetType="kcg_float32" inCtx="true"/>
+    <Local scadeName="_L35" scadeType="float32" targetName="Signal" targetType="kcg_float32"/>
+    <Local scadeName="_L33" scadeType="bool" targetName="Reset" targetType="kcg_bool"/>
+    <Local scadeName="_L31" scadeType="float32" targetName="LowLimit" targetType="kcg_float32"/>
+    <Local scadeName="_L30" scadeType="float32" targetName="_L30" targetType="kcg_float32"/>
+    <Local scadeName="_L27" scadeType="float32" targetName="Initial" targetType="kcg_float32"/>
+    <Local scadeName="_L26" scadeType="float32" targetName="TimeCycle" targetType="kcg_float32"/>
+    <NodeInstance scadeName="&lt;=" instName="1"/>
+    <FbyOp instName="1">
+      <Memory targetName="IntegralSignal" targetType="kcg_float32" inCtx="true"/>
+      <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+    </FbyOp>
+    <NodeInstance scadeName="if" instName="1"/>
+    <InitOp instName="1">
+      <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+    </InitOp>
+    <NodeInstance scadeName="&gt;=" instName="1"/>
+    <NodeInstance scadeName="if" instName="2"/>
+    <NodeInstance scadeName="+" instName="1"/>
+    <NodeInstance scadeName="if" instName="3"/>
+    <NodeInstance scadeName="*" instName="1"/>
+    <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+    <OutCtxType targetName="outC_IntegratorLimit"/>
+  </NoExpNode>
+  <NoExpNode scadeName="PI_Controller" headerFile="PI_Controller.h" targetCycleFct="PI_Controller"
+      targetInitFct="PI_Controller_reset" targetInitializationFct="PI_Controller_init">
+    <Input scadeName="SetPoint" scadeType="float32" targetName="SetPoint" targetType="kcg_float32"/>
+    <Input scadeName="ProcessVariable" scadeType="float32" targetName="ProcessVariable" targetType="kcg_float32"/>
+    <Input scadeName="Kp" scadeType="float32" targetName="Kp3" targetType="kcg_float32"/>
+    <Input scadeName="Ki" scadeType="float32" targetName="Ki2" targetType="kcg_float32"/>
+    <Input scadeName="DeltaT" scadeType="float32" targetName="DeltaT" targetType="kcg_float32"/>
+    <Input scadeName="LowLimit" scadeType="float32" targetName="LowLimit" targetType="kcg_float32"/>
+    <Input scadeName="HighLimit" scadeType="float32" targetName="HighLimit" targetType="kcg_float32"/>
+    <Input scadeName="Reset" scadeType="bool" targetName="Reset" targetType="kcg_bool"/>
+    <Output scadeName="ControlVariable" scadeType="float32" targetName="ControlVariable" targetType="kcg_float32"
+        inCtx="true"/>
+    <Local scadeName="_L17" scadeType="float32" targetName="_L17" targetType="kcg_float32"/>
+    <Local scadeName="_L20" scadeType="float32" targetName="SetPoint" targetType="kcg_float32"/>
+    <Local scadeName="_L27" scadeType="float32" targetName="ProcessVariable" targetType="kcg_float32"/>
+    <Local scadeName="_L28" scadeType="bool" targetName="Reset" targetType="kcg_bool"/>
+    <Local scadeName="_L33" scadeType="float32" targetName="Kp3" targetType="kcg_float32"/>
+    <Local scadeName="_L34" scadeType="float32" targetName="Ki2" targetType="kcg_float32"/>
+    <Local scadeName="_L35" scadeType="float32" targetName="ControlVariable" targetType="kcg_float32" inCtx="true"/>
+    <NodeInstance scadeName="+" instName="1"/>
+    <NodeInstance scadeName="-" instName="1"/>
+    <NodeInstance scadeName="IntegratorLimit" instName="1" refName="IntegratorLimit">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="if" instName="1"/>
+    <NodeInstance scadeName="*" instName="1"/>
+    <NodeInstance scadeName="*" instName="2"/>
+    <NodeInstance scadeName="LimiterF32" instName="1" refName="LimiterF32"/>
+    <OutCtxType targetName="outC_PI_Controller"/>
+  </NoExpNode>
+  <Package scadeName="unit">
+    <NoExpNode scadeName="g_to_mps2" headerFile="g_to_mps2_unit.h" targetCycleFct="g_to_mps2_unit">
+      <Input scadeName="Input1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+      <Output scadeName="Output1" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+      <Local scadeName="_L1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+      <Local scadeName="_L2" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+      <NodeInstance scadeName="*" instName="1"/>
+    </NoExpNode>
+    <NoExpNode scadeName="m_to_kt" headerFile="m_to_kt_unit.h" targetCycleFct="m_to_kt_unit">
+      <Input scadeName="Input1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+      <Output scadeName="Output1" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+      <Local scadeName="_L1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+      <Local scadeName="_L4" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+      <NodeInstance scadeName="/" instName="1"/>
+    </NoExpNode>
+    <NoExpNode scadeName="ft_to_m" headerFile="ft_to_m_unit.h" targetCycleFct="ft_to_m_unit">
+      <Input scadeName="Input1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+      <Output scadeName="Output1" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+      <Local scadeName="_L1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+      <Local scadeName="_L2" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+      <NodeInstance scadeName="*" instName="1"/>
+    </NoExpNode>
+    <NoExpNode scadeName="m_to_ft" headerFile="m_to_ft_unit.h" targetCycleFct="m_to_ft_unit">
+      <Input scadeName="Input1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+      <Output scadeName="Output1" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+      <Local scadeName="_L1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+      <Local scadeName="_L4" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+      <NodeInstance scadeName="/" instName="1"/>
+    </NoExpNode>
+  </Package>
+  <NoExpNode scadeName="Lockwheel" headerFile="Lockwheel.h" targetCycleFct="Lockwheel" targetInitFct="Lockwheel_reset"
+      targetInitializationFct="Lockwheel_init">
+    <Input scadeName="APPData" scadeType="tINPUT_Data" targetName="APPData" targetType="tINPUT_Data"/>
+    <Output scadeName="LDPActive_Left" scadeType="bool" targetName="LDPActive_Left" targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="LDPActive_Rightt" scadeType="bool" targetName="LDPActive_Rightt" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L6" scadeType="bool" targetName="LDPActive_Left" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L45" scadeType="bool" targetName="LDPActive_Rightt" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L73" scadeType="bool" targetName="_L73" targetType="kcg_bool"/>
+    <Local scadeName="_L74" scadeType="bool" targetName="_L74" targetType="kcg_bool"/>
+    <Local scadeName="_L75" scadeType="bool" targetName="_L75" targetType="kcg_bool"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="sigle" instName="1" refName="sigle">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="sigle" instName="2" refName="sigle">
+      <OutCtxVar targetName="Context_2"/>
+    </NodeInstance>
+    <NodeInstance scadeName="and" instName="2"/>
+    <NodeInstance scadeName="not" instName="1"/>
+    <NodeInstance scadeName="not" instName="2"/>
+    <NodeInstance scadeName="Delay_OFF" instName="1" refName="Delay_OFF">
+      <OutCtxVar targetName="_2_Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="Delay_OFF" instName="2" refName="Delay_OFF">
+      <OutCtxVar targetName="_1_Context_2"/>
+    </NodeInstance>
+    <NodeInstance scadeName="&gt;=" instName="1"/>
+    <NodeInstance scadeName="and" instName="3"/>
+    <NodeInstance scadeName="and" instName="4"/>
+    <NodeInstance scadeName="and" instName="5"/>
+    <OutCtxType targetName="outC_Lockwheel"/>
+  </NoExpNode>
+  <Constant scadeName="reference_wheel_speed" scadeType="float32" targetName="reference_wheel_speed"
+      targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="percent1" scadeType="float32" targetName="percent1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="outputpressure1" scadeType="float32" targetName="outputpressure1" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="outputpressure2" scadeType="float32" targetName="outputpressure2" targetType="kcg_float32"
+      macroDef="true"/>
+  <NoExpNode scadeName="sigle" headerFile="sigle.h" targetCycleFct="sigle" targetInitFct="sigle_reset"
+      targetInitializationFct="sigle_init">
+    <Input scadeName="RefWheelspeed" scadeType="float32" targetName="RefWheelspeed" targetType="kcg_float32"/>
+    <Input scadeName="WheelSpeed" scadeType="float32" targetName="WheelSpeed" targetType="kcg_float32"/>
+    <Output scadeName="LDPActive" scadeType="bool" targetName="LDPActive" targetType="kcg_bool" inCtx="true"/>
+    <Automaton scadeName="SM1" targetStatesType="_5_SSM_ST_SM1" targetTransitionsType="_7_SSM_TR_SM1">
+      <State scadeName="LockWheelEnable" targetName="SSM_st_LockWheelEnable_SM1">
+        <Fork priority="1">
+          <Condition>
+            <NodeInstance scadeName="&gt;" instName="2"/>
+            <NodeInstance scadeName="*" instName="8"/>
+          </Condition>
+          <Transition targetName="SSM_TR_LockWheelEnable_1_SM1" kind="strong" scadeDest="LockWheelDisable"/>
+        </Fork>
+      </State>
+      <State scadeName="LockWheelDisable" targetName="SSM_st_LockWheelDisable_SM1">
+        <Fork priority="1">
+          <Condition>
+            <NodeInstance scadeName="&lt;=" instName="4"/>
+            <NodeInstance scadeName="*" instName="7"/>
+          </Condition>
+          <Transition targetName="SSM_TR_LockWheelDisable_1_SM1" kind="strong" scadeDest="LockWheelEnable"/>
+        </Fork>
+      </State>
+      <ActiveState targetName="SM1_state_act"/>
+      <NextState targetName="SM1_state_nxt" mem="true" inCtx="true"/>
+      <SelectedState targetName="SM1_state_nxt" mem="true" inCtx="true"/>
+    </Automaton>
+    <OutCtxType targetName="outC_sigle"/>
+  </NoExpNode>
+  <NoExpNode scadeName="BrakePress" headerFile="BrakePress.h" targetCycleFct="BrakePress">
+    <Input scadeName="APPData" scadeType="tINPUT_Data" targetName="APPData" targetType="tINPUT_Data"/>
+    <Output scadeName="BrakePdlOut" scadeType="tBrakePdlOut" targetName="BrakePdlOut" targetType="tBrakePdlOut"/>
+    <Local scadeName="_L4" scadeType="float32" targetName="_L4" targetType="kcg_float32"/>
+    <Local scadeName="_L3" scadeType="float32" targetName="_L3" targetType="kcg_float32"/>
+    <Local scadeName="_L18" scadeType="tBrakePdlOut" targetName="BrakePdlOut" targetType="tBrakePdlOut"/>
+    <NodeInlining scadeName="math::Max" instName="2">
+      <Local scadeName="_L4" scadeType="&apos;T" targetName="_L3" targetType="kcg_float32"/>
+      <NodeInstance scadeName="&gt;=" instName="1"/>
+      <NodeInstance scadeName="if" instName="2"/>
+      <Output scadeName="Ma_Output" scadeType="&apos;T" targetName="_L3" targetType="kcg_float32"/>
+    </NodeInlining>
+    <NodeInlining scadeName="math::Max" instName="1">
+      <Local scadeName="_L4" scadeType="&apos;T" targetName="_L4" targetType="kcg_float32"/>
+      <NodeInstance scadeName="&gt;=" instName="1"/>
+      <NodeInstance scadeName="if" instName="2"/>
+      <Output scadeName="Ma_Output" scadeType="&apos;T" targetName="_L4" targetType="kcg_float32"/>
+    </NodeInlining>
+    <NodeInstance scadeName="PedalF" instName="1" refName="PedalF"/>
+    <NodeInstance scadeName="PedalF" instName="2" refName="PedalF"/>
+    <NodeInstance scadeName="&gt;" instName="1"/>
+    <NodeInstance scadeName="&gt;" instName="2"/>
+    <NodeInstance scadeName="and" instName="1"/>
+  </NoExpNode>
+  <NoExpNode scadeName="equ_6" headerFile="equ_6.h" targetCycleFct="equ_6">
+    <Input scadeName="Input1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Output scadeName="Output1" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <Local scadeName="_L1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L6" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <NodeInstance scadeName="*" instName="1"/>
+    <NodeInstance scadeName="/" instName="1"/>
+    <NodeInstance scadeName="-" instName="1"/>
+    <NodeInstance scadeName="/" instName="2"/>
+  </NoExpNode>
+  <NoExpNode scadeName="equ_5" headerFile="equ_5.h" targetCycleFct="equ_5">
+    <Input scadeName="Input1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Output scadeName="Output1" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <Local scadeName="_L1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L6" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <NodeInstance scadeName="*" instName="1"/>
+    <NodeInstance scadeName="/" instName="1"/>
+    <NodeInstance scadeName="-" instName="1"/>
+  </NoExpNode>
+  <NoExpNode scadeName="equ_4" headerFile="equ_4.h" targetCycleFct="equ_4">
+    <Input scadeName="Input1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Output scadeName="Output1" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <Local scadeName="_L1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L6" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <NodeInstance scadeName="*" instName="1"/>
+    <NodeInstance scadeName="/" instName="1"/>
+    <NodeInstance scadeName="-" instName="1"/>
+    <NodeInstance scadeName="/" instName="2"/>
+  </NoExpNode>
+  <NoExpNode scadeName="equ_3" headerFile="equ_3.h" targetCycleFct="equ_3">
+    <Input scadeName="Input1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Output scadeName="Output1" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <Local scadeName="_L2" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L6" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <NodeInstance scadeName="*" instName="1"/>
+    <NodeInstance scadeName="/" instName="1"/>
+    <NodeInstance scadeName="+" instName="1"/>
+    <NodeInstance scadeName="/" instName="2"/>
+  </NoExpNode>
+  <NoExpNode scadeName="equ_2" headerFile="equ_2.h" targetCycleFct="equ_2">
+    <Input scadeName="Input1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Output scadeName="Output1" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <Local scadeName="_L1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L7" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <NodeInstance scadeName="*" instName="1"/>
+    <NodeInstance scadeName="/" instName="1"/>
+    <NodeInstance scadeName="-" instName="1"/>
+  </NoExpNode>
+  <Constant scadeName="PedalDisplacementPercent_7" scadeType="float32" targetName="PedalDisplacementPercent_7"
+      targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="PedalDisplacementPercent_6" scadeType="float32" targetName="PedalDisplacementPercent_6"
+      targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="PedalDisplacementPercent_5" scadeType="float32" targetName="PedalDisplacementPercent_5"
+      targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="PedalDisplacementPercent_4" scadeType="float32" targetName="PedalDisplacementPercent_4"
+      targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="PedalDisplacementPercent_3" scadeType="float32" targetName="PedalDisplacementPercent_3"
+      targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="PedalDisplacementPercent_2" scadeType="float32" targetName="PedalDisplacementPercent_2"
+      targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="PedalDisplacementPercent_1" scadeType="float32" targetName="PedalDisplacementPercent_1"
+      targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="equ_7_par_1" scadeType="float32" targetName="equ_7_par_1" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_6_par_3" scadeType="float32" targetName="equ_6_par_3" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_6_par_2" scadeType="float32" targetName="equ_6_par_2" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_6_par_1" scadeType="float32" targetName="equ_6_par_1" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_5_par_3" scadeType="float32" targetName="equ_5_par_3" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_5_par_2" scadeType="float32" targetName="equ_5_par_2" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_5_par_1" scadeType="float32" targetName="equ_5_par_1" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_4_par_4" scadeType="float32" targetName="equ_4_par_4" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_4_par_3" scadeType="float32" targetName="equ_4_par_3" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_4_par_2" scadeType="float32" targetName="equ_4_par_2" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_4_par_1" scadeType="float32" targetName="equ_4_par_1" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_3_par_4" scadeType="float32" targetName="equ_3_par_4" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_3_par_3" scadeType="float32" targetName="equ_3_par_3" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_3_par_2" scadeType="float32" targetName="equ_3_par_2" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_3_par_1" scadeType="float32" targetName="equ_3_par_1" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_2_par_3" scadeType="float32" targetName="equ_2_par_3" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_2_par_2" scadeType="float32" targetName="equ_2_par_2" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_2_par_1" scadeType="float32" targetName="equ_2_par_1" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_1_par_1" scadeType="float32" targetName="equ_1_par_1" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="equ_6_par_4" scadeType="float32" targetName="equ_6_par_4" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="Error" scadeType="float32" targetName="Error" targetType="kcg_float32" macroDef="true"/>
+  <NoExpNode scadeName="PedalF" headerFile="PedalF.h" targetCycleFct="PedalF">
+    <Input scadeName="Input1" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Output scadeName="Output1" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <Local scadeName="Local2" scadeType="bool" targetName="Local2" targetType="kcg_bool"/>
+    <Local scadeName="_L5" scadeType="bool" targetName="Local2" targetType="kcg_bool"/>
+    <Local scadeName="_L21" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L22" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L23" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L24" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L25" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L26" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L27" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L28" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L29" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L30" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L31" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L32" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <Local scadeName="_L33" scadeType="float32" targetName="Input1" targetType="kcg_float32"/>
+    <NodeInstance scadeName="&gt;=" instName="1"/>
+    <NodeInstance scadeName="&lt;" instName="1"/>
+    <NodeInstance scadeName="&lt;" instName="2"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="&gt;=" instName="2"/>
+    <NodeInstance scadeName="&lt;" instName="3"/>
+    <NodeInstance scadeName="&gt;=" instName="3"/>
+    <NodeInstance scadeName="&lt;" instName="4"/>
+    <NodeInstance scadeName="and" instName="2"/>
+    <NodeInstance scadeName="and" instName="3"/>
+    <NodeInstance scadeName="&gt;=" instName="4"/>
+    <NodeInstance scadeName="&lt;" instName="5"/>
+    <NodeInstance scadeName="and" instName="4"/>
+    <NodeInstance scadeName="&gt;=" instName="5"/>
+    <NodeInstance scadeName="&lt;" instName="6"/>
+    <NodeInstance scadeName="and" instName="5"/>
+    <NodeInstance scadeName="&gt;=" instName="6"/>
+    <NodeInstance scadeName="&lt;" instName="7"/>
+    <NodeInstance scadeName="and" instName="6"/>
+    <ActivateIf scadeName="IfBlock1">
+      <Condition targetName="Local2"/>
+      <Else>
+        <Condition targetName="_5_else_clock_IfBlock1"/>
+        <Else>
+          <Condition targetName="_4_else_clock_IfBlock1"/>
+          <Else>
+            <Condition targetName="_3_else_clock_IfBlock1"/>
+            <Else>
+              <Condition targetName="_2_else_clock_IfBlock1"/>
+              <Else>
+                <Condition targetName="_1_else_clock_IfBlock1"/>
+                <Else>
+                  <Condition targetName="else_clock_IfBlock1"/>
+                  <Else/>
+                  <Then/>
+                </Else>
+                <Then>
+                  <NodeInstance scadeName="equ_6" instName="1" refName="equ_6"/>
+                </Then>
+              </Else>
+              <Then>
+                <NodeInstance scadeName="equ_5" instName="1" refName="equ_5"/>
+              </Then>
+            </Else>
+            <Then>
+              <NodeInstance scadeName="equ_4" instName="1" refName="equ_4"/>
+            </Then>
+          </Else>
+          <Then>
+            <NodeInstance scadeName="equ_3" instName="1" refName="equ_3"/>
+          </Then>
+        </Else>
+        <Then>
+          <NodeInstance scadeName="equ_2" instName="1" refName="equ_2"/>
+        </Then>
+      </Else>
+      <Then/>
+    </ActivateIf>
+  </NoExpNode>
+  <NoExpNode scadeName="Autobrake_EnaletoApplication" headerFile="Autobrake_EnaletoApplication.h"
+      targetCycleFct="Autobrake_EnaletoApplication" targetInitFct="Autobrake_EnaletoApplication_reset"
+      targetInitializationFct="Autobrake_EnaletoApplication_init">
+    <Input scadeName="Idle_Position_Discrete_R" scadeType="bool" targetName="Idle_Position_Discrete_R"
+        targetType="kcg_bool"/>
+    <Input scadeName="dle_Position_Discrete_L" scadeType="bool" targetName="dle_Position_Discrete_L" targetType="kcg_bool"/>
+    <Output scadeName="LandingApplication" scadeType="bool" targetName="LandingApplication" targetType="kcg_bool"
+        inCtx="true"/>
+    <Local scadeName="_L3" scadeType="bool" targetName="Idle_Position_Discrete_R" targetType="kcg_bool"/>
+    <Local scadeName="_L4" scadeType="bool" targetName="dle_Position_Discrete_L" targetType="kcg_bool"/>
+    <Local scadeName="_L19" scadeType="bool" targetName="LandingApplication" targetType="kcg_bool" inCtx="true"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="Delay_ON" instName="1" refName="Delay_ON">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="not" instName="1"/>
+    <OutCtxType targetName="outC_Autobrake_EnaletoApplication"/>
+  </NoExpNode>
+  <Constant scadeName="Brakespeed" scadeType="float32" targetName="Brakespeed" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="PedaldisArm" scadeType="float32" targetName="PedaldisArm" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="Constant3" scadeType="int8" targetName="Constant3" targetType="kcg_int8" macroDef="true"/>
+  <Constant scadeName="Pedal_RTO" scadeType="float32" targetName="Pedal_RTO" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Constant5" scadeType="int8" targetName="Constant5" targetType="kcg_int8" macroDef="true"/>
+  <Constant scadeName="Constant6" scadeType="int8" targetName="Constant6" targetType="kcg_int8" macroDef="true"/>
+  <Constant scadeName="RTO_ARM" scadeType="float32" targetName="RTO_ARM" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="RTO_H" scadeType="float32" targetName="RTO_H" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Acc_Lo" scadeType="float32" targetName="Acc_Lo" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Acc_MED" scadeType="float32" targetName="Acc_MED" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Acc_HI" scadeType="float32" targetName="Acc_HI" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="zero" scadeType="float32" targetName="zero" targetType="kcg_float32" macroDef="true"/>
+  <NamedType scadeName="tBRAKE_Auto" targetName="tBRAKE_Auto" refType="tBRAKE_Auto"/>
+  <Constant scadeName="Auto_KP" scadeType="float32" targetName="Auto_KP" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Auto_KI" scadeType="float32" targetName="Auto_KI" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="DT" scadeType="float32" targetName="DT" targetType="kcg_float32" macroDef="true"/>
+  <NoExpNode scadeName="Autobrake_Application_Disarmed" headerFile="Autobrake_Application_Disarmed.h"
+      targetCycleFct="Autobrake_Application_Disarmed">
+    <Input scadeName="BCSfaults" scadeType="bool" targetName="BCSfaults" targetType="kcg_bool"/>
+    <Input scadeName="ARMdisagree" scadeType="bool" targetName="ARMdisagree" targetType="kcg_bool"/>
+    <Input scadeName="Maxpedal" scadeType="float32" targetName="Maxpedal" targetType="kcg_float32"/>
+    <Input scadeName="Idle_Position_Discrete_L" scadeType="bool" targetName="Idle_Position_Discrete_L"
+        targetType="kcg_bool"/>
+    <Input scadeName="Idle_Position_Discrete_R" scadeType="bool" targetName="Idle_Position_Discrete_R"
+        targetType="kcg_bool"/>
+    <Input scadeName="AutoBrk_OFF" scadeType="bool" targetName="AutoBrk_OFF" targetType="kcg_bool"/>
+    <Input scadeName="AutoBrk_RTO" scadeType="bool" targetName="AutoBrk_RTO" targetType="kcg_bool"/>
+    <Input scadeName="SpoilerStored_Left" scadeType="bool" targetName="SpoilerStored_Left" targetType="kcg_bool"/>
+    <Input scadeName="CoilEnergized" scadeType="bool" targetName="CoilEnergized" targetType="kcg_bool"/>
+    <Input scadeName="SpoilerStored_Right" scadeType="bool" targetName="SpoilerStored_Right" targetType="kcg_bool"/>
+    <Input scadeName="WOWdisagree" scadeType="bool" targetName="WOWdisagree" targetType="kcg_bool"/>
+    <Output scadeName="LandingARM_Disarmed" scadeType="bool" targetName="LandingARM_Disarmed" targetType="kcg_bool"/>
+    <Output scadeName="LandingEnable_Disarmed" scadeType="bool" targetName="LandingEnable_Disarmed" targetType="kcg_bool"/>
+    <Output scadeName="LandingApplication_Disarmed" scadeType="bool" targetName="LandingApplication_Disarmed"
+        targetType="kcg_bool"/>
+    <Local scadeName="_L1" scadeType="bool" targetName="BCSfaults" targetType="kcg_bool"/>
+    <Local scadeName="_L2" scadeType="float32" targetName="Maxpedal" targetType="kcg_float32"/>
+    <Local scadeName="_L3" scadeType="bool" targetName="LandingApplication_Disarmed" targetType="kcg_bool"/>
+    <Local scadeName="_L4" scadeType="bool" targetName="Idle_Position_Discrete_L" targetType="kcg_bool"/>
+    <Local scadeName="_L5" scadeType="bool" targetName="Idle_Position_Discrete_R" targetType="kcg_bool"/>
+    <Local scadeName="_L6" scadeType="bool" targetName="AutoBrk_OFF" targetType="kcg_bool"/>
+    <Local scadeName="_L7" scadeType="bool" targetName="AutoBrk_RTO" targetType="kcg_bool"/>
+    <Local scadeName="_L10" scadeType="bool" targetName="SpoilerStored_Left" targetType="kcg_bool"/>
+    <Local scadeName="_L11" scadeType="bool" targetName="CoilEnergized" targetType="kcg_bool"/>
+    <Local scadeName="_L17" scadeType="bool" targetName="SpoilerStored_Right" targetType="kcg_bool"/>
+    <Local scadeName="_L20" scadeType="bool" targetName="ARMdisagree" targetType="kcg_bool"/>
+    <Local scadeName="_L21" scadeType="bool" targetName="_L21" targetType="kcg_bool"/>
+    <Local scadeName="_L22" scadeType="bool" targetName="LandingEnable_Disarmed" targetType="kcg_bool"/>
+    <Local scadeName="_L23" scadeType="bool" targetName="LandingARM_Disarmed" targetType="kcg_bool"/>
+    <Local scadeName="_L24" scadeType="bool" targetName="WOWdisagree" targetType="kcg_bool"/>
+    <NodeInstance scadeName="or" instName="1"/>
+    <NodeInstance scadeName="or" instName="1"/>
+    <NodeInstance scadeName="or" instName="1"/>
+    <NodeInstance scadeName="or" instName="1"/>
+    <NodeInstance scadeName="&gt;" instName="1"/>
+    <NodeInstance scadeName="not" instName="1"/>
+    <NodeInstance scadeName="not" instName="2"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="not" instName="3"/>
+    <NodeInstance scadeName="or" instName="2"/>
+    <NodeInstance scadeName="or" instName="2"/>
+    <NodeInstance scadeName="or" instName="2"/>
+    <NodeInstance scadeName="or" instName="3"/>
+    <NodeInstance scadeName="or" instName="4"/>
+  </NoExpNode>
+  <NoExpNode scadeName="OFFtoAutobrakeArmed" headerFile="OFFtoAutobrakeArmed.h" targetCycleFct="OFFtoAutobrakeArmed">
+    <Input scadeName="AutoBrk_LO" scadeType="bool" targetName="AutoBrk_LO" targetType="kcg_bool"/>
+    <Input scadeName="AutoBrk_MED" scadeType="bool" targetName="AutoBrk_MED" targetType="kcg_bool"/>
+    <Input scadeName="AutoBrk_HI" scadeType="bool" targetName="AutoBrk_HI" targetType="kcg_bool"/>
+    <Input scadeName="BCSfaults" scadeType="bool" targetName="BCSfaults" targetType="kcg_bool"/>
+    <Input scadeName="WOW_BRK" scadeType="bool" targetName="WOW_BRK" targetType="kcg_bool"/>
+    <Output scadeName="LandingArmed" scadeType="bool" targetName="LandingArmed" targetType="kcg_bool"/>
+    <Local scadeName="_L1" scadeType="bool" targetName="AutoBrk_LO" targetType="kcg_bool"/>
+    <Local scadeName="_L2" scadeType="bool" targetName="AutoBrk_MED" targetType="kcg_bool"/>
+    <Local scadeName="_L3" scadeType="bool" targetName="AutoBrk_HI" targetType="kcg_bool"/>
+    <Local scadeName="_L6" scadeType="bool" targetName="BCSfaults" targetType="kcg_bool"/>
+    <Local scadeName="_L7" scadeType="bool" targetName="WOW_BRK" targetType="kcg_bool"/>
+    <Local scadeName="_L12" scadeType="bool" targetName="LandingArmed" targetType="kcg_bool"/>
+    <NodeInstance scadeName="or" instName="1"/>
+    <NodeInstance scadeName="or" instName="1"/>
+    <NodeInstance scadeName="not" instName="1"/>
+    <NodeInstance scadeName="not" instName="2"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="and" instName="1"/>
+  </NoExpNode>
+  <NoExpNode scadeName="OFFtoRTOArmed" headerFile="OFFtoRTOArmed.h" targetCycleFct="OFFtoRTOArmed">
+    <Input scadeName="BCSfaults" scadeType="bool" targetName="BCSfaults" targetType="kcg_bool"/>
+    <Input scadeName="WOW_BRK" scadeType="bool" targetName="WOW_BRK" targetType="kcg_bool"/>
+    <Input scadeName="Wheel_speed_av" scadeType="float32" targetName="Wheel_speed_av" targetType="kcg_float32"/>
+    <Input scadeName="AutoBrk_RTO" scadeType="bool" targetName="AutoBrk_RTO" targetType="kcg_bool"/>
+    <Output scadeName="RTOArmed" scadeType="bool" targetName="RTOArmed" targetType="kcg_bool"/>
+    <Local scadeName="_L2" scadeType="bool" targetName="BCSfaults" targetType="kcg_bool"/>
+    <Local scadeName="_L3" scadeType="bool" targetName="WOW_BRK" targetType="kcg_bool"/>
+    <Local scadeName="_L4" scadeType="float32" targetName="Wheel_speed_av" targetType="kcg_float32"/>
+    <Local scadeName="_L7" scadeType="bool" targetName="AutoBrk_RTO" targetType="kcg_bool"/>
+    <Local scadeName="_L14" scadeType="bool" targetName="RTOArmed" targetType="kcg_bool"/>
+    <NodeInstance scadeName="not" instName="1"/>
+    <NodeInstance scadeName="&lt;" instName="1"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="and" instName="1"/>
+  </NoExpNode>
+  <NoExpNode scadeName="RTOApplicationDisarmed_" headerFile="RTOApplicationDisarmed_.h"
+      targetCycleFct="RTOApplicationDisarmed_">
+    <Input scadeName="Idel_Position_Discrete_L" scadeType="bool" targetName="Idel_Position_Discrete_L"
+        targetType="kcg_bool"/>
+    <Input scadeName="Idel_Position_Discrete_R" scadeType="bool" targetName="Idel_Position_Discrete_R"
+        targetType="kcg_bool"/>
+    <Input scadeName="Maxpedal" scadeType="float32" targetName="Maxpedal" targetType="kcg_float32"/>
+    <Input scadeName="AutoBrk_LO" scadeType="bool" targetName="AutoBrk_LO" targetType="kcg_bool"/>
+    <Input scadeName="AutoBrk_MED" scadeType="bool" targetName="AutoBrk_MED" targetType="kcg_bool"/>
+    <Input scadeName="AutoBrk_HI" scadeType="bool" targetName="AutoBrk_HI" targetType="kcg_bool"/>
+    <Input scadeName="AutoBrk_OFF" scadeType="bool" targetName="AutoBrk_OFF" targetType="kcg_bool"/>
+    <Input scadeName="BCSfaults" scadeType="bool" targetName="BCSfaults" targetType="kcg_bool"/>
+    <Input scadeName="WOWBRK" scadeType="bool" targetName="WOWBRK" targetType="kcg_bool"/>
+    <Input scadeName="CoilEnergized" scadeType="bool" targetName="CoilEnergized" targetType="kcg_bool"/>
+    <Input scadeName="ArmDisagree" scadeType="bool" targetName="ArmDisagree" targetType="kcg_bool"/>
+    <Output scadeName="ARM_EnableToDisarm" scadeType="bool" targetName="ARM_EnableToDisarm" targetType="kcg_bool"/>
+    <Output scadeName="RTOApplicationDisarmed" scadeType="bool" targetName="RTOApplicationDisarmed" targetType="kcg_bool"/>
+    <Local scadeName="_L1" scadeType="bool" targetName="Idel_Position_Discrete_L" targetType="kcg_bool"/>
+    <Local scadeName="_L2" scadeType="bool" targetName="Idel_Position_Discrete_R" targetType="kcg_bool"/>
+    <Local scadeName="_L6" scadeType="float32" targetName="Maxpedal" targetType="kcg_float32"/>
+    <Local scadeName="_L17" scadeType="bool" targetName="RTOApplicationDisarmed" targetType="kcg_bool"/>
+    <Local scadeName="_L18" scadeType="bool" targetName="AutoBrk_LO" targetType="kcg_bool"/>
+    <Local scadeName="_L19" scadeType="bool" targetName="AutoBrk_MED" targetType="kcg_bool"/>
+    <Local scadeName="_L20" scadeType="bool" targetName="AutoBrk_HI" targetType="kcg_bool"/>
+    <Local scadeName="_L21" scadeType="bool" targetName="AutoBrk_OFF" targetType="kcg_bool"/>
+    <Local scadeName="_L24" scadeType="bool" targetName="BCSfaults" targetType="kcg_bool"/>
+    <Local scadeName="_L25" scadeType="bool" targetName="WOWBRK" targetType="kcg_bool"/>
+    <Local scadeName="_L26" scadeType="bool" targetName="CoilEnergized" targetType="kcg_bool"/>
+    <Local scadeName="_L27" scadeType="bool" targetName="ArmDisagree" targetType="kcg_bool"/>
+    <Local scadeName="_L30" scadeType="bool" targetName="_L30" targetType="kcg_bool"/>
+    <Local scadeName="_L31" scadeType="bool" targetName="ARM_EnableToDisarm" targetType="kcg_bool"/>
+    <NodeInstance scadeName="&gt;" instName="1"/>
+    <NodeInstance scadeName="or" instName="1"/>
+    <NodeInstance scadeName="or" instName="1"/>
+    <NodeInstance scadeName="or" instName="1"/>
+    <NodeInstance scadeName="not" instName="2"/>
+    <NodeInstance scadeName="not" instName="3"/>
+    <NodeInstance scadeName="or" instName="2"/>
+    <NodeInstance scadeName="or" instName="2"/>
+    <NodeInstance scadeName="or" instName="2"/>
+    <NodeInstance scadeName="not" instName="1"/>
+    <NodeInstance scadeName="or" instName="3"/>
+    <NodeInstance scadeName="or" instName="3"/>
+    <NodeInstance scadeName="or" instName="3"/>
+    <NodeInstance scadeName="or" instName="4"/>
+  </NoExpNode>
+  <NoExpNode scadeName="RTOArmedtoEnabled" headerFile="RTOArmedtoEnabled.h" targetCycleFct="RTOArmedtoEnabled">
+    <Input scadeName="Wheel_speed_av" scadeType="float32" targetName="Wheel_speed_av" targetType="kcg_float32"/>
+    <Output scadeName="RTOEnabled" scadeType="bool" targetName="RTOEnabled" targetType="kcg_bool"/>
+    <Local scadeName="_L1" scadeType="float32" targetName="Wheel_speed_av" targetType="kcg_float32"/>
+    <Local scadeName="_L3" scadeType="bool" targetName="RTOEnabled" targetType="kcg_bool"/>
+    <NodeInstance scadeName="&gt;" instName="1"/>
+  </NoExpNode>
+  <NoExpNode scadeName="RTOEnabledtoApplication" headerFile="RTOEnabledtoApplication.h"
+      targetCycleFct="RTOEnabledtoApplication">
+    <Input scadeName="RTOEnabled" scadeType="bool" targetName="RTOEnabled" targetType="kcg_bool"/>
+    <Input scadeName="Idel_Position_Discrete_L" scadeType="bool" targetName="Idel_Position_Discrete_L"
+        targetType="kcg_bool"/>
+    <Input scadeName="Idel_Position_Discrete_R" scadeType="bool" targetName="Idel_Position_Discrete_R"
+        targetType="kcg_bool"/>
+    <Input scadeName="Wheel_speed_av" scadeType="float32" targetName="Wheel_speed_av" targetType="kcg_float32"/>
+    <Output scadeName="RTOMAXApplication" scadeType="bool" targetName="RTOMAXApplication" targetType="kcg_bool"/>
+    <Output scadeName="RTONormalApplication" scadeType="bool" targetName="RTONormalApplication" targetType="kcg_bool"/>
+    <Local scadeName="_L1" scadeType="bool" targetName="RTOEnabled" targetType="kcg_bool"/>
+    <Local scadeName="_L2" scadeType="bool" targetName="Idel_Position_Discrete_L" targetType="kcg_bool"/>
+    <Local scadeName="_L3" scadeType="bool" targetName="Idel_Position_Discrete_R" targetType="kcg_bool"/>
+    <Local scadeName="_L4" scadeType="float32" targetName="Wheel_speed_av" targetType="kcg_float32"/>
+    <Local scadeName="_L5" scadeType="float32" targetName="Wheel_speed_av" targetType="kcg_float32"/>
+    <Local scadeName="_L7" scadeType="bool" targetName="_L7" targetType="kcg_bool"/>
+    <Local scadeName="_L8" scadeType="bool" targetName="RTOMAXApplication" targetType="kcg_bool"/>
+    <Local scadeName="_L13" scadeType="bool" targetName="RTONormalApplication" targetType="kcg_bool"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="and" instName="2"/>
+    <NodeInstance scadeName="and" instName="3"/>
+    <NodeInstance scadeName="&gt;" instName="1"/>
+    <NodeInstance scadeName="&lt;=" instName="1"/>
+    <NodeInstance scadeName="and" instName="4"/>
+  </NoExpNode>
+  <NoExpNode scadeName="stm" headerFile="stm.h" targetCycleFct="stm" targetInitFct="stm_reset"
+      targetInitializationFct="stm_init">
+    <Input scadeName="LandingArmed" scadeType="bool" targetName="LandingArmed" targetType="kcg_bool"/>
+    <Input scadeName="LandingApplication" scadeType="bool" targetName="LandingApplication" targetType="kcg_bool"/>
+    <Input scadeName="LandingArmedDisarmed" scadeType="bool" targetName="LandingArmedDisarmed" targetType="kcg_bool"/>
+    <Input scadeName="LandingApplicationDisarmed" scadeType="bool" targetName="LandingApplicationDisarmed"
+        targetType="kcg_bool"/>
+    <Input scadeName="RTOArmed" scadeType="bool" targetName="RTOArmed" targetType="kcg_bool"/>
+    <Input scadeName="RTOArmedDisarmed" scadeType="bool" targetName="RTOArmedDisarmed" targetType="kcg_bool"/>
+    <Input scadeName="RTOEnabled" scadeType="bool" targetName="RTOEnabled" targetType="kcg_bool"/>
+    <Input scadeName="RTOEnabledDisarmed" scadeType="bool" targetName="RTOEnabledDisarmed" targetType="kcg_bool"/>
+    <Input scadeName="RTOApplicationDisarmed" scadeType="bool" targetName="RTOApplicationDisarmed" targetType="kcg_bool"/>
+    <Input scadeName="RTOMAXApplication" scadeType="bool" targetName="RTOMAXApplication" targetType="kcg_bool"/>
+    <Input scadeName="RTONormalApplication" scadeType="bool" targetName="RTONormalApplication" targetType="kcg_bool"/>
+    <Input scadeName="LandingEnable" scadeType="bool" targetName="LandingEnable" targetType="kcg_bool"/>
+    <Input scadeName="LandingEnableDisarmed" scadeType="bool" targetName="LandingEnableDisarmed" targetType="kcg_bool"/>
+    <Output scadeName="OFF_State" scadeType="bool" targetName="OFF_State" targetType="kcg_bool" mem="true" inCtx="true"/>
+    <Output scadeName="LandingDisarmedState" scadeType="bool" targetName="LandingDisarmedState" targetType="kcg_bool"
+        mem="true" inCtx="true"/>
+    <Output scadeName="LandingArmedState" scadeType="bool" targetName="LandingArmedState" targetType="kcg_bool"
+        mem="true" inCtx="true"/>
+    <Output scadeName="LandingApplicationState" scadeType="bool" targetName="LandingApplicationState"
+        targetType="kcg_bool" mem="true" inCtx="true"/>
+    <Output scadeName="RTODisarmedState" scadeType="bool" targetName="RTODisarmedState" targetType="kcg_bool" mem="true"
+        inCtx="true"/>
+    <Output scadeName="RTOEnabledState" scadeType="bool" targetName="RTOEnabledState" targetType="kcg_bool" mem="true"
+        inCtx="true"/>
+    <Output scadeName="RTOApplicationState" scadeType="bool" targetName="RTOApplicationState" targetType="kcg_bool"
+        mem="true" inCtx="true"/>
+    <Output scadeName="RTOArmedState" scadeType="bool" targetName="RTOArmedState" targetType="kcg_bool" mem="true"
+        inCtx="true"/>
+    <Output scadeName="LandingEnableState" scadeType="bool" targetName="LandingEnableState" targetType="kcg_bool"
+        mem="true" inCtx="true"/>
+    <Automaton scadeName="SM1" targetStatesType="_2_SSM_ST_SM1" targetTransitionsType="_4_SSM_TR_SM1">
+      <State scadeName="RTOArmedState" targetName="SSM_st_RTOArmedState_SM1">
+        <Fork priority="1">
+          <Transition targetName="SSM_TR_RTOArmedState_1_SM1" kind="weak" scadeDest="OFF_State"/>
+        </Fork>
+        <Fork priority="2">
+          <Transition targetName="SSM_TR_RTOArmedState_2_SM1" kind="weak" scadeDest="RTOEnabledState"/>
+        </Fork>
+      </State>
+      <State scadeName="OFF_State" targetName="SSM_st_OFF_State_SM1">
+        <Fork priority="1">
+          <Transition targetName="SSM_TR_OFF_State_1_SM1" kind="weak" scadeDest="LandingArmedState"/>
+        </Fork>
+        <Fork priority="2">
+          <Transition targetName="SSM_TR_OFF_State_2_SM1" kind="weak" scadeDest="RTOArmedState"/>
+        </Fork>
+      </State>
+      <State scadeName="LandingArmedState" targetName="SSM_st_LandingArmedState_SM1">
+        <Fork priority="1">
+          <Transition targetName="SSM_TR_LandingArmedState_1_SM1" kind="weak" scadeDest="LandingEnableState"/>
+        </Fork>
+        <Fork priority="2">
+          <Transition targetName="SSM_TR_LandingArmedState_2_SM1" kind="weak" scadeDest="LandingDisarmedState"/>
+        </Fork>
+      </State>
+      <State scadeName="LandingApplicationState" targetName="SSM_st_LandingApplicationState_SM1">
+        <Fork priority="1">
+          <Transition targetName="SSM_TR_LandingApplicationState_1_SM1" kind="weak" scadeDest="LandingDisarmedState"/>
+        </Fork>
+      </State>
+      <State scadeName="RTOEnabledState" targetName="SSM_st_RTOEnabledState_SM1">
+        <Fork priority="1">
+          <Transition targetName="SSM_TR_RTOEnabledState_1_SM1" kind="weak" scadeDest="OFF_State"/>
+        </Fork>
+        <Fork priority="2">
+          <Transition targetName="SSM_TR_RTOEnabledState_2_SM1" kind="weak" scadeDest="RTOApplicationState"/>
+        </Fork>
+        <Fork priority="3">
+          <Transition targetName="SSM_TR_RTOEnabledState_3_SM1" kind="weak" scadeDest="RTOApplicationState"/>
+        </Fork>
+      </State>
+      <State scadeName="RTOApplicationState" targetName="SSM_st_RTOApplicationState_SM1">
+        <Fork priority="1">
+          <Transition targetName="SSM_TR_RTOApplicationState_1_SM1" kind="weak" scadeDest="OFF_State"/>
+        </Fork>
+      </State>
+      <State scadeName="LandingEnableState" targetName="SSM_st_LandingEnableState_SM1">
+        <Fork priority="1">
+          <Transition targetName="SSM_TR_LandingEnableState_1_SM1" kind="weak" scadeDest="LandingDisarmedState"/>
+        </Fork>
+        <Fork priority="2">
+          <Transition targetName="SSM_TR_LandingEnableState_2_SM1" kind="weak" scadeDest="LandingApplicationState"/>
+        </Fork>
+      </State>
+      <State scadeName="LandingDisarmedState" targetName="SSM_st_LandingDisarmedState_SM1">
+        <Fork priority="1">
+          <Transition targetName="SSM_TR_LandingDisarmedState_1_SM1" kind="weak" scadeDest="OFF_State"/>
+        </Fork>
+      </State>
+      <ActiveState targetName="SM1_state_act"/>
+      <NextState targetName="SM1_state_nxt" mem="true" inCtx="true"/>
+      <SelectedState targetName="SM1_state_act"/>
+    </Automaton>
+    <OutCtxType targetName="outC_stm"/>
+  </NoExpNode>
+  <NoExpNode scadeName="AutoBrake" headerFile="AutoBrake.h" targetCycleFct="AutoBrake" targetInitFct="AutoBrake_reset"
+      targetInitializationFct="AutoBrake_init">
+    <Input scadeName="APPData" scadeType="tINPUT_Data" targetName="APPData" targetType="tINPUT_Data"/>
+    <Output scadeName="BRAKEAuto" scadeType="tBrakeAutoBKOut" targetName="BRAKEAuto" targetType="tBrakeAutoBKOut"
+        inCtx="true"/>
+    <Local scadeName="RTOApplicationDisarmed" scadeType="bool" targetName="RTOApplicationDisarmed" targetType="kcg_bool"/>
+    <Local scadeName="RTOArmedtoDisarmed" scadeType="bool" targetName="RTOArmedtoDisarmed" targetType="kcg_bool"/>
+    <Local scadeName="RTOEnabledtoDisarmed" scadeType="bool" targetName="RTOArmedtoDisarmed" targetType="kcg_bool"/>
+    <Local scadeName="RTOMAXApplication" scadeType="bool" targetName="RTOMAXApplication" targetType="kcg_bool"/>
+    <Local scadeName="RTONormalApplication" scadeType="bool" targetName="RTONormalApplication" targetType="kcg_bool"/>
+    <Local scadeName="RTOEnabled" scadeType="bool" targetName="unlatch" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="LandingArmedDisarmed" scadeType="bool" targetName="latch" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="LandingApplicationDisarmed" scadeType="bool" targetName="_L244" targetType="kcg_bool" reused="true"/>
+    <Memory scadeName="ArmDisagree" scadeType="bool" targetName="ArmDisagree" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="latch" scadeType="bool" targetName="latch" targetType="kcg_bool" reused="true"/>
+    <Memory scadeName="CoilEnergized" scadeType="bool" targetName="CoilEnergized" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="unlatch" scadeType="bool" targetName="unlatch" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="LandingEnableDisarmed" scadeType="bool" targetName="_L209" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="_L12" scadeType="bool" targetName="_L244" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="_L67" scadeType="bool" targetName="RTOApplicationDisarmed" targetType="kcg_bool"/>
+    <Local scadeName="_L65" scadeType="bool" targetName="RTOMAXApplication" targetType="kcg_bool"/>
+    <Local scadeName="_L66" scadeType="bool" targetName="RTONormalApplication" targetType="kcg_bool"/>
+    <Local scadeName="_L64" scadeType="bool" targetName="unlatch" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="_L134" scadeType="bool" targetName="_L244" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="_L136" scadeType="bool" targetName="latch" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="_L137" scadeType="bool" targetName="RTOApplicationDisarmed" targetType="kcg_bool"/>
+    <Local scadeName="_L139" scadeType="bool" targetName="RTOArmedtoDisarmed" targetType="kcg_bool"/>
+    <Local scadeName="_L140" scadeType="bool" targetName="unlatch" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="_L141" scadeType="bool" targetName="RTOArmedtoDisarmed" targetType="kcg_bool"/>
+    <Local scadeName="_L142" scadeType="bool" targetName="RTOMAXApplication" targetType="kcg_bool"/>
+    <Local scadeName="_L143" scadeType="bool" targetName="RTONormalApplication" targetType="kcg_bool"/>
+    <Local scadeName="_L179" scadeType="bool" targetName="unlatch" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="_L209" scadeType="bool" targetName="_L209" targetType="kcg_bool" reused="true"/>
+    <Memory scadeName="_L240" scadeType="bool" targetName="ArmDisagree" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L244" scadeType="bool" targetName="_L244" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="_L254" scadeType="bool" targetName="_L244" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="_L263" scadeType="bool" targetName="latch" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="_L264" scadeType="bool" targetName="_L264" targetType="kcg_bool"/>
+    <Local scadeName="_L268" scadeType="bool" targetName="unlatch" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="_L298" scadeType="bool" targetName="_L209" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="_L302" scadeType="bool" targetName="_L302" targetType="kcg_bool"/>
+    <Local scadeName="_L308" scadeType="bool" targetName="_L264" targetType="kcg_bool"/>
+    <Local scadeName="_L307" scadeType="bool" targetName="_L302" targetType="kcg_bool"/>
+    <Local scadeName="_L312" scadeType="tBrakeAutoBKOut" targetName="BRAKEAuto" targetType="tBrakeAutoBKOut" inCtx="true"/>
+    <Memory scadeName="_L313" scadeType="bool" targetName="CoilEnergized" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L314" scadeType="tINPUT_Data" targetName="APPData" targetType="tINPUT_Data"/>
+    <Local scadeName="_L382" scadeType="bool" targetName="RTOArmedtoDisarmed" targetType="kcg_bool"/>
+    <Local scadeName="_L384" scadeType="bool" targetName="latch" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="_L385" scadeType="bool" targetName="_L209" targetType="kcg_bool" reused="true"/>
+    <Memory scadeName="_L386" scadeType="bool" targetName="ArmDisagree" targetType="kcg_bool" inCtx="true"/>
+    <Memory scadeName="_L413" scadeType="bool" targetName="ArmDisagree" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L426" scadeType="bool" targetName="unlatch" targetType="kcg_bool" reused="true"/>
+    <Local scadeName="_L427" scadeType="bool" targetName="latch" targetType="kcg_bool" reused="true"/>
+    <Memory scadeName="_L428" scadeType="bool" targetName="ArmDisagree" targetType="kcg_bool" inCtx="true"/>
+    <NodeInstance scadeName="Autobrake_Application_Disarmed" instName="2" refName="Autobrake_Application_Disarmed"/>
+    <NodeInstance scadeName="OFFtoAutobrakeArmed" instName="2" refName="OFFtoAutobrakeArmed"/>
+    <NodeInstance scadeName="OFFtoRTOArmed" instName="2" refName="OFFtoRTOArmed"/>
+    <NodeInstance scadeName="RTOArmedtoEnabled" instName="3" refName="RTOArmedtoEnabled"/>
+    <NodeInstance scadeName="RTOEnabledtoApplication" instName="3" refName="RTOEnabledtoApplication"/>
+    <NodeInstance scadeName="RTOApplicationDisarmed_" instName="3" refName="RTOApplicationDisarmed_"/>
+    <NodeInstance scadeName="stm" instName="1" refName="stm">
+      <OutCtxVar targetName="_1_Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="or" instName="4"/>
+    <NodeInstance scadeName="&lt;" instName="2"/>
+    <NodeInstance scadeName="and" instName="2"/>
+    <NodeInstance scadeName="and" instName="2"/>
+    <NodeInstance scadeName="and" instName="2"/>
+    <NodeInstance scadeName="or" instName="5"/>
+    <NodeInstance scadeName="or" instName="5"/>
+    <NodeInstance scadeName="not" instName="2"/>
+    <NodeInstance scadeName="&lt;" instName="3"/>
+    <NodeInstance scadeName="not" instName="4"/>
+    <NodeInstance scadeName="and" instName="3"/>
+    <NodeInstance scadeName="and" instName="3"/>
+    <NodeInstance scadeName="and" instName="3"/>
+    <NodeInstance scadeName="or" instName="6"/>
+    <Last>
+      <Memory targetName="ArmDisagree" targetType="kcg_bool" inCtx="true"/>
+    </Last>
+    <NodeInstance scadeName="or" instName="7"/>
+    <NodeInstance scadeName="or" instName="7"/>
+    <NodeInstance scadeName="or" instName="7"/>
+    <Automaton scadeName="SM1" targetStatesType="SSM_ST_SM1" targetTransitionsType="SSM_TR_SM1">
+      <State scadeName="State1" targetName="SSM_st_State1_SM1">
+        <Last>
+          <Memory targetName="CoilEnergized" targetType="kcg_bool" inCtx="true"/>
+        </Last>
+        <Fork priority="1">
+          <Transition targetName="SSM_TR_State1_1_SM1" kind="weak" scadeDest="State2"/>
+        </Fork>
+        <Fork priority="2">
+          <Transition targetName="SSM_TR_State1_2_SM1" kind="weak" scadeDest="State3"/>
+        </Fork>
+      </State>
+      <State scadeName="State2" targetName="SSM_st_State2_SM1">
+        <Fork priority="1">
+          <Transition targetName="SSM_TR_State2_1_SM1" kind="weak" scadeDest="State1"/>
+        </Fork>
+      </State>
+      <State scadeName="State3" targetName="SSM_st_State3_SM1">
+        <Fork priority="1">
+          <Transition targetName="SSM_TR_State3_1_SM1" kind="weak" scadeDest="State1"/>
+        </Fork>
+      </State>
+      <ActiveState targetName="SM1_state_act"/>
+      <NextState targetName="SM1_state_nxt" mem="true" inCtx="true"/>
+      <SelectedState targetName="SM1_state_act"/>
+    </Automaton>
+    <NodeInstance scadeName="Autobrake_ARMtoEnable" instName="1" refName="Autobrake_ARMtoEnable">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <Last>
+      <Memory targetName="CoilEnergized" targetType="kcg_bool" inCtx="true"/>
+    </Last>
+    <Last>
+      <Memory targetName="CoilEnergized" targetType="kcg_bool" inCtx="true"/>
+    </Last>
+    <Last>
+      <Memory targetName="ArmDisagree" targetType="kcg_bool" inCtx="true"/>
+    </Last>
+    <NodeInstance scadeName="Autobrake_EnaletoApplication" instName="4" refName="Autobrake_EnaletoApplication">
+      <OutCtxVar targetName="Context_4"/>
+    </NodeInstance>
+    <NodeInstance scadeName="xor" instName="1"/>
+    <NodeInstance scadeName="not" instName="5"/>
+    <NodeInstance scadeName="Rate_select" instName="1" refName="Rate_select"/>
+    <NodeInstance scadeName="PI_Controller" instName="1" refName="PI_Controller">
+      <OutCtxVar targetName="_2_Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="-" instName="1"/>
+    <NodeInstance scadeName="not" instName="6"/>
+    <OutCtxType targetName="outC_AutoBrake"/>
+  </NoExpNode>
+  <NoExpNode scadeName="Autobrake_ARMtoEnable" headerFile="Autobrake_ARMtoEnable.h"
+      targetCycleFct="Autobrake_ARMtoEnable" targetInitFct="Autobrake_ARMtoEnable_reset"
+      targetInitializationFct="Autobrake_ARMtoEnable_init">
+    <Input scadeName="WOW_BRK" scadeType="bool" targetName="WOW_BRK" targetType="kcg_bool"/>
+    <Input scadeName="Wheel_speed_av" scadeType="float32" targetName="Wheel_speed_av" targetType="kcg_float32"/>
+    <Output scadeName="LandingEnable" scadeType="bool" targetName="LandingEnable" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L5" scadeType="bool" targetName="WOW_BRK" targetType="kcg_bool"/>
+    <Local scadeName="_L10" scadeType="float32" targetName="Wheel_speed_av" targetType="kcg_float32"/>
+    <Local scadeName="_L11" scadeType="bool" targetName="LandingEnable" targetType="kcg_bool" inCtx="true"/>
+    <NodeInstance scadeName="Counter" instName="1" refName="Counter">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <FbyOp instName="1">
+      <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+      <Memory targetName="rem_WOW_BRK" targetType="kcg_bool" inCtx="true"/>
+    </FbyOp>
+    <NodeInstance scadeName="not" instName="1"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="&gt;=" instName="1"/>
+    <NodeInstance scadeName="&gt;" instName="1"/>
+    <NodeInstance scadeName="and" instName="2"/>
+    <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+    <Memory scadeName="WOW_BRK" scadeType="bool" targetName="rem_WOW_BRK" targetType="kcg_bool" inCtx="true"/>
+    <OutCtxType targetName="outC_Autobrake_ARMtoEnable"/>
+  </NoExpNode>
+  <NoExpNode scadeName="Rate_select" headerFile="Rate_select.h" targetCycleFct="Rate_select">
+    <Input scadeName="Low" scadeType="bool" targetName="Low" targetType="kcg_bool"/>
+    <Input scadeName="Med" scadeType="bool" targetName="Med" targetType="kcg_bool"/>
+    <Input scadeName="Hi" scadeType="bool" targetName="Hi" targetType="kcg_bool"/>
+    <Input scadeName="RTO" scadeType="bool" targetName="RTO" targetType="kcg_bool"/>
+    <Input scadeName="Ref" scadeType="float32" targetName="Ref" targetType="kcg_float32"/>
+    <Output scadeName="Output1" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <ActivateIf scadeName="IfBlock1">
+      <Condition targetName="Low"/>
+      <Else>
+        <Condition targetName="Med"/>
+        <Else>
+          <Condition targetName="Hi"/>
+          <Else>
+            <Condition targetName="RTO"/>
+            <Else/>
+            <Then>
+              <NodeInstance scadeName="if" instName="1"/>
+              <NodeInstance scadeName="&gt;" instName="1"/>
+            </Then>
+          </Else>
+          <Then/>
+        </Else>
+        <Then/>
+      </Else>
+      <Then/>
+    </ActivateIf>
+  </NoExpNode>
+  <NoExpNode scadeName="BrakeSelect" headerFile="BrakeSelect.h" targetCycleFct="BrakeSelect">
+    <Input scadeName="BrakePdlOut" scadeType="tBrakePdlOut" targetName="BrakePdlOut" targetType="tBrakePdlOut"/>
+    <Input scadeName="BrakeIfbOut" scadeType="tBrakeIfbOut" targetName="BrakeIfbOut" targetType="tBrakeIfbOut"/>
+    <Input scadeName="BrakeAutoBKOut" scadeType="tBrakeAutoBKOut" targetName="BrakeAutoBKOut" targetType="tBrakeAutoBKOut"/>
+    <Output scadeName="BrakeSelectOut" scadeType="tBrakeSelectOut" targetName="BrakeSelectOut"
+        targetType="tBrakeSelectOut"/>
+    <Local scadeName="_L29" scadeType="int16" targetName="_L29" targetType="kcg_int16"/>
+    <Local scadeName="_L33" scadeType="tBrakeSelectOut" targetName="BrakeSelectOut" targetType="tBrakeSelectOut"/>
+    <NodeInstance scadeName="case" instName="1"/>
+    <NodeInstance scadeName="case" instName="2"/>
+    <NodeInstance scadeName="digital::BoolVect2Int16" instName="1" refName="BoolVect2Int16_digital_3"/>
+    <NodeInstance scadeName="or" instName="1"/>
+    <NodeInstance scadeName="or" instName="1"/>
+  </NoExpNode>
+  <NoExpNode scadeName="Brake_Skid" headerFile="Brake_Skid.h" targetCycleFct="Brake_Skid"
+      targetInitFct="Brake_Skid_reset" targetInitializationFct="Brake_Skid_init">
+    <Input scadeName="APPData" scadeType="tINPUT_Data" targetName="APPData" targetType="tINPUT_Data"/>
+    <Input scadeName="BrakeSelectOut" scadeType="tBrakeSelectOut" targetName="BrakeSelectOut" targetType="tBrakeSelectOut"/>
+    <Output scadeName="BrakeSkid" scadeType="tBrakeSkidOut" targetName="BrakeSkid" targetType="tBrakeSkidOut" inCtx="true"/>
+    <Local scadeName="_L20" scadeType="tBrakeSkidOut" targetName="BrakeSkid" targetType="tBrakeSkidOut" inCtx="true"/>
+    <NodeInstance scadeName="SC_Wheel" instName="1" refName="SC_Wheel">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="SC_Wheel" instName="2" refName="SC_Wheel">
+      <OutCtxVar targetName="Context_2"/>
+    </NodeInstance>
+    <OutCtxType targetName="outC_Brake_Skid"/>
+  </NoExpNode>
+  <NoExpNode scadeName="SC_Wheel" headerFile="SC_Wheel.h" targetCycleFct="SC_Wheel" targetInitFct="SC_Wheel_reset"
+      targetInitializationFct="SC_Wheel_init">
+    <Input scadeName="WOWBK" scadeType="bool" targetName="WOWBK" targetType="kcg_bool"/>
+    <Input scadeName="WheelSpeed" scadeType="tValidityF32" targetName="WheelSpeed" targetType="tValidityF32"/>
+    <Input scadeName="WheelRefSpeed" scadeType="float32" targetName="WheelRefSpeed" targetType="kcg_float32"/>
+    <Input scadeName="BrakePressureCommand" scadeType="float32" targetName="BrakePressureCommand" targetType="kcg_float32"/>
+    <Output scadeName="SkidEnable" scadeType="bool" targetName="SkidEnable" targetType="kcg_bool" inCtx="true"/>
+    <Output scadeName="BrakePressureCommandAdj" scadeType="float32" targetName="BrakePressureCommandAdj"
+        targetType="kcg_float32" mem="true" inCtx="true"/>
+    <Local scadeName="_L1" scadeType="float32" targetName="BrakePressureCommand" targetType="kcg_float32"/>
+    <Local scadeName="_L2" scadeType="tValidityF32" targetName="WheelSpeed" targetType="tValidityF32"/>
+    <Local scadeName="_L3" scadeType="float32" targetName="WheelRefSpeed" targetType="kcg_float32"/>
+    <Local scadeName="_L4" scadeType="bool" targetName="WOWBK" targetType="kcg_bool"/>
+    <Memory scadeName="_L6" scadeType="float32" targetName="BrakePressureCommandAdj" targetType="kcg_float32" inCtx="true"/>
+    <Local scadeName="_L9" scadeType="bool" targetName="SkidEnable" targetType="kcg_bool" inCtx="true"/>
+    <ActivateEveryInitialDefault instName="2">
+      <Condition targetName="SkidEnable"/>
+      <Default/>
+      <Memory targetName="BrakePressureCommandAdj" targetType="kcg_float32" inCtx="true"/>
+      <NodeInstance scadeName="SC_Function" instName="1" refName="SC_Function" clockVar="SkidEnable" clockVal="kcg_true">
+        <OutCtxVar targetName="Context_1" clockVar="SkidEnable" clockVal="kcg_true"/>
+      </NodeInstance>
+      <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+    </ActivateEveryInitialDefault>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="&gt;" instName="1"/>
+    <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+    <OutCtxType targetName="outC_SC_Wheel"/>
+  </NoExpNode>
+  <NoExpNode scadeName="SC_LowSpeedMonitor" headerFile="SC_LowSpeedMonitor.h" targetCycleFct="SC_LowSpeedMonitor"
+      targetInitFct="SC_LowSpeedMonitor_reset" targetInitializationFct="SC_LowSpeedMonitor_init">
+    <Input scadeName="WheelRefSpeed" scadeType="float32" targetName="WheelRefSpeed" targetType="kcg_float32"/>
+    <Output scadeName="SkidEnable" scadeType="bool" targetName="SkidEnable" targetType="kcg_bool" inCtx="true"/>
+    <Automaton scadeName="SM_LowSpeedMonitor" targetStatesType="SSM_ST_SM_LowSpeedMonitor"
+        targetTransitionsType="SSM_TR_SM_LowSpeedMonitor">
+      <State scadeName="StateEnabled" targetName="SSM_st_StateEnabled_SM_LowSpeedMonitor">
+        <Fork priority="1">
+          <Condition>
+            <NodeInstance scadeName="&lt;" instName="1"/>
+          </Condition>
+          <Transition targetName="SSM_TR_StateEnabled_1_SM_LowSpeedMonitor" kind="strong" scadeDest="StateDisabled"/>
+        </Fork>
+      </State>
+      <State scadeName="StateDisabled" targetName="SSM_st_StateDisabled_SM_LowSpeedMonitor">
+        <Fork priority="1">
+          <Condition>
+            <NodeInstance scadeName="&gt;=" instName="1"/>
+          </Condition>
+          <Transition targetName="SSM_TR_StateDisabled_1_SM_LowSpeedMonitor" kind="strong" scadeDest="StateEnabled"/>
+        </Fork>
+      </State>
+      <ActiveState targetName="SM_LowSpeedMonitor_state_act"/>
+      <NextState targetName="SM_LowSpeedMonitor_state_nxt" mem="true" inCtx="true"/>
+      <SelectedState targetName="SM_LowSpeedMonitor_state_nxt" mem="true" inCtx="true"/>
+    </Automaton>
+    <OutCtxType targetName="outC_SC_LowSpeedMonitor"/>
+  </NoExpNode>
+  <NoExpNode scadeName="SC_Function" headerFile="SC_Function.h" targetCycleFct="SC_Function"
+      targetInitFct="SC_Function_reset" targetInitializationFct="SC_Function_init">
+    <Input scadeName="WheelSpeed" scadeType="float32" targetName="WheelSpeed" targetType="kcg_float32"/>
+    <Input scadeName="WheelRefSpeed" scadeType="float32" targetName="WheelRefSpeed" targetType="kcg_float32"/>
+    <Input scadeName="SC_command_enter" scadeType="bool" targetName="SC_command_enter" targetType="kcg_bool"/>
+    <Input scadeName="BrakePressureCommand" scadeType="float32" targetName="BrakePressureCommand" targetType="kcg_float32"/>
+    <Output scadeName="BrakePressureCommandAdj" scadeType="float32" targetName="BrakePressureCommandAdj"
+        targetType="kcg_float32" inCtx="true"/>
+    <Local scadeName="_L1" scadeType="float32" targetName="WheelSpeed" targetType="kcg_float32"/>
+    <Local scadeName="_L2" scadeType="float32" targetName="WheelRefSpeed" targetType="kcg_float32"/>
+    <Local scadeName="_L23" scadeType="bool" targetName="SC_command_enter" targetType="kcg_bool"/>
+    <Local scadeName="_L28" scadeType="float32" targetName="BrakePressureCommand" targetType="kcg_float32"/>
+    <Local scadeName="_L30" scadeType="float32" targetName="BrakePressureCommand" targetType="kcg_float32"/>
+    <Local scadeName="_L31" scadeType="float32" targetName="BrakePressureCommandAdj" targetType="kcg_float32" inCtx="true"/>
+    <NodeInstance scadeName="SC_SlipControl" instName="1" refName="SC_SlipControl">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="Blending" instName="1" refName="Blending">
+      <OutCtxVar targetName="_1_Context_1"/>
+    </NodeInstance>
+    <NodeInlining scadeName="math::Min" instName="1">
+      <Local scadeName="_L21" scadeType="&apos;T" targetName="BrakePressureCommand" targetType="kcg_float32"/>
+      <Local scadeName="_L24" scadeType="&apos;T" targetName="BrakePressureCommandAdj" targetType="kcg_float32" inCtx="true"/>
+      <NodeInstance scadeName="if" instName="1"/>
+      <NodeInstance scadeName="&lt;=" instName="4"/>
+      <Input scadeName="I1" scadeType="&apos;T" targetName="BrakePressureCommand" targetType="kcg_float32"/>
+      <Output scadeName="Mi_Output" scadeType="&apos;T" targetName="BrakePressureCommandAdj" targetType="kcg_float32"
+          inCtx="true"/>
+    </NodeInlining>
+    <OutCtxType targetName="outC_SC_Function"/>
+  </NoExpNode>
+  <NoExpNode scadeName="PI_Control" headerFile="PI_Control.h" targetCycleFct="PI_Control"
+      targetInitFct="PI_Control_reset" targetInitializationFct="PI_Control_init">
+    <Input scadeName="slip" scadeType="float32" targetName="slip" targetType="kcg_float32"/>
+    <Input scadeName="Slip_opt" scadeType="float32" targetName="Slip_opt" targetType="kcg_float32"/>
+    <Input scadeName="SC_enter_1" scadeType="bool" targetName="SC_enter_1" targetType="kcg_bool"/>
+    <Input scadeName="Kp" scadeType="float32" targetName="Kp4" targetType="kcg_float32"/>
+    <Input scadeName="Ki" scadeType="float32" targetName="Ki3" targetType="kcg_float32"/>
+    <Input scadeName="Zero" scadeType="float32" targetName="Zero2" targetType="kcg_float32"/>
+    <Input scadeName="Hidden4" scadeType="bool" targetName="Hidden4" targetType="kcg_bool"/>
+    <Input scadeName="DT" scadeType="float32" targetName="DT1" targetType="kcg_float32"/>
+    <Output scadeName="Command" scadeType="float32" targetName="Command" targetType="kcg_float32" inCtx="true"/>
+    <Local scadeName="err" scadeType="float32" targetName="err" targetType="kcg_float32"/>
+    <Local scadeName="_L30" scadeType="float32" targetName="slip" targetType="kcg_float32"/>
+    <Local scadeName="_L29" scadeType="bool" targetName="Hidden4" targetType="kcg_bool"/>
+    <Local scadeName="_L25" scadeType="float32" targetName="Zero2" targetType="kcg_float32"/>
+    <Local scadeName="_L23" scadeType="float32" targetName="Slip_opt" targetType="kcg_float32"/>
+    <Local scadeName="_L17" scadeType="float32" targetName="err" targetType="kcg_float32"/>
+    <Local scadeName="_L41" scadeType="float32" targetName="err" targetType="kcg_float32"/>
+    <Local scadeName="_L49" scadeType="float32" targetName="DT1" targetType="kcg_float32"/>
+    <Local scadeName="_L50" scadeType="float32" targetName="Kp4" targetType="kcg_float32"/>
+    <Local scadeName="_L51" scadeType="float32" targetName="Ki3" targetType="kcg_float32"/>
+    <Local scadeName="_L58" scadeType="float32" targetName="Command" targetType="kcg_float32" inCtx="true"/>
+    <Local scadeName="_L71" scadeType="bool" targetName="SC_enter_1" targetType="kcg_bool"/>
+    <NodeInstance scadeName="-" instName="1"/>
+    <NodeInstance scadeName="if" instName="1"/>
+    <NodeInstance scadeName="-" instName="2"/>
+    <NodeInstance scadeName="*" instName="1"/>
+    <NodeInstance scadeName="+" instName="1"/>
+    <NodeInstance scadeName="*" instName="2"/>
+    <NodeInstance scadeName="*" instName="3"/>
+    <NodeInstance scadeName="+" instName="2"/>
+    <FbyOp instName="1">
+      <Memory targetName="rem_err" targetType="kcg_float32" inCtx="true"/>
+    </FbyOp>
+    <NodeInstance scadeName="*" instName="4"/>
+    <FbyOp instName="2">
+      <Memory targetName="rem__L65" targetType="kcg_float32" inCtx="true"/>
+    </FbyOp>
+    <NodeInstance scadeName="if" instName="2"/>
+    <FbyOp instName="3">
+      <Memory targetName="rem_SC_enter_1" targetType="kcg_bool" inCtx="true"/>
+    </FbyOp>
+    <NodeInstance scadeName="LimiterF32" instName="1" refName="LimiterF32"/>
+    <NodeInstance scadeName="LimiterF32" instName="2" refName="LimiterF32"/>
+    <Memory scadeName="_L65" scadeType="float32" targetName="rem__L65" targetType="kcg_float32" inCtx="true"/>
+    <Memory scadeName="err" scadeType="float32" targetName="rem_err" targetType="kcg_float32" inCtx="true"/>
+    <Memory scadeName="SC_enter_1" scadeType="bool" targetName="rem_SC_enter_1" targetType="kcg_bool" inCtx="true"/>
+    <OutCtxType targetName="outC_PI_Control"/>
+  </NoExpNode>
+  <Constant scadeName="Constant1" scadeType="float32" targetName="Constant1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Zero1" scadeType="float32" targetName="Zero1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Tol_R1" scadeType="float32" targetName="Tol_R1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Tol_LM1" scadeType="float32" targetName="Tol_LM1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Tol_L1" scadeType="float32" targetName="Tol_L1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Tol__1" scadeType="float32" targetName="Tol__1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Slip_min1" scadeType="float32" targetName="Slip_min1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Slip_ini1" scadeType="float32" targetName="Slip_ini1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Sl_P1" scadeType="float32" targetName="Sl_P1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Sl_m1" scadeType="float32" targetName="Sl_m1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="MaxPressure1" scadeType="float32" targetName="MaxPressure1" targetType="kcg_float32"
+      macroDef="true"/>
+  <Constant scadeName="Log_Sl_P1" scadeType="float32" targetName="Log_Sl_P1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Log_Sl_m1" scadeType="float32" targetName="Log_Sl_m1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Kp1" scadeType="float32" targetName="Kp1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Ki1" scadeType="float32" targetName="Ki1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="huashui1" scadeType="float32" targetName="huashui1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Gain_Kp1" scadeType="float32" targetName="Gain_Kp1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="Gain_Ki1" scadeType="float32" targetName="Gain_Ki1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="DT_T1" scadeType="float32" targetName="DT_T1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="DT_R1" scadeType="float32" targetName="DT_R1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="DT_L1" scadeType="float32" targetName="DT_L1" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="C_SKID_Y_PSI1" scadeType="float32^(5)" targetName="C_SKID_Y_PSI1" targetType="array_float32_5"/>
+  <Constant scadeName="C_SKID_X_MPA1" scadeType="float32^(5)" targetName="C_SKID_X_MPA1" targetType="array_float32_5"/>
+  <Constant scadeName="C_SC_BLENDING_RATE1" scadeType="float32" targetName="C_SC_BLENDING_RATE1"
+      targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="C_SC_BLENDING_MAX_STEPS1" scadeType="float32" targetName="C_SC_BLENDING_MAX_STEPS1"
+      targetType="kcg_float32" macroDef="true"/>
+  <NoExpNode scadeName="SC_SlipControl" headerFile="SC_SlipControl.h" targetCycleFct="SC_SlipControl"
+      targetInitFct="SC_SlipControl_reset" targetInitializationFct="SC_SlipControl_init">
+    <Input scadeName="Speedref" scadeType="float32" targetName="Speedref" targetType="kcg_float32"/>
+    <Input scadeName="Wheelspeed" scadeType="float32" targetName="Wheelspeed" targetType="kcg_float32"/>
+    <Input scadeName="SC_enter" scadeType="bool" targetName="SC_enter" targetType="kcg_bool"/>
+    <Output scadeName="BrakePressureCommandAdj" scadeType="float32" targetName="BrakePressureCommandAdj"
+        targetType="kcg_float32" mem="true" inCtx="true"/>
+    <Output scadeName="StartBlending" scadeType="bool" targetName="StartBlending" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="SpeedRef" scadeType="float32" targetName="Speedref" targetType="kcg_float32"/>
+    <Local scadeName="WheelSpeed" scadeType="float32" targetName="Wheelspeed" targetType="kcg_float32"/>
+    <Local scadeName="_L14" scadeType="float32" targetName="_L14" targetType="kcg_float32"/>
+    <Memory scadeName="_L26" scadeType="float32" targetName="BrakePressureCommandAdj" targetType="kcg_float32"
+        inCtx="true"/>
+    <Local scadeName="_L27" scadeType="bool" targetName="StartBlending" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L60" scadeType="float32" targetName="Wheelspeed" targetType="kcg_float32"/>
+    <Local scadeName="_L64" scadeType="float32" targetName="Speedref" targetType="kcg_float32"/>
+    <Local scadeName="_L71" scadeType="float32" targetName="Speedref" targetType="kcg_float32"/>
+    <Local scadeName="_L72" scadeType="float32" targetName="Wheelspeed" targetType="kcg_float32"/>
+    <Local scadeName="_L98" scadeType="bool" targetName="SC_enter" targetType="kcg_bool"/>
+    <Local scadeName="_L103" scadeType="float32" targetName="Speedref" targetType="kcg_float32"/>
+    <Local scadeName="_L104" scadeType="float32" targetName="Speedref" targetType="kcg_float32"/>
+    <NodeInstance scadeName="PI_Control" instName="1" refName="PI_Control">
+      <OutCtxVar targetName="_1_Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="-" instName="1"/>
+    <NodeInstance scadeName="/" instName="1"/>
+    <NodeInstance scadeName="&gt;=" instName="1"/>
+    <NodeInstance scadeName="if" instName="1"/>
+    <NodeInstance scadeName="SC_LowSpeedMonitor" instName="1" refName="SC_LowSpeedMonitor">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <FbyOp instName="2">
+      <Memory targetName="BrakePressureCommandAdj" targetType="kcg_float32" inCtx="true"/>
+    </FbyOp>
+    <NodeInstance scadeName="if" instName="2"/>
+    <NodeInstance scadeName="not" instName="1"/>
+    <OutCtxType targetName="outC_SC_SlipControl"/>
+  </NoExpNode>
+  <NoExpNode scadeName="BrakeInhibit" headerFile="BrakeInhibit.h" targetCycleFct="BrakeInhibit">
+    <Input scadeName="TDP" scadeType="bool" targetName="TDP1" targetType="kcg_bool"/>
+    <Input scadeName="LWP_L" scadeType="bool" targetName="LWP_L" targetType="kcg_bool"/>
+    <Input scadeName="LWP_R" scadeType="bool" targetName="LWP_R" targetType="kcg_bool"/>
+    <Input scadeName="BrakeSelectOut" scadeType="tBrakeSelectOut" targetName="BrakeSelectOut" targetType="tBrakeSelectOut"/>
+    <Input scadeName="BrakeSkidOut" scadeType="tBrakeSkidOut" targetName="BrakeSkidOut" targetType="tBrakeSkidOut"/>
+    <Output scadeName="BrakeInhibitOut" scadeType="tBrakeInhibitOut" targetName="BrakeInhibitOut"
+        targetType="tBrakeInhibitOut"/>
+    <Local scadeName="_L1" scadeType="tBrakeSelectOut" targetName="BrakeSelectOut" targetType="tBrakeSelectOut"/>
+    <Local scadeName="_L9" scadeType="bool" targetName="TDP1" targetType="kcg_bool"/>
+    <Local scadeName="_L12" scadeType="tBrakeInhibitOut" targetName="BrakeInhibitOut" targetType="tBrakeInhibitOut"/>
+    <Local scadeName="_L13" scadeType="bool" targetName="LWP_L" targetType="kcg_bool"/>
+    <Local scadeName="_L14" scadeType="bool" targetName="LWP_R" targetType="kcg_bool"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="not" instName="1"/>
+    <NodeInstance scadeName="if" instName="1"/>
+    <NodeInstance scadeName="or" instName="1"/>
+    <NodeInstance scadeName="if" instName="2"/>
+    <NodeInstance scadeName="or" instName="2"/>
+  </NoExpNode>
+  <NoExpNode scadeName="Spindown" headerFile="Spindown.h" targetCycleFct="Spindown" targetInitFct="Spindown_reset"
+      targetInitializationFct="Spindown_init">
+    <Input scadeName="APPData" scadeType="tINPUT_Data" targetName="APPData" targetType="tINPUT_Data"/>
+    <Output scadeName="BrakeIfbOut" scadeType="tBrakeIfbOut" targetName="BrakeIfbOut" targetType="tBrakeIfbOut"
+        inCtx="true"/>
+    <Local scadeName="_L16" scadeType="bool" targetName="_L16" targetType="kcg_bool"/>
+    <Local scadeName="_L42" scadeType="tBrakeIfbOut" targetName="BrakeIfbOut" targetType="tBrakeIfbOut" inCtx="true"/>
+    <NodeInstance scadeName="not" instName="1"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="if" instName="2"/>
+    <NodeInstance scadeName="Counter" instName="1" refName="Counter">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="and" instName="2"/>
+    <NodeInstance scadeName="not" instName="3"/>
+    <NodeInstance scadeName="and" instName="3"/>
+    <NodeInstance scadeName="not" instName="4"/>
+    <NodeInstance scadeName="and" instName="4"/>
+    <NodeInstance scadeName="*" instName="1"/>
+    <NodeInstance scadeName="&gt;=" instName="2"/>
+    <NodeInstance scadeName="LimiterF32" instName="1" refName="LimiterF32"/>
+    <FbyOp instName="1">
+      <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+      <Memory targetName="rem__L16" targetType="kcg_bool" inCtx="true"/>
+    </FbyOp>
+    <Memory scadeName="_L16" scadeType="bool" targetName="rem__L16" targetType="kcg_bool" inCtx="true"/>
+    <Init targetName="init" targetType="kcg_bool" inCtx="true"/>
+    <OutCtxType targetName="outC_Spindown"/>
+  </NoExpNode>
+  <Constant scadeName="N" scadeType="int32" targetName="N" targetType="kcg_int32" macroDef="true"/>
+  <Constant scadeName="lowlimit" scadeType="float32" targetName="lowlimit" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="highlimit" scadeType="float32" targetName="highlimit" targetType="kcg_float32" macroDef="true"/>
+  <Constant scadeName="k" scadeType="float32" targetName="k" targetType="kcg_float32" macroDef="true"/>
+  <NoExpNode scadeName="TDP" headerFile="TDP.h" targetCycleFct="TDP" targetInitFct="TDP_reset"
+      targetInitializationFct="TDP_init">
+    <Input scadeName="APPData" scadeType="tINPUT_Data" targetName="APPData" targetType="tINPUT_Data"/>
+    <Input scadeName="Spindown_out" scadeType="tBrakeIfbOut" targetName="Spindown_out" targetType="tBrakeIfbOut"/>
+    <Output scadeName="TDP" scadeType="bool" targetName="TDP" targetType="kcg_bool" inCtx="true"/>
+    <Local scadeName="_L22" scadeType="bool" targetName="TDP" targetType="kcg_bool" inCtx="true"/>
+    <NodeInstance scadeName="not" instName="1"/>
+    <NodeInstance scadeName="&gt;" instName="2"/>
+    <NodeInstance scadeName="not" instName="4"/>
+    <NodeInstance scadeName="Delay_ON" instName="1" refName="Delay_ON">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="&gt;" instName="3"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="or" instName="2"/>
+    <NodeInstance scadeName="or" instName="2"/>
+    <NodeInstance scadeName="or" instName="2"/>
+    <NodeInstance scadeName="Delay_ON" instName="2" refName="Delay_ON">
+      <OutCtxVar targetName="Context_2"/>
+    </NodeInstance>
+    <NodeInstance scadeName="and" instName="2"/>
+    <NodeInstance scadeName="&gt;" instName="5"/>
+    <NodeInstance scadeName="&gt;" instName="4"/>
+    <NodeInstance scadeName="and" instName="3"/>
+    <NodeInstance scadeName="and" instName="4"/>
+    <NodeInstance scadeName="not" instName="5"/>
+    <OutCtxType targetName="outC_TDP"/>
+  </NoExpNode>
+  <NoExpNode scadeName="IO_Processing" headerFile="IO_Processing.h" targetCycleFct="IO_Processing"
+      targetInitFct="IO_Processing_reset" targetInitializationFct="IO_Processing_init">
+    <Input scadeName="Input1" scadeType="tData_to_DSP" targetName="Input1" targetType="tData_to_DSP"/>
+    <Output scadeName="APPData" scadeType="tINPUT_Data" targetName="APPData" targetType="tINPUT_Data" inCtx="true"/>
+    <Local scadeName="WOWData" scadeType="tIOR_ProcessWowData" targetName="WOWData" targetType="tIOR_ProcessWowData"/>
+    <Local scadeName="_L1" scadeType="tData_to_DSP" targetName="Input1" targetType="tData_to_DSP"/>
+    <Local scadeName="_L5" scadeType="tIOR_ProcessWowData" targetName="WOWData" targetType="tIOR_ProcessWowData"/>
+    <Local scadeName="_L13" scadeType="tIOR_ProcessWowData" targetName="WOWData" targetType="tIOR_ProcessWowData"/>
+    <Local scadeName="_L15" scadeType="tIOR_ProcessWowData" targetName="WOWData" targetType="tIOR_ProcessWowData"/>
+    <Local scadeName="_L22" scadeType="tINPUT_Data" targetName="APPData" targetType="tINPUT_Data" inCtx="true"/>
+    <NodeInstance scadeName="WOW_Processing" instName="1" refName="WOW_Processing"/>
+    <NodeInstance scadeName="AutoBRKData_Processing" instName="1" refName="AutoBRKData_Processing">
+      <OutCtxVar targetName="_1_Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="Pedal_Processing" instName="1" refName="Pedal_Processing"/>
+    <NodeInstance scadeName="LGData_Processing" instName="1" refName="LGData_Processing"/>
+    <NodeInstance scadeName="Throttle_Processing" instName="1" refName="Throttle_Processing"/>
+    <NodeInstance scadeName="HydraulicData_Processing" instName="1" refName="HydraulicData_Processing"/>
+    <NodeInstance scadeName="Speed_Processing" instName="1" refName="Speed_Processing">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <OutCtxType targetName="outC_IO_Processing"/>
+  </NoExpNode>
+  <NoExpNode scadeName="Pedal_Processing" headerFile="Pedal_Processing.h" targetCycleFct="Pedal_Processing">
+    <Input scadeName="Input1" scadeType="tData_to_DSP" targetName="Input1" targetType="tData_to_DSP"/>
+    <Output scadeName="PedalData" scadeType="tIOR_ProcessPedalData" targetName="PedalData"
+        targetType="tIOR_ProcessPedalData"/>
+    <Local scadeName="_L1" scadeType="tData_to_DSP" targetName="Input1" targetType="tData_to_DSP"/>
+    <Local scadeName="_L18" scadeType="tIOR_ProcessPedalData" targetName="PedalData" targetType="tIOR_ProcessPedalData"/>
+    <Local scadeName="_L21" scadeType="float32" targetName="_L21" targetType="kcg_float32"/>
+    <NodeInstance scadeName="math::Max3" instName="1" refName="Max3_math_float32"/>
+    <NodeInlining scadeName="math::Max" instName="1">
+      <Local scadeName="_L1" scadeType="&apos;T" targetName="_L21" targetType="kcg_float32"/>
+      <NodeInstance scadeName="&gt;=" instName="1"/>
+      <NodeInstance scadeName="if" instName="2"/>
+      <Input scadeName="I1" scadeType="&apos;T" targetName="_L21" targetType="kcg_float32"/>
+    </NodeInlining>
+  </NoExpNode>
+  <NoExpNode scadeName="AutoBRKData_Processing" headerFile="AutoBRKData_Processing.h"
+      targetCycleFct="AutoBRKData_Processing" targetInitFct="AutoBRKData_Processing_reset"
+      targetInitializationFct="AutoBRKData_Processing_init">
+    <Input scadeName="Input1" scadeType="tData_to_DSP" targetName="Input1" targetType="tData_to_DSP"/>
+    <Output scadeName="AutoBRKswitch" scadeType="tIOR_ProcessAutobrakeData" targetName="AutoBRKswitch"
+        targetType="tIOR_ProcessAutobrakeData" inCtx="true"/>
+    <Local scadeName="_L1" scadeType="tData_to_DSP" targetName="Input1" targetType="tData_to_DSP"/>
+    <Local scadeName="_L7" scadeType="tIOR_ProcessAutobrakeData" targetName="AutoBRKswitch"
+        targetType="tIOR_ProcessAutobrakeData" inCtx="true"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="and" instName="1"/>
+    <NodeInstance scadeName="BTI" instName="1" refName="BTI"/>
+    <NodeInstance scadeName="BTI" instName="2" refName="BTI"/>
+    <NodeInstance scadeName="BTI" instName="4" refName="BTI"/>
+    <NodeInstance scadeName="BTI" instName="3" refName="BTI"/>
+    <NodeInstance scadeName="BTI" instName="5" refName="BTI"/>
+    <NodeInstance scadeName="+" instName="1"/>
+    <NodeInstance scadeName="+" instName="1"/>
+    <NodeInstance scadeName="+" instName="1"/>
+    <NodeInstance scadeName="+" instName="1"/>
+    <NodeInstance scadeName="=" instName="1"/>
+    <NodeInstance scadeName="and" instName="2"/>
+    <NodeInstance scadeName="Delay_OFF" instName="1" refName="Delay_OFF">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="not" instName="1"/>
+    <OutCtxType targetName="outC_AutoBRKData_Processing"/>
+  </NoExpNode>
+  <NoExpNode scadeName="WOW_Processing" headerFile="WOW_Processing.h" targetCycleFct="WOW_Processing">
+    <Input scadeName="InData" scadeType="tData_to_DSP" targetName="InData" targetType="tData_to_DSP"/>
+    <Output scadeName="WOW_Data" scadeType="tIOR_ProcessWowData" targetName="WOW_Data" targetType="tIOR_ProcessWowData"/>
+    <Local scadeName="zong" scadeType="bool" targetName="zong" targetType="kcg_bool"/>
+    <Local scadeName="_L40" scadeType="bool" targetName="zong" targetType="kcg_bool"/>
+    <Local scadeName="_L41" scadeType="bool" targetName="zong" targetType="kcg_bool"/>
+    <Local scadeName="_L45" scadeType="bool" targetName="zong" targetType="kcg_bool"/>
+    <Local scadeName="_L52" scadeType="tIOR_ProcessWowData" targetName="WOW_Data" targetType="tIOR_ProcessWowData"/>
+    <NodeInstance scadeName="+" instName="1"/>
+    <NodeInstance scadeName="+" instName="1"/>
+    <NodeInstance scadeName="&gt;=" instName="2"/>
+    <NodeInstance scadeName="if" instName="1"/>
+    <NodeInstance scadeName="if" instName="2"/>
+    <NodeInstance scadeName="BTI" instName="1" refName="BTI"/>
+    <NodeInstance scadeName="BTI" instName="2" refName="BTI"/>
+    <NodeInstance scadeName="BTI" instName="3" refName="BTI"/>
+    <NodeInstance scadeName="digital::Int2BoolVect" instName="1" refName="Int2BoolVect_digital_uint32_32"/>
+    <NodeInstance scadeName="digital::Int2BoolVect" instName="2" refName="Int2BoolVect_digital_uint32_32"/>
+    <NodeInstance scadeName="and" instName="2"/>
+    <NodeInstance scadeName="&gt;=" instName="1"/>
+  </NoExpNode>
+  <NoExpNode scadeName="Throttle_Processing" headerFile="Throttle_Processing.h" targetCycleFct="Throttle_Processing">
+    <Input scadeName="Input1" scadeType="tData_to_DSP" targetName="Input1" targetType="tData_to_DSP"/>
+    <Output scadeName="ThrottleData" scadeType="tIOR_ProcessThrottleData" targetName="ThrottleData"
+        targetType="tIOR_ProcessThrottleData"/>
+    <Local scadeName="_L6" scadeType="tIOR_ProcessThrottleData" targetName="ThrottleData"
+        targetType="tIOR_ProcessThrottleData"/>
+  </NoExpNode>
+  <NoExpNode scadeName="LGData_Processing" headerFile="LGData_Processing.h" targetCycleFct="LGData_Processing">
+    <Input scadeName="Input1" scadeType="tData_to_DSP" targetName="Input1" targetType="tData_to_DSP"/>
+    <Output scadeName="LGData" scadeType="tIOR_ProcessLandingGearData" targetName="LGData"
+        targetType="tIOR_ProcessLandingGearData"/>
+    <Local scadeName="_L6" scadeType="tIOR_ProcessLandingGearData" targetName="LGData"
+        targetType="tIOR_ProcessLandingGearData"/>
+    <NodeInstance scadeName="and" instName="1"/>
+  </NoExpNode>
+  <NoExpNode scadeName="HydraulicData_Processing" headerFile="HydraulicData_Processing.h"
+      targetCycleFct="HydraulicData_Processing">
+    <Input scadeName="Input1" scadeType="tData_to_DSP" targetName="Input1" targetType="tData_to_DSP"/>
+    <Output scadeName="Output1" scadeType="tIOR_ProcessHydraulicData" targetName="Output1"
+        targetType="tIOR_ProcessHydraulicData"/>
+    <Local scadeName="_L1" scadeType="tData_to_DSP" targetName="Input1" targetType="tData_to_DSP"/>
+    <Local scadeName="_L5" scadeType="tIOR_ProcessHydraulicData" targetName="Output1"
+        targetType="tIOR_ProcessHydraulicData"/>
+    <NodeInstance scadeName="&gt;=" instName="1"/>
+  </NoExpNode>
+  <NoExpNode scadeName="BTI" headerFile="BTI.h" targetCycleFct="BTI">
+    <Input scadeName="Bool_value" scadeType="bool" targetName="Bool_value" targetType="kcg_bool"/>
+    <Output scadeName="out_int8" scadeType="int8" targetName="out_int8" targetType="kcg_int8"/>
+    <Local scadeName="_L3" scadeType="int8" targetName="out_int8" targetType="kcg_int8"/>
+    <Local scadeName="_L4" scadeType="bool" targetName="Bool_value" targetType="kcg_bool"/>
+    <NodeInstance scadeName="if" instName="1"/>
+  </NoExpNode>
+  <NoExpNode scadeName="Acc_average" headerFile="Acc_average.h" targetCycleFct="Acc_average">
+    <Input scadeName="Value_right" scadeType="float32" targetName="Value_right" targetType="kcg_float32"/>
+    <Input scadeName="Value_left" scadeType="float32" targetName="Value_left" targetType="kcg_float32"/>
+    <Input scadeName="Valid_right" scadeType="bool" targetName="Valid_right" targetType="kcg_bool"/>
+    <Input scadeName="Valid_left" scadeType="bool" targetName="Valid_left" targetType="kcg_bool"/>
+    <Output scadeName="Acc_av" scadeType="tValidityF32" targetName="Acc_av" targetType="tValidityF32"/>
+    <Local scadeName="_L21" scadeType="bool" targetName="Valid_left" targetType="kcg_bool"/>
+    <Local scadeName="_L20" scadeType="bool" targetName="Valid_right" targetType="kcg_bool"/>
+    <Local scadeName="_L18" scadeType="float32" targetName="Value_right" targetType="kcg_float32"/>
+    <Local scadeName="_L16" scadeType="tValidityF32" targetName="Acc_av" targetType="tValidityF32"/>
+    <Local scadeName="_L10" scadeType="bool" targetName="Valid_left" targetType="kcg_bool"/>
+    <Local scadeName="_L7" scadeType="float32" targetName="_L7" targetType="kcg_float32"/>
+    <Local scadeName="_L5" scadeType="float32" targetName="Value_left" targetType="kcg_float32"/>
+    <Local scadeName="_L4" scadeType="bool" targetName="Valid_left" targetType="kcg_bool"/>
+    <Local scadeName="_L3" scadeType="bool" targetName="Valid_right" targetType="kcg_bool"/>
+    <Local scadeName="_L1" scadeType="bool" targetName="Valid_right" targetType="kcg_bool"/>
+    <NodeInlining scadeName="math::BoolToFloat32" instName="10">
+      <Input scadeName="BTR_Input" scadeType="bool" targetName="Valid_right" targetType="kcg_bool"/>
+      <Local scadeName="_L5" scadeType="bool" targetName="Valid_right" targetType="kcg_bool"/>
+      <NodeInstance scadeName="if" instName="1"/>
+    </NodeInlining>
+    <NodeInstance scadeName="&lt;" instName="5"/>
+    <NodeInstance scadeName="+" instName="10"/>
+    <NodeInstance scadeName="+" instName="9"/>
+    <NodeInstance scadeName="/" instName="5"/>
+    <NodeInstance scadeName="if" instName="15"/>
+    <NodeInstance scadeName="if" instName="14"/>
+    <NodeInstance scadeName="if" instName="13"/>
+    <NodeInlining scadeName="math::BoolToFloat32" instName="9">
+      <Input scadeName="BTR_Input" scadeType="bool" targetName="Valid_left" targetType="kcg_bool"/>
+      <Local scadeName="_L5" scadeType="bool" targetName="Valid_left" targetType="kcg_bool"/>
+      <NodeInstance scadeName="if" instName="1"/>
+    </NodeInlining>
+    <NodeInstance scadeName="or" instName="5"/>
+  </NoExpNode>
+  <NoExpNode scadeName="Ref_cal" headerFile="Ref_cal.h" targetCycleFct="Ref_cal" targetInitFct="Ref_cal_reset"
+      targetInitializationFct="Ref_cal_init">
+    <Input scadeName="Wheelspeed" scadeType="float32" targetName="Wheelspeed" targetType="kcg_float32"/>
+    <Input scadeName="acc" scadeType="float32" targetName="acc" targetType="kcg_float32"/>
+    <Input scadeName="WOW" scadeType="bool" targetName="WOW" targetType="kcg_bool"/>
+    <Output scadeName="refspeed" scadeType="float32" targetName="refspeed" targetType="kcg_float32" inCtx="true"/>
+    <Local scadeName="_L1" scadeType="float32" targetName="Wheelspeed" targetType="kcg_float32"/>
+    <Local scadeName="_L2" scadeType="float32" targetName="acc" targetType="kcg_float32"/>
+    <Local scadeName="_L5" scadeType="bool" targetName="WOW" targetType="kcg_bool"/>
+    <Memory scadeName="_L8" scadeType="float32" targetName="_L9" targetType="kcg_float32" inCtx="true"/>
+    <Memory scadeName="_L9" scadeType="float32" targetName="_L9" targetType="kcg_float32" inCtx="true"/>
+    <Local scadeName="_L17" scadeType="float32" targetName="refspeed" targetType="kcg_float32" inCtx="true"/>
+    <NodeInstance scadeName="*" instName="1"/>
+    <NodeInstance scadeName="if" instName="4"/>
+    <FbyOp instName="1">
+      <Memory targetName="_L9" targetType="kcg_float32" inCtx="true"/>
+    </FbyOp>
+    <NodeInstance scadeName="+" instName="3"/>
+    <NodeInstance scadeName="&gt;" instName="1"/>
+    <NodeInstance scadeName="if" instName="5"/>
+    <NodeInstance scadeName="&gt;" instName="2"/>
+    <NodeInstance scadeName="if" instName="6"/>
+    <NodeInstance scadeName="unit::ft_to_m" instName="1" refName="ft_to_m_unit"/>
+    <NodeInstance scadeName="unit::m_to_kt" instName="1" refName="m_to_kt_unit"/>
+    <OutCtxType targetName="outC_Ref_cal"/>
+  </NoExpNode>
+  <NoExpNode scadeName="Speed_Processing" headerFile="Speed_Processing.h" targetCycleFct="Speed_Processing"
+      targetInitFct="Speed_Processing_reset" targetInitializationFct="Speed_Processing_init">
+    <Input scadeName="In" scadeType="tData_to_DSP" targetName="In" targetType="tData_to_DSP"/>
+    <Input scadeName="WOWData" scadeType="tIOR_ProcessWowData" targetName="WOWData" targetType="tIOR_ProcessWowData"/>
+    <Output scadeName="Aircraft_Data" scadeType="tIOR_ProcessAircraftData" targetName="Aircraft_Data"
+        targetType="tIOR_ProcessAircraftData" inCtx="true"/>
+    <Output scadeName="WheelSpeedData" scadeType="tIOR_ProcessSpeedData" targetName="WheelSpeedData"
+        targetType="tIOR_ProcessSpeedData" inCtx="true"/>
+    <Local scadeName="AccAv" scadeType="tValidityF32" targetName="AccAv" targetType="tValidityF32"/>
+    <Local scadeName="RefSpeed" scadeType="tValidityF32" targetName="RefSpeed" targetType="tValidityF32"/>
+    <Local scadeName="_L1" scadeType="tData_to_DSP" targetName="In" targetType="tData_to_DSP"/>
+    <Local scadeName="_L27" scadeType="float32" targetName="_L27" targetType="kcg_float32"/>
+    <Local scadeName="_L31" scadeType="float32" targetName="_L31" targetType="kcg_float32"/>
+    <Local scadeName="_L41" scadeType="tValidityF32" targetName="AccAv" targetType="tValidityF32"/>
+    <Local scadeName="_L51" scadeType="tValidityF32" targetName="AccAv" targetType="tValidityF32"/>
+    <Local scadeName="_L62" scadeType="tIOR_ProcessAircraftData" targetName="Aircraft_Data"
+        targetType="tIOR_ProcessAircraftData" inCtx="true"/>
+    <Local scadeName="_L72" scadeType="tValidityF32" targetName="RefSpeed" targetType="tValidityF32"/>
+    <Local scadeName="_L77" scadeType="tIOR_ProcessSpeedData" targetName="WheelSpeedData"
+        targetType="tIOR_ProcessSpeedData" inCtx="true"/>
+    <Local scadeName="_L78" scadeType="tValidityF32" targetName="RefSpeed" targetType="tValidityF32"/>
+    <Local scadeName="_L82" scadeType="tValidityF32" targetName="AccAv" targetType="tValidityF32"/>
+    <NodeInstance scadeName="*" instName="1"/>
+    <NodeInstance scadeName="*" instName="2"/>
+    <NodeInstance scadeName="if" instName="1"/>
+    <NodeInlining scadeName="math::Max" instName="1">
+      <Local scadeName="_L1" scadeType="&apos;T" targetName="_L27" targetType="kcg_float32"/>
+      <Local scadeName="_L2" scadeType="&apos;T" targetName="_L31" targetType="kcg_float32"/>
+      <NodeInstance scadeName="&gt;=" instName="1"/>
+      <NodeInstance scadeName="if" instName="2"/>
+      <Input scadeName="I1" scadeType="&apos;T" targetName="_L27" targetType="kcg_float32"/>
+      <Input scadeName="I2" scadeType="&apos;T" targetName="_L31" targetType="kcg_float32"/>
+    </NodeInlining>
+    <NodeInstance scadeName="-" instName="1"/>
+    <NodeInstance scadeName="Ref_cal" instName="1" refName="Ref_cal">
+      <OutCtxVar targetName="Context_1"/>
+    </NodeInstance>
+    <NodeInstance scadeName="Acc_average" instName="1" refName="Acc_average"/>
+    <NodeInstance scadeName="HzTOradpersec" instName="1" refName="HzTOradpersec"/>
+    <NodeInstance scadeName="HzTOradpersec" instName="2" refName="HzTOradpersec"/>
+    <NodeInstance scadeName="+" instName="1"/>
+    <NodeInstance scadeName="/" instName="1"/>
+    <NodeInstance scadeName="unit::g_to_mps2" instName="1" refName="g_to_mps2_unit"/>
+    <NodeInstance scadeName="unit::m_to_ft" instName="1" refName="m_to_ft_unit"/>
+    <NodeInstance scadeName="unit::g_to_mps2" instName="2" refName="g_to_mps2_unit"/>
+    <NodeInstance scadeName="unit::m_to_ft" instName="2" refName="m_to_ft_unit"/>
+    <OutCtxType targetName="outC_Speed_Processing"/>
+  </NoExpNode>
+  <NoExpNode scadeName="HzTOradpersec" headerFile="HzTOradpersec.h" targetCycleFct="HzTOradpersec">
+    <Input scadeName="Hz" scadeType="float32" targetName="Hz" targetType="kcg_float32"/>
+    <Output scadeName="Output1" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <Local scadeName="_L1" scadeType="float32" targetName="Hz" targetType="kcg_float32"/>
+    <Local scadeName="_L2" scadeType="float32" targetName="Output1" targetType="kcg_float32"/>
+    <NodeInstance scadeName="*" instName="1"/>
+  </NoExpNode>
+  <Constant scadeName="HzTOrad" scadeType="float32" targetName="HzTOrad" targetType="kcg_float32" macroDef="true"/>
+  <StructType targetName="tValidityU32" targetCopyFct="kcg_copy_tValidityU32" targetCompFct="kcg_comp_tValidityU32">
+    <Field scadeName="Valid" scadeType="bool" targetName="Valid" targetType="kcg_bool"/>
+    <Field scadeName="Value" scadeType="uint32" targetName="Value" targetType="kcg_uint32"/>
+  </StructType>
+  <StructType targetName="tValidityS32" targetCopyFct="kcg_copy_tValidityS32" targetCompFct="kcg_comp_tValidityS32">
+    <Field scadeName="Valid" scadeType="bool" targetName="Valid" targetType="kcg_bool"/>
+    <Field scadeName="Value" scadeType="int32" targetName="Value" targetType="kcg_int32"/>
+  </StructType>
+  <StructType targetName="tValidityF32" targetCopyFct="kcg_copy_tValidityF32" targetCompFct="kcg_comp_tValidityF32">
+    <Field scadeName="Valid" scadeType="bool" targetName="Valid" targetType="kcg_bool"/>
+    <Field scadeName="Value" scadeType="float32" targetName="Value" targetType="kcg_float32"/>
+  </StructType>
+  <StructType targetName="tValidityBool" targetCopyFct="kcg_copy_tValidityBool" targetCompFct="kcg_comp_tValidityBool">
+    <Field scadeName="Valid" scadeType="bool" targetName="Valid" targetType="kcg_bool"/>
+    <Field scadeName="Value" scadeType="bool" targetName="Value" targetType="kcg_bool"/>
+  </StructType>
+  <StructType targetName="tIOR_ProcessPedalData" targetCopyFct="kcg_copy_tIOR_ProcessPedalData"
+      targetCompFct="kcg_comp_tIOR_ProcessPedalData">
+    <Field scadeName="LeftCptPedal" scadeType="tValidityF32" targetName="LeftCptPedal" targetType="tValidityF32"/>
+    <Field scadeName="RightCptPedal" scadeType="tValidityF32" targetName="RightCptPedal" targetType="tValidityF32"/>
+    <Field scadeName="LeftPPedal" scadeType="tValidityF32" targetName="LeftPPedal" targetType="tValidityF32"/>
+    <Field scadeName="RightPPedal" scadeType="tValidityF32" targetName="RightPPedal" targetType="tValidityF32"/>
+    <Field scadeName="MaxPedal" scadeType="float32" targetName="MaxPedal" targetType="kcg_float32"/>
+  </StructType>
+  <StructType targetName="tIOR_ProcessSpeedData" targetCopyFct="kcg_copy_tIOR_ProcessSpeedData"
+      targetCompFct="kcg_comp_tIOR_ProcessSpeedData">
+    <Field scadeName="LeftWheelSpeed" scadeType="tValidityF32" targetName="LeftWheelSpeed" targetType="tValidityF32"/>
+    <Field scadeName="RightWheelSpeed" scadeType="tValidityF32" targetName="RightWheelSpeed" targetType="tValidityF32"/>
+    <Field scadeName="LeftWheelRefSpeed" scadeType="tValidityF32" targetName="LeftWheelRefSpeed" targetType="tValidityF32"/>
+    <Field scadeName="RightWheelRefSpeed" scadeType="tValidityF32" targetName="RightWheelRefSpeed"
+        targetType="tValidityF32"/>
+    <Field scadeName="LWP_RefSpeed" scadeType="tValidityF32" targetName="LWP_RefSpeed" targetType="tValidityF32"/>
+    <Field scadeName="WheelSpeed_av" scadeType="float32" targetName="WheelSpeed_av" targetType="kcg_float32"/>
+  </StructType>
+  <StructType targetName="tINPUT_Data" targetCopyFct="kcg_copy_tINPUT_Data" targetCompFct="kcg_comp_tINPUT_Data">
+    <Field scadeName="Aircraft_Data" scadeType="tIOR_ProcessAircraftData" targetName="Aircraft_Data"
+        targetType="tIOR_ProcessAircraftData"/>
+    <Field scadeName="WOWData" scadeType="tIOR_ProcessWowData" targetName="WOWData" targetType="tIOR_ProcessWowData"/>
+    <Field scadeName="PedalData" scadeType="tIOR_ProcessPedalData" targetName="PedalData"
+        targetType="tIOR_ProcessPedalData"/>
+    <Field scadeName="ThrottleData" scadeType="tIOR_ProcessThrottleData" targetName="ThrottleData"
+        targetType="tIOR_ProcessThrottleData"/>
+    <Field scadeName="LGData" scadeType="tIOR_ProcessLandingGearData" targetName="LGData"
+        targetType="tIOR_ProcessLandingGearData"/>
+    <Field scadeName="HydraulicData" scadeType="tIOR_ProcessHydraulicData" targetName="HydraulicData"
+        targetType="tIOR_ProcessHydraulicData"/>
+    <Field scadeName="AutoBrakeData" scadeType="tIOR_ProcessAutobrakeData" targetName="AutoBrakeData"
+        targetType="tIOR_ProcessAutobrakeData"/>
+    <Field scadeName="WheelSpeedData" scadeType="tIOR_ProcessSpeedData" targetName="WheelSpeedData"
+        targetType="tIOR_ProcessSpeedData"/>
+  </StructType>
+  <StructType targetName="tIOR_ProcessAircraftData" targetCopyFct="kcg_copy_tIOR_ProcessAircraftData"
+      targetCompFct="kcg_comp_tIOR_ProcessAircraftData">
+    <Field scadeName="Airspeed" scadeType="tValidityF32" targetName="Airspeed" targetType="tValidityF32"/>
+    <Field scadeName="AircraftAcceleration_Left" scadeType="tValidityF32" targetName="AircraftAcceleration_Left"
+        targetType="tValidityF32"/>
+    <Field scadeName="AircraftAcceleration1_Right" scadeType="tValidityF32" targetName="AircraftAcceleration1_Right"
+        targetType="tValidityF32"/>
+    <Field scadeName="AircraftAcceleration_av" scadeType="tValidityF32" targetName="AircraftAcceleration_av"
+        targetType="tValidityF32"/>
+    <Field scadeName="SpoilerStoredSignal_Left" scadeType="bool" targetName="SpoilerStoredSignal_Left"
+        targetType="kcg_bool"/>
+    <Field scadeName="SpoilerStoredSignal_Right" scadeType="bool" targetName="SpoilerStoredSignal_Right"
+        targetType="kcg_bool"/>
+    <Field scadeName="AircraftGroundSpeed" scadeType="tValidityF32" targetName="AircraftGroundSpeed"
+        targetType="tValidityF32"/>
+    <Field scadeName="AircraftAttitude" scadeType="tValidityF32" targetName="AircraftAttitude" targetType="tValidityF32"/>
+  </StructType>
+  <StructType targetName="tIOR_ProcessWowData" targetCopyFct="kcg_copy_tIOR_ProcessWowData"
+      targetCompFct="kcg_comp_tIOR_ProcessWowData">
+    <Field scadeName="LeftWOW" scadeType="bool" targetName="LeftWOW" targetType="kcg_bool"/>
+    <Field scadeName="RightWOW" scadeType="bool" targetName="RightWOW" targetType="kcg_bool"/>
+    <Field scadeName="zong" scadeType="tValidityBool" targetName="zong" targetType="tValidityBool"/>
+    <Field scadeName="WOWBK" scadeType="bool" targetName="WOWBK" targetType="kcg_bool"/>
+  </StructType>
+  <StructType targetName="tIOR_ProcessAutobrakeData" targetCopyFct="kcg_copy_tIOR_ProcessAutobrakeData"
+      targetCompFct="kcg_comp_tIOR_ProcessAutobrakeData">
+    <Field scadeName="AutoBRK_OFF" scadeType="tValidityBool" targetName="AutoBRK_OFF" targetType="tValidityBool"/>
+    <Field scadeName="AutoBRK_LOW" scadeType="tValidityBool" targetName="AutoBRK_LOW" targetType="tValidityBool"/>
+    <Field scadeName="AutoBRK_MED" scadeType="tValidityBool" targetName="AutoBRK_MED" targetType="tValidityBool"/>
+    <Field scadeName="AutoBRK_HI" scadeType="tValidityBool" targetName="AutoBRK_HI" targetType="tValidityBool"/>
+    <Field scadeName="AutoBRK_RTO" scadeType="tValidityBool" targetName="AutoBRK_RTO" targetType="tValidityBool"/>
+    <Field scadeName="AutoBRKfault" scadeType="bool" targetName="AutoBRKfault" targetType="kcg_bool"/>
+  </StructType>
+  <StructType targetName="tIOR_ProcessHydraulicData" targetCopyFct="kcg_copy_tIOR_ProcessHydraulicData"
+      targetCompFct="kcg_comp_tIOR_ProcessHydraulicData">
+    <Field scadeName="HighPressure" scadeType="bool" targetName="HighPressure" targetType="kcg_bool"/>
+  </StructType>
+  <StructType targetName="tIOR_ProcessThrottleData" targetCopyFct="kcg_copy_tIOR_ProcessThrottleData"
+      targetCompFct="kcg_comp_tIOR_ProcessThrottleData">
+    <Field scadeName="LeftThrottleIdle" scadeType="bool" targetName="LeftThrottleIdle" targetType="kcg_bool"/>
+    <Field scadeName="RightThrottleIdle" scadeType="bool" targetName="RightThrottleIdle" targetType="kcg_bool"/>
+    <Field scadeName="ThrottleIdleAtLeastOne" scadeType="bool" targetName="ThrottleIdleAtLeastOne" targetType="kcg_bool"/>
+    <Field scadeName="ThrottleIdleBoth" scadeType="bool" targetName="ThrottleIdleBoth" targetType="kcg_bool"/>
+  </StructType>
+  <StructType targetName="tIOR_ProcessLandingGearData" targetCopyFct="kcg_copy_tIOR_ProcessLandingGearData"
+      targetCompFct="kcg_comp_tIOR_ProcessLandingGearData">
+    <Field scadeName="LG_GearDown_Locked" scadeType="bool" targetName="LG_GearDown_Locked" targetType="kcg_bool"/>
+    <Field scadeName="LandingGearExtentionandRetractionCommand" scadeType="bool"
+        targetName="LandingGearExtentionandRetractionCommand" targetType="kcg_bool"/>
+  </StructType>
+  <StructType targetName="tIOR_ProcessAutoFlightData" targetCopyFct="kcg_copy_tIOR_ProcessAutoFlightData"
+      targetCompFct="kcg_comp_tIOR_ProcessAutoFlightData">
+    <Field scadeName="TOGA_Active" scadeType="tValidityBool" targetName="TOGA_Active" targetType="tValidityBool"/>
+  </StructType>
+  <StructType targetName="tBrakeInhibits" targetCopyFct="kcg_copy_tBrakeInhibits" targetCompFct="kcg_comp_tBrakeInhibits">
+    <Field scadeName="TDP_BrakeInhibit" scadeType="bool" targetName="TDP_BrakeInhibit" targetType="kcg_bool"/>
+    <Field scadeName="LWP_LeftBrakeInhibit" scadeType="bool" targetName="LWP_LeftBrakeInhibit" targetType="kcg_bool"/>
+    <Field scadeName="LWP_RightBrakeInhibit" scadeType="bool" targetName="LWP_RightBrakeInhibit" targetType="kcg_bool"/>
+  </StructType>
+  <StructType targetName="tBrakeAutoBKOut" targetCopyFct="kcg_copy_tBrakeAutoBKOut"
+      targetCompFct="kcg_comp_tBrakeAutoBKOut">
+    <Field scadeName="AutoBrakeActivate" scadeType="bool" targetName="AutoBrakeActivate" targetType="kcg_bool"/>
+    <Field scadeName="Left_BrakePressureCommand" scadeType="float32" targetName="Left_BrakePressureCommand"
+        targetType="kcg_float32"/>
+    <Field scadeName="Right_BrakePressureCommand" scadeType="float32" targetName="Right_BrakePressureCommand"
+        targetType="kcg_float32"/>
+    <Field scadeName="ArmDisagree" scadeType="bool" targetName="ArmDisagree" targetType="kcg_bool"/>
+    <Field scadeName="AutoBrakeState" scadeType="tAutobrakeState" targetName="AutoBrakeState" targetType="tAutobrakeState"/>
+    <Field scadeName="CoilEnergized" scadeType="bool" targetName="CoilEnergized" targetType="kcg_bool"/>
+    <Field scadeName="testData" scadeType="tTestData" targetName="testData" targetType="tTestData"/>
+  </StructType>
+  <StructType targetName="tBrakePdlOut" targetCopyFct="kcg_copy_tBrakePdlOut" targetCompFct="kcg_comp_tBrakePdlOut">
+    <Field scadeName="LeftPDL_BrakePressureCommand" scadeType="float32" targetName="LeftPDL_BrakePressureCommand"
+        targetType="kcg_float32"/>
+    <Field scadeName="RightPDL_BrakePressureCommand" scadeType="float32" targetName="RightPDL_BrakePressureCommand"
+        targetType="kcg_float32"/>
+    <Field scadeName="PedalBrakeActivate" scadeType="bool" targetName="PedalBrakeActivate" targetType="kcg_bool"/>
+  </StructType>
+  <StructType targetName="tBrakeSelectOut" targetCopyFct="kcg_copy_tBrakeSelectOut"
+      targetCompFct="kcg_comp_tBrakeSelectOut">
+    <Field scadeName="SOV_Open" scadeType="bool" targetName="SOV_Open" targetType="kcg_bool"/>
+    <Field scadeName="LeftBrakePressureCommand" scadeType="float32" targetName="LeftBrakePressureCommand"
+        targetType="kcg_float32"/>
+    <Field scadeName="RightBrakePressureCommand" scadeType="float32" targetName="RightBrakePressureCommand"
+        targetType="kcg_float32"/>
+  </StructType>
+  <StructType targetName="tBrakeSkidOut" targetCopyFct="kcg_copy_tBrakeSkidOut" targetCompFct="kcg_comp_tBrakeSkidOut">
+    <Field scadeName="LeftSkidEnable" scadeType="bool" targetName="LeftSkidEnable" targetType="kcg_bool"/>
+    <Field scadeName="LeftBrakePressureCommandAdj" scadeType="float32" targetName="LeftBrakePressureCommandAdj"
+        targetType="kcg_float32"/>
+    <Field scadeName="Ratio" scadeType="float32" targetName="Ratio" targetType="kcg_float32"/>
+    <Field scadeName="RightSkidEnable" scadeType="bool" targetName="RightSkidEnable" targetType="kcg_bool"/>
+    <Field scadeName="RightBrakePressureCommandAdj" scadeType="float32" targetName="RightBrakePressureCommandAdj"
+        targetType="kcg_float32"/>
+  </StructType>
+  <StructType targetName="tBrakeIfbOut" targetCopyFct="kcg_copy_tBrakeIfbOut" targetCompFct="kcg_comp_tBrakeIfbOut">
+    <Field scadeName="IFB_BrakeActivate" scadeType="bool" targetName="IFB_BrakeActivate" targetType="kcg_bool"/>
+    <Field scadeName="LeftIFB_BrakePressureCommand" scadeType="float32" targetName="LeftIFB_BrakePressureCommand"
+        targetType="kcg_float32"/>
+    <Field scadeName="RightIFB_BrakePressureCommand" scadeType="float32" targetName="RightIFB_BrakePressureCommand"
+        targetType="kcg_float32"/>
+  </StructType>
+  <StructType targetName="tBrakeInhibitOut" targetCopyFct="kcg_copy_tBrakeInhibitOut"
+      targetCompFct="kcg_comp_tBrakeInhibitOut">
+    <Field scadeName="SOV_Open" scadeType="bool" targetName="SOV_Open" targetType="kcg_bool"/>
+    <Field scadeName="LeftBrakePressureCommandAdj" scadeType="float32" targetName="LeftBrakePressureCommandAdj"
+        targetType="kcg_float32"/>
+    <Field scadeName="RightBrakePressureCommandAdj" scadeType="float32" targetName="RightBrakePressureCommandAdj"
+        targetType="kcg_float32"/>
+    <Field scadeName="BrakeInhibits" scadeType="tBrakeInhibits" targetName="BrakeInhibits" targetType="tBrakeInhibits"/>
+  </StructType>
+  <StructType targetName="tOutPut" targetCopyFct="kcg_copy_tOutPut" targetCompFct="kcg_comp_tOutPut">
+    <Field scadeName="SOV_Open" scadeType="bool" targetName="SOV_Open" targetType="kcg_bool"/>
+    <Field scadeName="BrakePressureCommand_L" scadeType="float32" targetName="BrakePressureCommand_L"
+        targetType="kcg_float32"/>
+    <Field scadeName="BrakePressureCommand_R" scadeType="float32" targetName="BrakePressureCommand_R"
+        targetType="kcg_float32"/>
+    <Field scadeName="BrakeAutoBKOut" scadeType="tBrakeAutoBKOut" targetName="BrakeAutoBKOut" targetType="tBrakeAutoBKOut"/>
+    <Field scadeName="BrakeIfbOut" scadeType="tBrakeIfbOut" targetName="BrakeIfbOut" targetType="tBrakeIfbOut"/>
+    <Field scadeName="BrakeInhibitOut" scadeType="tBrakeInhibitOut" targetName="BrakeInhibitOut"
+        targetType="tBrakeInhibitOut"/>
+    <Field scadeName="BrakePdlOut" scadeType="tBrakePdlOut" targetName="BrakePdlOut" targetType="tBrakePdlOut"/>
+    <Field scadeName="BrakeSelectOut" scadeType="tBrakeSelectOut" targetName="BrakeSelectOut" targetType="tBrakeSelectOut"/>
+    <Field scadeName="BrakeSkidOut" scadeType="tBrakeSkidOut" targetName="BrakeSkidOut" targetType="tBrakeSkidOut"/>
+    <Field scadeName="WOWBK" scadeType="bool" targetName="WOWBK" targetType="kcg_bool"/>
+    <Field scadeName="WOW429" scadeType="bool" targetName="WOW429" targetType="kcg_bool"/>
+    <Field scadeName="speed" scadeType="tIOR_ProcessSpeedData" targetName="speed" targetType="tIOR_ProcessSpeedData"/>
+  </StructType>
+  <StructType targetName="tAutobrakeState" targetCopyFct="kcg_copy_tAutobrakeState"
+      targetCompFct="kcg_comp_tAutobrakeState">
+    <Field scadeName="LandingArmedState" scadeType="bool" targetName="LandingArmedState" targetType="kcg_bool"/>
+    <Field scadeName="LandingApplicationState" scadeType="bool" targetName="LandingApplicationState" targetType="kcg_bool"/>
+    <Field scadeName="LandingEnabledState" scadeType="bool" targetName="LandingEnabledState" targetType="kcg_bool"/>
+    <Field scadeName="LandingDisArmedState" scadeType="bool" targetName="LandingDisArmedState" targetType="kcg_bool"/>
+    <Field scadeName="RTOArmedState" scadeType="bool" targetName="RTOArmedState" targetType="kcg_bool"/>
+    <Field scadeName="RTOEnabledState" scadeType="bool" targetName="RTOEnabledState" targetType="kcg_bool"/>
+    <Field scadeName="RTODisarmedState" scadeType="bool" targetName="RTODisarmedState" targetType="kcg_bool"/>
+    <Field scadeName="RTOApplicationState" scadeType="bool" targetName="RTOApplicationState" targetType="kcg_bool"/>
+    <Field scadeName="OFFState" scadeType="bool" targetName="OFFState" targetType="kcg_bool"/>
+  </StructType>
+  <StructType targetName="tBCU_an" targetCopyFct="kcg_copy_tBCU_an" targetCompFct="kcg_comp_tBCU_an">
+    <Field scadeName="AutobrakeState" scadeType="tAutobrakeState" targetName="AutobrakeState" targetType="tAutobrakeState"/>
+  </StructType>
+  <StructType targetName="tData_to_DSP" targetCopyFct="kcg_copy_tData_to_DSP" targetCompFct="kcg_comp_tData_to_DSP">
+    <Field scadeName="In_Discrete" scadeType="tIn_Discrete" targetName="In_Discrete" targetType="tIn_Discrete"/>
+    <Field scadeName="In_HcLeftWheelAngularSpeed" scadeType="tValidityF32" targetName="In_HcLeftWheelAngularSpeed"
+        targetType="tValidityF32"/>
+    <Field scadeName="In_HcRightWheelAngularSpeed" scadeType="tValidityF32" targetName="In_HcRightWheelAngularSpeed"
+        targetType="tValidityF32"/>
+    <Field scadeName="In_HcLeftBrakePressure" scadeType="float32" targetName="In_HcLeftBrakePressure"
+        targetType="kcg_float32"/>
+    <Field scadeName="In_HcRightBrakePressure" scadeType="float32" targetName="In_HcRightBrakePressure"
+        targetType="kcg_float32"/>
+    <Field scadeName="In_HcLeftBrakeTemperature" scadeType="float32" targetName="In_HcLeftBrakeTemperature"
+        targetType="kcg_float32"/>
+    <Field scadeName="In_HcRightBrakeTemperature" scadeType="float32" targetName="In_HcRightBrakeTemperature"
+        targetType="kcg_float32"/>
+    <Field scadeName="In_PLT_LT_LVDT_Percent" scadeType="tValidityF32" targetName="In_PLT_LT_LVDT_Percent"
+        targetType="tValidityF32"/>
+    <Field scadeName="In_PLT_RT_LVDT_Percent" scadeType="tValidityF32" targetName="In_PLT_RT_LVDT_Percent"
+        targetType="tValidityF32"/>
+    <Field scadeName="In_CPLT_LT_LVDT_Percent" scadeType="tValidityF32" targetName="In_CPLT_LT_LVDT_Percent"
+        targetType="tValidityF32"/>
+    <Field scadeName="In_CPLT_RT_LVDT_Percent" scadeType="tValidityF32" targetName="In_CPLT_RT_LVDT_Percent"
+        targetType="tValidityF32"/>
+    <Field scadeName="In_Right_BCV_Current" scadeType="float32" targetName="In_Right_BCV_Current" targetType="kcg_float32"/>
+    <Field scadeName="In_Left_BCV_Current" scadeType="float32" targetName="In_Left_BCV_Current" targetType="kcg_float32"/>
+    <Field scadeName="In_SOV_Current" scadeType="float32" targetName="In_SOV_Current" targetType="kcg_float32"/>
+    <Field scadeName="In_Hydraulic_System_Pressure_60" scadeType="float32" targetName="In_Hydraulic_System_Pressure_60"
+        targetType="kcg_float32"/>
+    <Field scadeName="In_Accumulator_Pressure_126" scadeType="float32" targetName="In_Accumulator_Pressure_126"
+        targetType="kcg_float32"/>
+    <Field scadeName="In_TLA_Position_Left_133" scadeType="float32" targetName="In_TLA_Position_Left_133"
+        targetType="kcg_float32"/>
+    <Field scadeName="In_TLA_Position_Right_133" scadeType="float32" targetName="In_TLA_Position_Right_133"
+        targetType="kcg_float32"/>
+    <Field scadeName="In_Master_Time_150" scadeType="uint32" targetName="In_Master_Time_150" targetType="kcg_uint32"/>
+    <Field scadeName="In_Computed_Air_Speed_206" scadeType="tValidityF32" targetName="In_Computed_Air_Speed_206"
+        targetType="tValidityF32"/>
+    <Field scadeName="In_Date_Master_260" scadeType="uint32" targetName="In_Date_Master_260" targetType="kcg_uint32"/>
+    <Field scadeName="In_MLG_RtDownlocked" scadeType="bool" targetName="In_MLG_RtDownlocked" targetType="kcg_bool"/>
+    <Field scadeName="In_MLG_LtDownlocked" scadeType="bool" targetName="In_MLG_LtDownlocked" targetType="kcg_bool"/>
+    <Field scadeName="In_Computed_WOW1_Data_277" scadeType="uint32" targetName="In_Computed_WOW1_Data_277"
+        targetType="kcg_uint32"/>
+    <Field scadeName="In_Computed_WOW2_Data_277" scadeType="uint32" targetName="In_Computed_WOW2_Data_277"
+        targetType="kcg_uint32"/>
+    <Field scadeName="In_Longitudinal_Acceleration_Body_Left_331" scadeType="tValidityF32"
+        targetName="_1_In_Longitudinal_Acceleration_Body_Left_331" targetType="tValidityF32"/>
+    <Field scadeName="In_Longitudinal_Acceleration_Body_Right_331" scadeType="tValidityF32"
+        targetName="In_Longitudinal_Acceleration_Body_Right_331" targetType="tValidityF32"/>
+  </StructType>
+  <ArrayType targetName="bool_word" cellType="kcg_bool" size="32" targetCopyFct="kcg_copy_bool_word"
+      targetCompFct="kcg_comp_bool_word"/>
+  <ArrayType targetName="bool_wordshort" cellType="kcg_bool" size="16" targetCopyFct="kcg_copy_bool_wordshort"
+      targetCompFct="kcg_comp_bool_wordshort"/>
+  <StructType targetName="HcDiscreteWord" targetCopyFct="kcg_copy_HcDiscreteWord" targetCompFct="kcg_comp_HcDiscreteWord">
+    <Field scadeName="Hc_RtSpoiler_stowed" scadeType="bool" targetName="Hc_RtSpoiler_stowed" targetType="kcg_bool"/>
+    <Field scadeName="Hc_RtThrottle_idle" scadeType="bool" targetName="Hc_RtThrottle_idle" targetType="kcg_bool"/>
+    <Field scadeName="Hc_Parkbrakeon_OB" scadeType="bool" targetName="Hc_Parkbrakeon_OB" targetType="kcg_bool"/>
+    <Field scadeName="Hc_ABS_OB" scadeType="bool" targetName="Hc_ABS_OB" targetType="kcg_bool"/>
+    <Field scadeName="Hc_Lt_WOW" scadeType="bool" targetName="Hc_Lt_WOW" targetType="kcg_bool"/>
+    <Field scadeName="Hc_GearHandle_OB" scadeType="bool" targetName="Hc_GearHandle_OB" targetType="kcg_bool"/>
+    <Field scadeName="AutoBK_OFF_OB" scadeType="bool" targetName="AutoBK_OFF_OB" targetType="kcg_bool"/>
+    <Field scadeName="AutoBK_LOW_OB" scadeType="bool" targetName="AutoBK_LOW_OB" targetType="kcg_bool"/>
+    <Field scadeName="AutoBK_MED_OB" scadeType="bool" targetName="AutoBK_MED_OB" targetType="kcg_bool"/>
+    <Field scadeName="AutoBK_HI_OB" scadeType="bool" targetName="AutoBK_HI_OB" targetType="kcg_bool"/>
+    <Field scadeName="AutoBK_RTO_OB" scadeType="bool" targetName="AutoBK_RTO_OB" targetType="kcg_bool"/>
+    <Field scadeName="Hc_LtSpoiler_stowed" scadeType="bool" targetName="Hc_LtSpoiler_stowed" targetType="kcg_bool"/>
+    <Field scadeName="Hc_LtThrottle_idle" scadeType="bool" targetName="Hc_LtThrottle_idle" targetType="kcg_bool"/>
+    <Field scadeName="Hc_Parkbrakeon_IB" scadeType="bool" targetName="Hc_Parkbrakeon_IB" targetType="kcg_bool"/>
+    <Field scadeName="Hc_ABS_IB" scadeType="bool" targetName="Hc_ABS_IB" targetType="kcg_bool"/>
+    <Field scadeName="Hc_Rt_WOW" scadeType="bool" targetName="Hc_Rt_WOW" targetType="kcg_bool"/>
+    <Field scadeName="Hc_GearHandle_IB" scadeType="bool" targetName="Hc_GearHandle_IB" targetType="kcg_bool"/>
+    <Field scadeName="AutoBK_OFF_IB" scadeType="bool" targetName="AutoBK_OFF_IB" targetType="kcg_bool"/>
+    <Field scadeName="AutoBK_LOW_IB" scadeType="bool" targetName="AutoBK_LOW_IB" targetType="kcg_bool"/>
+    <Field scadeName="AutoBK_MED_IB" scadeType="bool" targetName="AutoBK_MED_IB" targetType="kcg_bool"/>
+    <Field scadeName="AutoBK_HI_IB" scadeType="bool" targetName="AutoBK_HI_IB" targetType="kcg_bool"/>
+    <Field scadeName="AutoBK_RTO_IB" scadeType="bool" targetName="AutoBK_RTO_IB" targetType="kcg_bool"/>
+  </StructType>
+  <StructType targetName="A429_Valid_short" targetCopyFct="kcg_copy_A429_Valid_short"
+      targetCompFct="kcg_comp_A429_Valid_short">
+    <Field scadeName="Acceleration_RT" scadeType="bool" targetName="Acceleration_RT" targetType="kcg_bool"/>
+    <Field scadeName="Acceleration_LT" scadeType="bool" targetName="Acceleration_LT" targetType="kcg_bool"/>
+    <Field scadeName="Computed_WOW2" scadeType="bool" targetName="Computed_WOW2" targetType="kcg_bool"/>
+    <Field scadeName="Computed_WOW1" scadeType="bool" targetName="Computed_WOW1" targetType="kcg_bool"/>
+    <Field scadeName="MLG_LtDownlocked" scadeType="bool" targetName="MLG_LtDownlocked" targetType="kcg_bool"/>
+    <Field scadeName="MLG_RtDownlocked" scadeType="bool" targetName="MLG_RtDownlocked" targetType="kcg_bool"/>
+    <Field scadeName="Date_Master" scadeType="bool" targetName="Date_Master" targetType="kcg_bool"/>
+    <Field scadeName="AirSpeed" scadeType="bool" targetName="AirSpeed" targetType="kcg_bool"/>
+    <Field scadeName="Master_Time" scadeType="bool" targetName="Master_Time" targetType="kcg_bool"/>
+    <Field scadeName="TLA_Position_Right" scadeType="bool" targetName="TLA_Position_Right" targetType="kcg_bool"/>
+    <Field scadeName="TLA_Position_Left" scadeType="bool" targetName="TLA_Position_Left" targetType="kcg_bool"/>
+    <Field scadeName="Accumulator_Pressure" scadeType="bool" targetName="Accumulator_Pressure" targetType="kcg_bool"/>
+    <Field scadeName="HS_Pressure" scadeType="bool" targetName="HS_Pressure" targetType="kcg_bool"/>
+  </StructType>
+  <StructType targetName="tIn_Discrete" targetCopyFct="kcg_copy_tIn_Discrete" targetCompFct="kcg_comp_tIn_Discrete">
+    <Field scadeName="SpoilerStoredSignal_Left" scadeType="bool" targetName="SpoilerStoredSignal_Left"
+        targetType="kcg_bool"/>
+    <Field scadeName="SpoilerStoredSignal_Right" scadeType="bool" targetName="SpoilerStoredSignal_Right"
+        targetType="kcg_bool"/>
+    <Field scadeName="LeftWOW" scadeType="bool" targetName="LeftWOW" targetType="kcg_bool"/>
+    <Field scadeName="RightWOW" scadeType="bool" targetName="RightWOW" targetType="kcg_bool"/>
+    <Field scadeName="LeftThrottleIdle" scadeType="bool" targetName="LeftThrottleIdle" targetType="kcg_bool"/>
+    <Field scadeName="RightThrottleIdle" scadeType="bool" targetName="RightThrottleIdle" targetType="kcg_bool"/>
+    <Field scadeName="ThrottleIdleAtLeastOne" scadeType="bool" targetName="ThrottleIdleAtLeastOne" targetType="kcg_bool"/>
+    <Field scadeName="ThrottleIdleBoth" scadeType="bool" targetName="ThrottleIdleBoth" targetType="kcg_bool"/>
+    <Field scadeName="AutoBRK_OFF" scadeType="tValidityBool" targetName="AutoBRK_OFF" targetType="tValidityBool"/>
+    <Field scadeName="AutoBRK_LOW" scadeType="tValidityBool" targetName="AutoBRK_LOW" targetType="tValidityBool"/>
+    <Field scadeName="AutoBRK_MED" scadeType="tValidityBool" targetName="AutoBRK_MED" targetType="tValidityBool"/>
+    <Field scadeName="AutoBRK_HI" scadeType="tValidityBool" targetName="AutoBRK_HI" targetType="tValidityBool"/>
+    <Field scadeName="AutoBRK_RTO" scadeType="tValidityBool" targetName="AutoBRK_RTO" targetType="tValidityBool"/>
+    <Field scadeName="GearHandle" scadeType="bool" targetName="GearHandle" targetType="kcg_bool"/>
+    <Field scadeName="Inner_wheel_ABS_start_signal" scadeType="bool" targetName="Inner_wheel_ABS_start_signal"
+        targetType="kcg_bool"/>
+    <Field scadeName="Parking_brake_signal" scadeType="bool" targetName="Parking_brake_signal" targetType="kcg_bool"/>
+    <Field scadeName="spare" scadeType="bool" targetName="spare" targetType="kcg_bool"/>
+    <Field scadeName="PIN_PGR_1" scadeType="bool" targetName="PIN_PGR_1" targetType="kcg_bool"/>
+    <Field scadeName="PIN_PGR_2" scadeType="bool" targetName="PIN_PGR_2" targetType="kcg_bool"/>
+  </StructType>
+  <StructType targetName="tTestData" targetCopyFct="kcg_copy_tTestData" targetCompFct="kcg_comp_tTestData">
+    <Field scadeName="AUTOBRKfault" scadeType="bool" targetName="AUTOBRKfault" targetType="kcg_bool"/>
+    <Field scadeName="ARMdisagree" scadeType="bool" targetName="ARMdisagree" targetType="kcg_bool"/>
+    <Field scadeName="latch" scadeType="bool" targetName="latch" targetType="kcg_bool"/>
+    <Field scadeName="unlatch" scadeType="bool" targetName="unlatch" targetType="kcg_bool"/>
+    <Field scadeName="maxpedal" scadeType="float32" targetName="maxpedal" targetType="kcg_float32"/>
+  </StructType>
+  <StructType targetName="tBRAKE_Auto" targetCopyFct="kcg_copy_tBRAKE_Auto" targetCompFct="kcg_comp_tBRAKE_Auto">
+    <Field scadeName="AutoBrakeCommand_L" scadeType="float32" targetName="AutoBrakeCommand_L" targetType="kcg_float32"/>
+    <Field scadeName="AutoBrakeCommand_R" scadeType="float32" targetName="AutoBrakeCommand_R" targetType="kcg_float32"/>
+    <Field scadeName="AutoBrakeEnable" scadeType="bool" targetName="AutoBrakeEnable" targetType="kcg_bool"/>
+  </StructType>
+  <PredefType scadeName="int8" targetName="kcg_int8"/>
+  <PredefType scadeName="int16" targetName="kcg_int16"/>
+  <PredefType scadeName="int32" targetName="kcg_int32"/>
+  <PredefType scadeName="int64" targetName="kcg_int64"/>
+  <PredefType scadeName="uint8" targetName="kcg_uint8"/>
+  <PredefType scadeName="uint16" targetName="kcg_uint16"/>
+  <PredefType scadeName="uint32" targetName="kcg_uint32"/>
+  <PredefType scadeName="uint64" targetName="kcg_uint64"/>
+  <PredefType scadeName="size" targetName="kcg_size"/>
+  <PredefType scadeName="float32" targetName="kcg_float32"/>
+  <PredefType scadeName="float64" targetName="kcg_float64"/>
+  <PredefType scadeName="bool" targetName="kcg_bool"/>
+  <PredefType scadeName="char" targetName="kcg_char"/>
+  <ArrayType targetName="array_bool_3" cellType="kcg_bool" size="3" targetCopyFct="kcg_copy_array_bool_3"
+      targetCompFct="kcg_comp_array_bool_3"/>
+  <ArrayType targetName="array_float32_5" cellType="kcg_float32" size="5" targetCopyFct="kcg_copy_array_float32_5"
+      targetCompFct="kcg_comp_array_float32_5"/>
+</Model>
+<!--$********** SCADE Suite KCG 64-bit 6.5 (build i12) ***********
+** kcg_trace.xml
+** Generation date: 2022-08-11T09:49:10
+*************************************************************$-->

@@ -6,7 +6,12 @@
  */
 
 #include "user_main.h"
+
 SDRAM_DATA MCB_Data[DATA_LEN];/* 保存所有通信用到的地址和其对应的数据*/
+unsigned short BSPI_Value_l[PSI_LEN]={0};
+unsigned short BSPI_head_l=0;
+unsigned short BSPI_Value_r[PSI_LEN]={0};
+unsigned short BSPI_head_r=0;
 /**************************************
  * void Sdram_Init(void)
  * 与FPGA通信的初始化
@@ -136,6 +141,8 @@ uint8_t SDRAM_Read_Data( uint16_t Addr,uint32_t *Read_data)
 void SDRAM_Read(void)
 {
     unsigned char i=0;
+    unsigned char j=0;
+    unsigned char k=0;
     signed short temp=0;
     signed short pressure=0;
     SDRAM_Set_IO_To_Read_Mode();
@@ -144,6 +151,8 @@ void SDRAM_Read(void)
     {
          SDRAM_Read_Data(MCB_Data[i].Addr,&MCB_Data[i].value);
     }
+    MCB_Data[12].value=MCB_Data[12].value+MCB_Data[12].value/45;
+    MCB_Data[13].value=MCB_Data[13].value+MCB_Data[13].value/45;
     /*以下将从FPGA读取到的数据赋值给设备的状态参数*/
     for(i=0;i<SDRAM_READ_DATA_LEN;i++)
     {
@@ -152,20 +161,22 @@ void SDRAM_Read(void)
         {
             case ADDR_INBD_LT_TEMP:
             {
-                Receive_Machine_Parameters.INBD_LT_TEMP=(float)(temp*5000.0/32768/10)*2;
-                if(Receive_Machine_Parameters.INBD_LT_TEMP>10)
-                {
-                    Receive_Machine_Parameters.INBD_LT_TEMP-20;
-                }
+//                Receive_Machine_Parameters.INBD_LT_TEMP=(float)(temp*5000.0/32768/10)*2;
+//                if(Receive_Machine_Parameters.INBD_LT_TEMP>10)
+//                {
+//                    Receive_Machine_Parameters.INBD_LT_TEMP-20;
+//                }
+                Receive_Machine_Parameters.INBD_LT_TEMP=(float)temp_value_left;
             }
             break;
             case ADDR_INBD_RT_TEMP:
             {
-                Receive_Machine_Parameters.INBD_RT_TEMP=(float)(temp*5000.0/32768/10)*2;
-                if(Receive_Machine_Parameters.INBD_RT_TEMP>10)
-                {
-                    Receive_Machine_Parameters.INBD_RT_TEMP-20;
-                }
+//                Receive_Machine_Parameters.INBD_RT_TEMP=(float)(temp*5000.0/32768/10)*2;
+//                if(Receive_Machine_Parameters.INBD_RT_TEMP>10)
+//                {
+//                    Receive_Machine_Parameters.INBD_RT_TEMP-20;
+//                }
+                Receive_Machine_Parameters.INBD_RT_TEMP=(float)temp_value_right;
             }
             break;
             case ADDR_INBD_LT_BPSI:
@@ -173,6 +184,9 @@ void SDRAM_Read(void)
             //    pressure=((float)(temp*5.0/32768))>=0.48?((float)(temp*5.0/32768))*8:0;
             //    Receive_Machine_Parameters.INBD_LT_BPSI=pressure;
                 Receive_Machine_Parameters.INBD_LT_BPSI=((float)(temp*5.0/32768));
+
+                BSPI_Value_l[BSPI_head_l]=temp;
+                BSPI_head_l=(BSPI_head_l+1)%PSI_LEN;
             }
             break;
             case ADDR_INBD_RT_BPSI:
@@ -180,34 +194,36 @@ void SDRAM_Read(void)
               //    pressure=((float)(temp*5.0/32768))>=0.48?((float)(temp*5.0/32768))*8:0;
               //    Receive_Machine_Parameters.INBD_RT_BPSI=pressure;
                 Receive_Machine_Parameters.INBD_RT_BPSI=(float)(temp*5.0/32768);
+                BSPI_Value_r[BSPI_head_r]=temp;
+                BSPI_head_r=(BSPI_head_r+1)%PSI_LEN;
             }
             break;
             case ADDR_LEFTPPEDAL:
             {
-           //     pressure=(float)(temp*5.0/32768)>=0.28 ?((float)(temp*5.0/32768)-0.28)*100/2.76:0;
-           //     Receive_Machine_Parameters.LeftPPedal.Value=pressure;
-                Receive_Machine_Parameters.LeftPPedal.Value=(float)(temp*5.0/32768);
+                pressure=(float)(temp*5.0/32768)>=0.28 ?((float)(temp*4.0/32768)-0.28)*100/2.76:0;
+                Receive_Machine_Parameters.LeftPPedal.Value=pressure;
+             //   Receive_Machine_Parameters.LeftPPedal.Value=(float)(temp*4.0/32768);
             }
             break;
             case ADDR_RIGHTPPEDAL:
             {
-           //     pressure=(float)(temp*5.0/32768)>=0.28 ?((float)(temp*5.0/32768)-0.28)*100/2.76:0;
-          //      Receive_Machine_Parameters.RightPPedal.Value=pressure;
-                Receive_Machine_Parameters.RightPPedal.Value=(float)(temp*5.0/32768);
+                pressure=(float)(temp*5.0/32768)>=0.28 ?((float)(temp*4.0/32768)-0.28)*100/2.76:0;
+                Receive_Machine_Parameters.RightPPedal.Value=pressure;
+             //   Receive_Machine_Parameters.RightPPedal.Value=(float)(temp*4.0/32768);
             }
             break;
             case ADDR_LEFTCPEDAL:
             {
-         //       pressure=(float)(temp*5.0/32768)>=0.28 ?((float)(temp*5.0/32768)-0.28)*100/2.76:0;
-         //       Receive_Machine_Parameters.LeftCptPedal.Value=pressure;
-                Receive_Machine_Parameters.LeftCptPedal.Value=(float)(temp*5.0/32768);
+                pressure=(float)(temp*5.0/32768)>=0.28 ?((float)(temp*4.0/32768)-0.28)*100/2.76:0;
+                Receive_Machine_Parameters.LeftCptPedal.Value=pressure;
+              //  Receive_Machine_Parameters.LeftCptPedal.Value=(float)(temp*4.0/32768);
             }
             break;
             case ADDR_RIGHTCPEDAL:
             {
-         //      pressure=(float)(temp*5.0/32768)>=0.28 ?((float)(temp*5.0/32768)-0.28)*100/2.76:0;
-         //      Receive_Machine_Parameters.RightCptPedal.Value=pressure;
-               Receive_Machine_Parameters.RightCptPedal.Value=(float)(temp*5.0/32768);
+               pressure=(float)(temp*5.0/32768)>=0.28 ?((float)(temp*4.0/32768)-0.28)*100/2.76:0;
+               Receive_Machine_Parameters.RightCptPedal.Value=pressure;
+            //   Receive_Machine_Parameters.RightCptPedal.Value=(float)(temp*4.0/32768);
             }
             break;
             case ADDR_INNER_WHEEL_ABS_START_SIGNAL:

@@ -38,8 +38,8 @@ void initialization(void)
     }
     rtiEnableNotification(rtiNOTIFICATION_COMPARE0); /*使能定时器COMPARE0 5ms*/
     rtiStartCounter(rtiCOUNTER_BLOCK0);              /*开始定时器BLOCK0计数*/
- //   rtiEnableNotification(rtiNOTIFICATION_COMPARE3); /*使能定时器COMPARE0 5ms*/
- //   rtiStartCounter(rtiCOUNTER_BLOCK1);              /*开始定时器BLOCK0计数*/
+ //   rtiEnableNotification(rtiNOTIFICATION_COMPARE3);
+ //   rtiStartCounter(rtiCOUNTER_BLOCK1);
     Set_SOV(0);   /*设置SOV上电状态*/
     Set_ABSW(0);  /*设置ABSW上电状态*/
 }

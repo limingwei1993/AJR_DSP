@@ -157,7 +157,11 @@ extern uint8_t SD_Process_Flag;
 extern uint16_t File_Name;
 extern uint8_t SD_Process_Mode;
 extern uint16_t get_bench_mode_time_count;
+
+extern  float temp_value_right;   /*右轮温度值*/
+extern  float temp_value_left;    /*左轮温度值*/
 extern void user_main(void);
 void SD_GPIO_Init(void);
 extern uint8_t SDRAM_RxTx;
+
 #endif /* __USER_MAIN_H */
